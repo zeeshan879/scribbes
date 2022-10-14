@@ -8,12 +8,12 @@ import apple from "../../Asstes/Images/apple.png";
 const Login = () => {
   return (
     <>
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
         <div className="">
-          {/*<Image src={loginBanner} style={{maxHeight:"100vh"}}  />*/}
+          <Image src={loginBanner}  />
         </div>
-        <div className="w-[1042px]   flex justify-center items-center">
-          <div className="w-[472px]">
+        <div className="w-[1042px]   pt-[100px]  flex justify-center">
+          <div className="w-[472px] pb-[118px]">
             <div className="text-[42px] font-bold text-black">Login</div>
             <div className="pt-[54px]">
               <div className="text-black font-medium text-[20px]">
