@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Login from "../components/Login";
+import HomePage from "../components/Home"
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Login />
+    <HomePage/>
       </div>
     </>
   );
