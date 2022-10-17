@@ -28,7 +28,7 @@ const Login = () => {
       </Head>
       <div className="flex flex-col-reverse flex-col  md:flex-row justify-between max-w-[100%] h-full">
         <div
-          className="w-[100%] mt-[30px] md:mt-[0px] lg:w-[650px] xl:w-[700px] h-[450px] 2xl:w-[878px] sm:h-[100vh] relative  "
+          className="hidden bg-scroll md:block w-[100%] w-[878px] mt-[30px]  md:mt-[0px]  h-[450px]  bg-center sm:h-[100vh] relative bg-[100%]"
           style={jsx}
         >
           <div className="absolute text-[32px] lg:text-[44px]  xl:text-[34px] 2xl:text-[64px] font-bold text-white top-[20px] sm:top-[100px] lg:top-[100px]  xl:top-[150px] left-[50px] lg:left-[50px]  xl:left-[80px] font-sans tracking-[-0.085em] leading-[95px]">
@@ -41,9 +41,9 @@ const Login = () => {
             A growing community of writers, thinkers and like-minded people.
           </div>
         </div>
-        <div className="flex justify-center w-full px-[10px] sm:px-0  md:w-[700px] xl:w-[950px] 2xl:w-[1050px] pt-[20px]   sm:pt-[50px] lg:pt-[40px] xl:pt-[50px] 2xl:pt-[120px]">
+        <div className="flex justify-center w-full px-[10px]   md:w-[700px] xl:w-[950px] 2xl:w-[1050px] pt-[40px]   sm:pt-[50px] lg:pt-[40px] xl:pt-[50px] 2xl:pt-[120px]">
           <div className="w-[350px] xl:w-[400px] 2xl:w-[472px] ">
-            <div className="text-[25px] text-center sm:text-start sm:text-[32px]  xl:text-[32px] 2xl:text-[42px] font-bold text-black font-grotesk">
+            <div className="text-[30px] text-center sm:text-start sm:text-[32px]  xl:text-[32px] 2xl:text-[42px] font-bold text-black font-grotesk">
               Login
             </div>
             <div className="pt-[15px] xl:pt-[24px] 2xl:pt-[54px]">
@@ -87,7 +87,7 @@ const Login = () => {
                 <div className="text-[#BCBCBC] text-[16px]">or</div>
                 <div className="border-[2px] border-[#BCBCBC] w-[40%]  2xl:w-[205px]"></div>
               </div>
-              <div className="mt-[20px] xl:mt-[30px] 2xl:mt-[57px] flex justify-evenly items-center">
+              <div className="mt-[40px] xl:mt-[30px] 2xl:mt-[57px] flex justify-evenly items-center">
                 <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
                   <Image src={google} />
                 </div>

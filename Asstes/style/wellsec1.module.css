@@ -1,0 +1,371 @@
+.login_main {
+  width: 100%;
+  background-color: #f8f8f8;
+  height: 1080px;
+  position: relative;
+}
+.scribe_logo {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0px 79px;
+}
+.scrren1_wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 61px;
+}
+.well_sec__wrapper {
+  width: 1568px;
+  height: 824px;
+
+  z-index: 5;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.15);
+}
+.card_image_box {
+  background: black;
+  border-radius: 30px 30px 0px 0px;
+  padding: 94px 0px 0px 64px;
+  height: 312px;
+}
+.scren1_card_heading {
+  max-width: 396px;
+  font-weight: 700;
+  color: white;
+  font-size: 72px;
+  line-height: 69px;
+  font-family: "Space Mono", sans-serif;
+}
+.screen1_card_content {
+  padding: 49px 320px 0px 64px;
+}
+.sec1_text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 19px;
+  color: black;
+}
+.sec1_text2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: black;
+  margin-top: 44px;
+}
+.sec1_text3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: black;
+  margin-top: 54px;
+}
+.sec1_text4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: black;
+  margin-top: 47px;
+}
+.sec1card_sep {
+  width: 100%;
+  margin-top: 63px;
+  border: 2px solid #bcbcbc;
+}
+.sec1_action_box {
+  padding: 23px 65px 0px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec1_show_around_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #1cac19;
+  border-radius: 41px;
+  font-weight: 700;
+  color: white;
+  width: 250px;
+  font-family: "DM Sans", sans-serif;
+  height: 63px;
+}
+.sce1_skip_now {
+  font-size: 20px;
+  font-weight: 400;
+  color: #4285f4;
+  cursor: pointer;
+  width: 250px;
+  text-decoration: underline;
+  font-family: "DM Sans", sans-serif;
+}
+.sec1_change_circle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.active_circle {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #1cac19;
+}
+.non_active_circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+@media screen and (max-width: 1600px) {
+  .well_sec__wrapper {
+    width: 100%;
+    height: 824px;
+
+    z-index: 5;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.15);
+  }
+  .login_main {
+    width: 100%;
+    background-color: #f8f8f8;
+    height: 1080px;
+
+    position: relative;
+  }
+  .well_sec_1_container {
+    padding: 0px 30px;
+  }
+}
+@media screen and (max-width: 1321px) {
+  .well_sec__wrapper {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 22px;
+    z-index: 5;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.15);
+  }
+  .screen1_card_content {
+    padding: 49px 64px 0px 64px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card_image_box {
+    background: black;
+    border-radius: 30px 30px 0px 0px;
+    padding: 94px 0px 0px 64px;
+    height: 280px;
+  }
+  .scren1_card_heading {
+    max-width: 396px;
+    font-weight: 700;
+    color: white;
+    font-size: 52px;
+    line-height: 59px;
+    font-family: "Space Mono", sans-serif;
+  }
+  .screen1_card_content {
+    padding: 39px 54px 0px 24px;
+  }
+  .sec1_text2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: black;
+    margin-top: 34px;
+  }
+  .sec1_text3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: black;
+    margin-top: 44px;
+  }
+  .sec1_text4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: black;
+    margin-top: 37px;
+  }
+  .sec1card_sep {
+    width: 100%;
+    margin-top: 43px;
+    border: 2px solid #bcbcbc;
+  }
+  .sec1_show_around_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #1cac19;
+    border-radius: 41px;
+    font-weight: 700;
+    color: white;
+    width: 200px;
+    font-family: "DM Sans", sans-serif;
+    height: 55px;
+  }
+  .sce1_skip_now {
+    font-size: 18px;
+    font-weight: 400;
+    color: #4285f4;
+    cursor: pointer;
+    width: 180px;
+    text-decoration: underline;
+    font-family: "DM Sans", sans-serif;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card_image_box {
+    background: black;
+    border-radius: 30px 30px 0px 0px;
+    padding: 94px 0px 0px 64px;
+    height: 260px;
+  }
+  .scren1_card_heading {
+    max-width: 396px;
+    font-weight: 700;
+    color: white;
+    font-size: 42px;
+    line-height: 49px;
+    font-family: "Space Mono", sans-serif;
+  }
+  .screen1_card_content {
+    padding: 30px 54px 0px 20px;
+  }
+  .sec1_text2 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: black;
+    margin-top: 24px;
+  }
+  .sec1_text3 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: black;
+    margin-top: 28px;
+  }
+  .sec1_text4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    color: black;
+    margin-top: 20px;
+  }
+  .sec1card_sep {
+    width: 100%;
+    margin-top: 33px;
+    border: 2px solid #bcbcbc;
+  }
+  .sec1_show_around_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #1cac19;
+    border-radius: 41px;
+    font-weight: 700;
+    color: white;
+    width: 160px;
+    font-family: "DM Sans", sans-serif;
+    height: 55px;
+  }
+  .sce1_skip_now {
+    font-size: 15px;
+    font-weight: 400;
+    color: #4285f4;
+    cursor: pointer;
+    width: 140px;
+    text-decoration: underline;
+    font-family: "DM Sans", sans-serif;
+  }
+  .sec1_action_box {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sec1_change_circle {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  .active_circle {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #1cac19;
+  }
+  .non_active_circle {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #d9d9d9;
+  }
+  .well_sec_1_container {
+    padding: 0px 10px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .sec1_show_around_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: #1cac19;
+    border-radius: 41px;
+    font-weight: 700;
+    color: white;
+    width: 120px;
+    font-family: "DM Sans", sans-serif;
+    height: 45px;
+  }
+  .sce1_skip_now {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4285f4;
+    cursor: pointer;
+    width: 100px;
+    text-decoration: underline;
+    font-family: "DM Sans", sans-serif;
+  }
+  .login_main {
+    width: 100%;
+    background-color: #f8f8f8;
+    height: 950px;
+    position: relative;
+  }
+  .scrren1_wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 41px;
+  }
+}
