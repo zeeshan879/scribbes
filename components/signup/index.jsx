@@ -20,7 +20,7 @@ const SignUp = () => {
         ></link>
         <link href="http://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet" />
       </Head>
-      <div className="relative  w-full h-[100%] bg-[#F8F8F8] px-[15px] sm:px-[0px]">
+      <div className="relative  w-full min-h-[100vh] bg-[#F8F8F8] px-[15px] sm:px-[0px]">
         <div className="pb-[30px] sm:pb-[50px]">
           <div className="flex justify-center flex-col items-center ">
             <div className="pt-[30px] sm:pt-[53px] text-[#1CAC19] text-[32px]  sm:text-[42px] font-bold font-sans  leading-[52px]  sm:leading-[62px] tracking-[-0.085em]">
@@ -125,7 +125,7 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-[5px] sm:bottom-[0px] flex justify-center w-[90%] sm:w-full px-0 sm:px-12">
+        <div className="absolute left-0 right-0 bottom-[5px] sm:bottom-[0px] flex justify-center w-[90%] sm:w-full px-0 sm:px-12">
           <Image src={Scribbes} />
         </div>
       </div>

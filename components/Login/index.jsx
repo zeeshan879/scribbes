@@ -5,6 +5,7 @@ import google from "../../Asstes/Images/google.png";
 import fb from "../../Asstes/Images/fb.png";
 import apple from "../../Asstes/Images/apple.png";
 import Head from "next/head";
+import Link from 'next/link'
 
 const Login = () => {
   const jsx = {
@@ -26,9 +27,9 @@ const Login = () => {
         ></link>
         <link href="http://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet" />
       </Head>
-      <div className="flex flex-col-reverse flex-col  md:flex-row justify-between max-w-[100%] h-full">
+      <div className="flex   md:flex-row justify-between  min-h-[100vh] pointer-events-none">
         <div
-          className="hidden bg-scroll md:block w-[100%] w-[878px] mt-[30px]  md:mt-[0px]  h-[450px]  bg-center sm:h-[100vh] relative bg-[100%]"
+          className="hidden  bg-scroll md:block w-[100%] w-[878px] mt-[30px]  md:mt-[0px]  h-[450px]  bg-center sm:h-[100vh] relative bg-[100%]"
           style={jsx}
         >
           <div className="absolute text-[32px] lg:text-[44px]  xl:text-[34px] 2xl:text-[64px] font-bold text-white top-[20px] sm:top-[100px] lg:top-[100px]  xl:top-[150px] left-[50px] lg:left-[50px]  xl:left-[80px] font-sans tracking-[-0.085em] leading-[95px]">

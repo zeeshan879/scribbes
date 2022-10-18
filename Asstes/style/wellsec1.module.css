@@ -1,16 +1,18 @@
 .login_main {
   width: 100%;
   background-color: #f8f8f8;
-  height: 1080px;
+  min-height: 100vh;
+
   position: relative;
 }
 .scribe_logo {
   position: absolute;
   display: flex;
-  bottom: 0;
-
+  bottom: 0px;
+  right: 0;
+  left: 0;
   justify-content: center;
-  align-items: center;
+
   padding: 0px 79px;
 }
 .scrren1_wrap {
@@ -21,23 +23,33 @@
 .well_sec__wrapper {
   width: 1568px;
   height: 824px;
-
   z-index: 5;
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 30px;
   box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.15);
 }
 .card_image_box {
-  background: black;
+  /*background: url("../Images/wellcome.png");*/
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.73) 1.24%,
+      rgba(0, 0, 0, 0) 75.82%
+    ),
+    url("../Images/wellcome.png");
+
   border-radius: 30px 30px 0px 0px;
   padding: 94px 0px 0px 64px;
   height: 312px;
+  background-size: cover;
+  background-position: center;
 }
 .scren1_card_heading {
   max-width: 396px;
   font-weight: 700;
   color: white;
-  font-size: 72px;
+  font-size: 62px;
   line-height: 69px;
   font-family: "Space Mono", sans-serif;
 }
@@ -75,14 +87,59 @@
   color: black;
   margin-top: 47px;
 }
+.action_btn_wraperr {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  width: 370px;
+}
+.action_btn_wraperr2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  width: 370px;
+}
+.backBtn {
+  width: 146px;
+  height: 64px;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  border: 3px solid #1cac19;
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1cac19;
+  border-radius: 41px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+}
+.take_home_btn{
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  color: #4285F4;
+  text-decoration: underline;
+
+}
 .sec1card_sep {
   width: 100%;
   margin-top: 63px;
   border: 2px solid #bcbcbc;
 }
+.conditional_opt {
+height: 100%;
+
+}
 .sec1_action_box {
-  padding: 23px 65px 0px 64px;
+  padding:0px 65px 0px 64px;
   display: flex;
+  height: 108px;
+align-items: center;
+  border-top: 2px solid #bcbcbc;
   justify-content: space-between;
   align-items: center;
 }
@@ -96,7 +153,7 @@
   border-radius: 41px;
   font-weight: 700;
   color: white;
-  width: 250px;
+  width: 230px;
   font-family: "DM Sans", sans-serif;
   height: 63px;
 }
@@ -105,7 +162,16 @@
   font-weight: 400;
   color: #4285f4;
   cursor: pointer;
-  width: 250px;
+  width: 230px;
+  text-decoration: underline;
+  font-family: "DM Sans", sans-serif;
+}
+.sce1_skip_now2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #4285f4;
+  cursor: pointer;
+
   text-decoration: underline;
   font-family: "DM Sans", sans-serif;
 }
@@ -131,17 +197,61 @@
 @media screen and (max-width: 1600px) {
   .well_sec__wrapper {
     width: 100%;
-    height: 824px;
+    height: 730px;
 
     z-index: 5;
     background-color: white;
     border-radius: 30px;
     box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 0.15);
   }
+  .conditional_opt {
+  height: 100%;
+    padding-bottom: 10px;
+  }
+  .scren1_card_heading {
+    max-width: 396px;
+    font-weight: 700;
+    color: white;
+    font-size: 52px;
+    line-height: 59px;
+    font-family: "Space Mono", sans-serif;
+  }
+  .sec1_text4 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    color: black;
+    margin-top: 37px;
+  }
+  .card_image_box {
+    /*background: url("../Images/wellcome.png");*/
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.73) 1.24%,
+        rgba(0, 0, 0, 0) 75.82%
+      ),
+      url("../Images/wellcome.png");
+
+    border-radius: 30px 30px 0px 0px;
+    padding: 44px 0px 0px 64px;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+  }
+  .sec1_action_box {
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    height: 100px;
+
+    border-top: 2px solid #bcbcbc;
+    justify-content: space-between;
+    align-items: center;
+  }
   .login_main {
     width: 100%;
     background-color: #f8f8f8;
-    height: 1080px;
+    height: 900px;
 
     position: relative;
   }
@@ -153,7 +263,7 @@
   .well_sec__wrapper {
     width: 100%;
     height: 100%;
-    padding-bottom: 22px;
+    
     z-index: 5;
     background-color: white;
     border-radius: 30px;
@@ -162,13 +272,44 @@
   .screen1_card_content {
     padding: 49px 64px 0px 64px;
   }
+  .backBtn {
+    width: 136px;
+    height: 58px;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    border: 2px solid #1cac19;
+    display: flex;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1cac19;
+    border-radius: 41px;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+  }
+  .sce1_skip_now2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4285f4;
+    cursor: pointer;
+  
+    text-decoration: underline;
+    font-family: "DM Sans", sans-serif;
+  }
 }
 @media screen and (max-width: 1000px) {
   .card_image_box {
-    background: black;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.73) 1.24%,
+        rgba(0, 0, 0, 0) 75.82%
+      ),
+      url("../Images/wellcome.png");
     border-radius: 30px 30px 0px 0px;
     padding: 94px 0px 0px 64px;
     height: 280px;
+    background-size: cover;
+    background-position: center;
   }
   .scren1_card_heading {
     max-width: 396px;
@@ -234,23 +375,71 @@
     font-family: "DM Sans", sans-serif;
   }
 }
+@media screen and (max-width:825px){
+  .action_btn_wraperr2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 200px;
+  }
+  .action_btn_wraperr {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: flex-start;
+    width: 200px;
+  }
+}
 @media screen and (max-width: 768px) {
   .card_image_box {
-    background: black;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.73) 1.24%,
+        rgba(0, 0, 0, 0) 75.82%
+      ),
+      url("../Images/wellcome.png");
     border-radius: 30px 30px 0px 0px;
-    padding: 94px 0px 0px 64px;
+    padding: 94px 0px 0px 0px;
+    text-align: center;
     height: 260px;
+    background-position: center;
   }
   .scren1_card_heading {
-    max-width: 396px;
+    max-width: 100%;
     font-weight: 700;
     color: white;
-    font-size: 42px;
+    font-size: 35px;
     line-height: 49px;
     font-family: "Space Mono", sans-serif;
   }
   .screen1_card_content {
-    padding: 30px 54px 0px 20px;
+    padding: 30px 20px 0px 20px;
+  }
+  .take_home_btn{
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    color: #4285F4;
+    text-decoration: underline;
+  
+  }
+  .backBtn {
+    width: 130px;
+    height: 45px;
+    font-family: "DM Sans", sans-serif;
+    cursor: pointer;
+    border: 2px solid #1cac19;
+    display: flex;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1cac19;
+    border-radius: 41px;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
   }
   .sec1_text2 {
     font-family: "DM Sans", sans-serif;
@@ -291,9 +480,9 @@
     border-radius: 41px;
     font-weight: 700;
     color: white;
-    width: 160px;
+    width: 140px;
     font-family: "DM Sans", sans-serif;
-    height: 55px;
+    height: 45px;
   }
   .sce1_skip_now {
     font-size: 15px;
@@ -305,14 +494,15 @@
     font-family: "DM Sans", sans-serif;
   }
   .sec1_action_box {
-    padding: 20px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
     display: flex;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
   }
   .sec1_change_circle {
     display: flex;
-    gap: 7px;
+    gap: 4px;
     align-items: center;
   }
   .active_circle {
@@ -339,12 +529,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
     background-color: #1cac19;
     border-radius: 41px;
-    font-weight: 700;
+    font-weight: 500;
     color: white;
-    width: 120px;
+    width: 110px;
     font-family: "DM Sans", sans-serif;
     height: 45px;
   }
@@ -360,12 +550,48 @@
   .login_main {
     width: 100%;
     background-color: #f8f8f8;
-    height: 950px;
+    height: 100vh;
     position: relative;
   }
   .scrren1_wrap {
     display: flex;
     justify-content: center;
-    margin-top: 41px;
+    margin-top: 31px;
+  }
+  .scren1_card_heading {
+    max-width: 100%;
+    font-weight: 700;
+    color: white;
+    font-size: 32px;
+    line-height: 49px;
+    font-family: "Space Mono", sans-serif;
+  }
+  .card_image_box {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.73) 1.24%,
+        rgba(0, 0, 0, 0) 75.82%
+      ),
+      url("../Images/wellcome.png");
+    border-radius: 30px 30px 0px 0px;
+    padding: 94px 0px 0px 0px;
+    text-align: center;
+    height: 220px;
+    background-position: center;
+  }
+  .action_btn_wraperr2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    width: 100px;
+  }
+  .action_btn_wraperr {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    justify-content: flex-start;
+    width: 100px;
   }
 }
