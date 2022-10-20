@@ -28,7 +28,7 @@ const StartConverstion = () => {
                 <div className={con.chose_interst}>
                   Choose Interest <Image src={downArrow} />
                 </div>
-           {/*<div className="relative">
+           <div className="relative">
            <div className={con.chose_toggle}>
                   <div className={con.togle_heading}>
                     <div>Followed Interests</div>
@@ -37,7 +37,7 @@ const StartConverstion = () => {
                     </div>
                   </div>
                 </div>
-           </div>*/}
+           </div>
               </div>
             </div>
             <div className={con.text_area}>
