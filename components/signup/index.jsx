@@ -5,6 +5,7 @@ import Head from "next/head";
 import google from "../../Asstes/Images/google.png";
 import fb from "../../Asstes/Images/fb.png";
 import apple from "../../Asstes/Images/apple.png";
+import Link from "next/link";
 
 const SignUp = () => {
   return (
@@ -24,7 +25,7 @@ const SignUp = () => {
         <div className="pb-[30px] sm:pb-[50px]">
           <div className="flex justify-center flex-col items-center ">
             <div className="pt-[30px] sm:pt-[53px] text-[#1CAC19] text-[32px]  sm:text-[42px] font-bold font-sans  leading-[52px]  sm:leading-[62px] tracking-[-0.085em]">
-              Scribbes
+            <Link href="/"> Scribbes</Link>
             </div>
             <div className="w-full sm:w-[564px] mt-[20px]  sm:mt-[39px]  shadow-signup pt-[20px] sm:pt-[35px] pb-[37px] px-[20px] sm:px-[45px] rounded-[37px] bg-white z-10">
               <div className="flex justify-center text-[28px] sm:text-heading font-bold text-black font-grotesk">
@@ -78,7 +79,7 @@ const SignUp = () => {
                 <div className="border-[2px] border-[#BCBCBC] h-[53px] sm:h-[63px]  w-full mt-[7px]  rounded-[41px]">
                   <input
                     placeholder="email@website"
-                    className="h-full rounded-[41px] w-[90%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
+                    className="h-full rounded-[41px] w-[100%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
                   />
                 </div>
               </div>
@@ -90,7 +91,7 @@ const SignUp = () => {
                 <div className="border-[2px] border-[#BCBCBC] h-[53px] sm:h-[63px]  w-full mt-[7px]  rounded-[41px]">
                   <input
                     placeholder="Your Scribbes username"
-                    className="h-full rounded-[41px] w-[90%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
+                    className="h-full rounded-[41px] w-[100%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
                   />
                 </div>
               </div>
@@ -101,7 +102,7 @@ const SignUp = () => {
                 <div className="border-[2px] border-[#BCBCBC] h-[53px] sm:h-[63px]  w-full mt-[7px]  rounded-[41px]">
                   <input
                     placeholder="Password"
-                    className="h-full rounded-[41px] w-[90%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
+                    className="h-full rounded-[41px] w-[100%] pl-[20px] sm:pl-[35px] border-none outline-none font-normal text-[#BCBCBC]"
                   />
                 </div>
               </div>
@@ -119,10 +120,12 @@ const SignUp = () => {
                 SIGN UP
               </div>
             </div>
-            <div className="flex mt-[18px]  justify-center font-DM items-center text-[16px] font-bold cursor-pointer">
-              Already a Member?&nbsp;{" "}
-              <span className="text-[#1CAC19]"> Log in</span>
-            </div>
+            <Link href="/login">
+              <div className="flex mt-[18px] z-10  justify-center font-DM items-center text-[16px] font-bold cursor-pointer">
+                Already a Member?&nbsp;{" "}
+                <span className="text-[#1CAC19]"> Log in</span>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="absolute left-0 right-0 bottom-[5px] sm:bottom-[0px] flex justify-center w-[90%] sm:w-full px-0 sm:px-12">

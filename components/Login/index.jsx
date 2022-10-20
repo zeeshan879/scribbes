@@ -27,7 +27,7 @@ const Login = () => {
         ></link>
         <link href="http://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet" />
       </Head>
-      <div className="flex   md:flex-row justify-between  min-h-[100vh] pointer-events-none">
+      <div className="flex   md:flex-row justify-between  min-h-[100vh] ">
         <div
           className="hidden  bg-scroll md:block w-[100%] w-[878px] mt-[30px]  md:mt-[0px]  h-[450px]  bg-center sm:h-[100vh] relative bg-[100%]"
           style={jsx}
@@ -54,7 +54,7 @@ const Login = () => {
               <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
                 <input
                   placeholder="email@website.com"
-                  className="h-full rounded-[41px] w-[90%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
+                  className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
                 />
               </div>
               <div className="text-black font-medium text-[16px] xl:text-[18px] 2xl:text-[20px] mt-[10px] xl:mt-[16px] 2xl:mt-[21px] font-DM">
@@ -63,7 +63,8 @@ const Login = () => {
               <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
                 <input
                   placeholder="Password"
-                  className="h-full rounded-[41px] w-[90%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
+                  type="passowrd"
+                  className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
                 />
               </div>
               <div className="flex justify-between items-center mt-[31px] xl:mt-[20px] 2xl:mt-[31px]">
@@ -99,10 +100,12 @@ const Login = () => {
                   <Image src={apple} />
                 </div>
               </div>
-              <div className="flex mt-[31px] xl:mt-[50px] 2xl:mt-[71px] justify-center font-DM items-center text-[16px] sm:text-[20px] font-bold cursor-pointer">
+           <Link href="/signup">  
+           <div className="flex mt-[31px] z-10 xl:mt-[50px] 2xl:mt-[71px] justify-center font-DM items-center text-[16px] sm:text-[20px] font-bold cursor-pointer">
                 Not a member?&nbsp;{" "}
                 <span className="text-[#1CAC19]"> Sign up</span>
               </div>
+              </Link> 
             </div>
           </div>
         </div>

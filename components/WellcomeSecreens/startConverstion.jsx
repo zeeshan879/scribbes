@@ -5,6 +5,7 @@ import profile from "../../Asstes/Images/profile.png";
 import downArrow from "../../Asstes/Images/arrowDown.png";
 import insert from "../../Asstes/Images/insert.png";
 import LinkV from "../../Asstes/Images/LinkV.png";
+import closeIcon from "../../Asstes/Images/closeIcon.png";
 import Image from "next/image";
 
 const StartConverstion = () => {
@@ -26,10 +27,17 @@ const StartConverstion = () => {
               <div className={con.chose_drop}>
                 <div className={con.chose_interst}>
                   Choose Interest <Image src={downArrow} />
-              
                 </div>
-                {/*<div className={con.chose_toggle}></div>*/}
-               
+           {/*<div className="relative">
+           <div className={con.chose_toggle}>
+                  <div className={con.togle_heading}>
+                    <div>Followed Interests</div>
+                    <div className="cursor-pointer">
+                      <Image src={closeIcon} />
+                    </div>
+                  </div>
+                </div>
+           </div>*/}
               </div>
             </div>
             <div className={con.text_area}>

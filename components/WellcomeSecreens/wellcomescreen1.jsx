@@ -9,6 +9,7 @@ import SetUpProfileView from "../WellcomeSecreens/setUpProfileView";
 import TellUsView from "../WellcomeSecreens/tellUsScreen";
 import FollowYourDesired from "../WellcomeSecreens/followYourDesired";
 import StartConverstion from "../WellcomeSecreens/startConverstion";
+import Link from "next/link";
 
 const WellcomeScreen1 = () => {
   const [activeView, setActiveView] = useState(1);
@@ -106,9 +107,10 @@ const WellcomeScreen1 = () => {
                     )}
 
                     {activeView === 5 ? (
-                      <div className={well1.take_home_btn}>
+                     <Link href="/">
+                       <div className={well1.take_home_btn}>
                         Take me to homepage
-                      </div>
+                      </div></Link>
                     ) : (
                       <div
                         className={well1.sec1_show_around_btn}

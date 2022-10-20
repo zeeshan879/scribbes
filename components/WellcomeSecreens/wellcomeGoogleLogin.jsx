@@ -3,6 +3,7 @@ import Header from "../Header";
 import well from "../../Asstes/style/wellSecGooglelogin.module.css";
 import Scribbes from "../../Asstes/Images/Scribbes.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const WellcomeGoogleLogin = () => {
   return (
@@ -23,7 +24,8 @@ const WellcomeGoogleLogin = () => {
                   placeholder="Your Scribbes username"
                 />
               </div>
-              <div className={well.card_continue_btn}>Continue</div>
+              <Link href="/wellcomescreen">
+              <div className={well.card_continue_btn}>Continue</div></Link>
             </div>
           </div>
         </div>

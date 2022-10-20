@@ -1,14 +1,15 @@
 .login_main{
 	width: 100%;
 	background-color: #F8F8F8;
-	height: 960px;
+	min-height: 100vh;
 	position: relative;
 }
 .scribe_logo{
 	position: absolute;
 	display: flex;
 	bottom: 0;
-	
+	left: 0;
+	right: 0;
 	justify-content: center;
 	align-items: center;
 	padding: 0px 79px;
