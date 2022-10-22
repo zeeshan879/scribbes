@@ -1,0 +1,121 @@
+.mbl_post_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #1CAC19;
+	height: 40px;
+	width: 100px;
+	font-size: 18px;
+	border-radius: 31px;
+	color: white;
+  }
+  .mobile_share_post_modal_header{
+	display: flex;
+  font-size: 20px;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+  
+  font-family: "DM Sans", sans-serif;
+}
+.mbl_media_wrap{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px 0px 20px;
+	
+}
+.media_item{
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #BCBCBC;
+box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.07);
+
+}
+.media_inner_box{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.share_thoughts_wraper{
+	max-width: 350px;
+margin: auto;
+	border-radius: 31px;
+	height: 150px;
+	background-color: white;
+	box-shadow: 0 3px 21px 0px rgba(0, 0, 0, 10%);
+}
+.share_thougts_box{
+	width: 300px;
+	font-size: 12px;
+	
+}
+.mbl_share_thougts{
+	border: none;
+	outline: none;
+	width: 100%;
+	margin-top: 5px;
+	height: 100%;
+	font-size: 14px;
+	color: #BCBCBC;
+}
+.seprator{
+	width: 100%;
+	
+	border: 1px solid #BCBCBC;
+}
+.share_thouts_ele{
+	display: flex;
+	gap: 20px;
+
+	padding: 20px 10px;
+	align-items: center;
+}
+@media screen and (max-width:550px){
+
+
+	.bottom_mobile_menu_container{
+	  position: fixed;
+	  bottom: 0;
+	  right: 0;
+	  left: 0;
+	}
+	.bottom_mobile_menu_box{
+	  height: 55px;
+	  width: 100%;
+	  background-color: white;
+  
+  
+	  display: flex;
+	  font-size: 25px;
+	  align-items: center;
+	  padding: 0px 20px;
+	  box-shadow: 7px 7px 21px 10px rgba(0, 0, 0, 10%);
+	  justify-content: space-between;
+  
+	  border-top: 1px solid #BCBCBC;
+	 
+	}
+	.mbl_create_post{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  height: 55px;
+	  width: 55px;
+	  color: white;
+	  font-size: 30px;
+	  background-color: #1CAC19;
+	  border-radius: 50%;
+	}
+	.mbl_create_post_wrap{
+	  display: flex;
+	  padding: 20px 20px;
+	  justify-content: flex-end;
+	  align-items: center;
+	}
+
+  }

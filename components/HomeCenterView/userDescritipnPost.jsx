@@ -29,13 +29,15 @@ const UserDescritipnPost = () => {
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+              <div className={HomCen.post_profile}>
                 <Image src={profile} />
               </div>
-              <div className={HomCen.des_post_userName}>Tom Brady</div>
+     <div className={HomCen.post_des_box}>
+     <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
               <div className={HomCen.desc_follow_btn}>+ Follow</div>
+     </div>
             </div>
             <div className={HomCen.des_post_box}>
               <div>
@@ -65,13 +67,15 @@ const UserDescritipnPost = () => {
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={postP} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
               <div className={HomCen.desc_follow_btn}>+ Follow</div>
+              </div>
             </div>
             <div className={HomCen.des_post_box}>
               <div>
@@ -79,10 +83,10 @@ const UserDescritipnPost = () => {
                   How to get started with NFT’s?
                 </div>
                 <div className={HomCen.post_imagge}>
-                  <Image src={pikacho} width="477px" height="270px" />
+                  <Image src={pikacho}  />
                 </div>
               </div>
-              <div>
+              <div className={HomCen.img_noti_wrap}>
                 <PostNotification />
               </div>
             </div>
@@ -97,12 +101,14 @@ const UserDescritipnPost = () => {
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={profile} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
+              </div>
        
             </div>
             <div className={HomCen.des_post_box}>
@@ -133,13 +139,15 @@ const UserDescritipnPost = () => {
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={postP} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
               <div className={HomCen.desc_follow_btn}>+ Follow</div>
+              </div>
             </div>
             <div className={HomCen.des_post_box}>
               <div>
@@ -165,12 +173,14 @@ const UserDescritipnPost = () => {
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={vPost} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>John Doe</div>
               <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
               <div className={HomCen.des_post_time}>2d</div>
+              </div>
           
             </div>
             <div className={HomCen.des_post_box}>
@@ -204,12 +214,14 @@ with video looks like. #video #tech
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={vPost} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>John Doe</div>
               <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
               <div className={HomCen.des_post_time}>2d</div>
+              </div>
           
             </div>
             <div className={HomCen.des_post_box}>
@@ -243,12 +255,14 @@ with video looks like. #video #tech
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={profile} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>John Doe</div>
               <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
+              </div>
           
             </div>
             <div className={HomCen.des_post_box}>
@@ -282,12 +296,14 @@ with video looks like. #video #tech
           </div>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
-              <div>
+            <div className={HomCen.post_profile}>
                 <Image src={postP} />
               </div>
+              <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>John Doe</div>
               <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
               <div className={HomCen.des_post_time}>Today at 1:30 PM</div>
+              </div>
           
             </div>
             <div className={HomCen.des_post_box}>

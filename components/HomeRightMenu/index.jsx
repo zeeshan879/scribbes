@@ -48,7 +48,7 @@ const HomeRightmenu = () => {
                   <div className={rbar.trending_tile_wrap}>
                     <div className={rbar.trendinf_tile_info}>
                       <div>
-                        <Image src={data.icon} />
+                        <Image src={data.icon} className={rbar.trending_images} />
                       </div>
                       <div>
                         <div className={rbar._trending_tile_head}>
