@@ -1,0 +1,48 @@
+.main_container{
+
+height: 421px;
+
+border-radius: 30px !important;
+
+}
+.modal_header{
+	display: flex;
+	padding: 18px 10px 0px 27px;
+	gap: 18px;
+}
+.modal_heading{
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 28px;
+	font-family: 'Space Grotesk', sans-serif;
+	color: black;
+}
+.social_media_wrap{
+	padding: 43px 50px 40px 50px;
+}
+.header_text{
+	font-size: 16px;
+	font-weight: 400;
+	color: #BCBCBC;
+	font-family: 'DM Sans', sans-serif;
+	padding: 0px 10px 0px 75px;
+}
+.seprator{
+	border: 2px solid #BCBCBC;
+	margin-top: 26px;
+	width: 100%;
+}
+.meta_container{
+	display: flex;
+	padding-top: 50px;
+	justify-content: space-between;
+}
+@media screen and (max-width:768px){
+	.social_media_wrap{
+		padding: 43px 20px 40px 20px;
+	}
+	.media_box{
+		height: 50px;
+		width: 50px;
+	}
+}

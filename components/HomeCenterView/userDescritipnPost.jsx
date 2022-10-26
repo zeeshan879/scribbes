@@ -15,6 +15,7 @@ import timg from "../../Asstes/Images/timg.png";
 import timage1 from "../../Asstes/Images/timage1.png";
 import timage2 from "../../Asstes/Images/timage2.png";
 import PostNotification from "../HomeCenterView/postNotification";
+import PostOption from "../HomeCenterView/postOption"
 
 const UserDescritipnPost = () => {
   return (
@@ -24,7 +25,7 @@ const UserDescritipnPost = () => {
         <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+      <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -62,7 +63,7 @@ const UserDescritipnPost = () => {
         <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -96,7 +97,7 @@ const UserDescritipnPost = () => {
 			  <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -134,7 +135,7 @@ const UserDescritipnPost = () => {
 			 <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -168,7 +169,7 @@ const UserDescritipnPost = () => {
 					 <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -209,7 +210,7 @@ with video looks like. #video #tech
 							 <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -250,7 +251,7 @@ with video looks like. #video #tech
 									 <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>
@@ -291,7 +292,7 @@ with video looks like. #video #tech
 <div className={HomCen.description_post_wrap}>
           <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-              <Image src={postAction} />
+            <PostOption/>
             </div>
           </div>
           <div className={HomCen.desc_pots_wrap}>

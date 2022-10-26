@@ -11,12 +11,22 @@ import Image from "next/image";
 import PostNotification from "../HomeCenterView/postNotification";
 import HomeTabsSection from "../HomeCenterView/HomeTabsSection";
 import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
+import   PostOption from "../HomeCenterView/postOption"
 import { useState } from "react";
+import CreatepostModal from "../CreatePostModal"
+import UserProfile from "../HomeCenterView/userProfile"
 const HomeCenterView = () => {
   const [activeTag, setActiveTag] = useState(1);
+  const [lgShow, setLgShow] = useState(false);
+  function onClick() {
+
+    setLgShow(!lgShow);
+    console.log("parent true",lgShow)
+  }
   return (
     <>
       <div className={HomCen.main_container}>
+        {/*<UserProfile/>*/}
         <div className={HomCen.share_thoughts_wrap}>
           <div className={HomCen.share_thoughts_box}>
             <div className={HomCen.share_thoughts_ele_wrap}>
@@ -67,7 +77,7 @@ const HomeCenterView = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[39px] w-[100px] 2xl:w-[144px] rounded-[41px] flex justify-center cursor-pointer items-center bg-action text-white">
+              <div className="h-[39px] w-[100px] 2xl:w-[144px] rounded-[41px] flex justify-center cursor-pointer items-center bg-action text-white" onClick={onClick}>
                 Post
               </div>
             </div>
@@ -78,7 +88,7 @@ const HomeCenterView = () => {
           <div className={HomCen.text_post_wraper}>
             <div className={HomCen.post_action}>
               <div className={HomCen.post_action_icon}>
-                <Image src={postAction} />
+    <PostOption/>
               </div>
             </div>
             <div className={HomCen.only_text_pots}>
@@ -114,6 +124,9 @@ const HomeCenterView = () => {
             <UserDescritipnPost />
           </div>
         </div>
+      </div>
+      <div>
+        <CreatepostModal state={lgShow} onClick={onClick} />
       </div>
     </>
   );

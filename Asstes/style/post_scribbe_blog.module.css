@@ -1,0 +1,45 @@
+.wraper{
+	width: 125px;
+	height: 38px;
+	display: flex;
+	padding: 3px 01px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 41px;
+	border: 2px solid #1CAC19;
+}
+.active_btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 31px;
+	font-size: 12px;
+	border-radius: 41px;
+	font-weight: 400;
+	font-family: "DM Sans", sans-serif;
+	cursor: pointer;
+	background-color: #1CAC19;
+	color: white;
+	width: 68px;
+}
+.non_active_btn1{
+
+padding-left: 9px;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: "DM Sans", sans-serif;
+	cursor: pointer;
+color: #1CAC19;
+	
+}
+
+.non_active_btn2{
+
+padding-right: 9px;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: "DM Sans", sans-serif;
+	cursor: pointer;
+color: #1CAC19;
+	
+}

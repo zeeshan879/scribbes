@@ -9,8 +9,31 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-
+.fade{
+  padding-left: 0px !important;
+}
+.show{
+  padding-left: 0px !important;
+}
+ .modal{
+  padding-left: 0px !important;
+}
+.rounded-checkbox {
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #1CAC19;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.rounded-checkbox:checked {
+  appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: #1CAC19 !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -20,4 +43,10 @@ a {
     color: white;
     background: black;
   }
+}
+.post_action_modal .modal-content{
+border-radius: 30px !important;
+}
+.post_share_modal .modal-content{
+border-radius: 30px !important;
 }

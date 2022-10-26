@@ -3,9 +3,12 @@ import HomCen from "../../Asstes/style/home_centerView.module.css";
 import arrowDown from "../../Asstes/Images/arrowDown.png";
 import Image from "next/image";
 
+
 const HomeTabsSection = () => {
   const [active, setActive] = useState(2);
   const [toggle, setToggle] = useState(false);
+
+  
   return (
     <>
       <div className={HomCen.tabs_wrap}>
@@ -43,6 +46,7 @@ const HomeTabsSection = () => {
             </div>}
         </div>
       </div>
+  
     </>
   );
 };

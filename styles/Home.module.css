@@ -1,7 +1,7 @@
 .main_container{
   max-width: 1880px;
 
-
+margin: auto;
 min-height: 100vh;
   display: flex;
   flex-direction: column;

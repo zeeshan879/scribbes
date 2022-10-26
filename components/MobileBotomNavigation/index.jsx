@@ -68,44 +68,44 @@ const MobileBottomNavigation = () => {
                 ></textarea>
               </div>
             </div>
-	<div className="px-3">
-	<div className={bn.seprator}></div>
-	</div>
-	<div className={bn.mbl_media_wrap}>
-		<div className={bn.media_inner_box}>
-<div className={bn.media_item}>
-<Image src={imgV} width="15px" height="15px" />
-</div>
-<div className={bn.media_item}>
-<Image src={LinkV} width="15px" height="15px" />
-</div>
-<div className={bn.media_item}>
-<Image src={gifV} width="15px" height="15px" />
-</div>
-		</div>
-		<div className={HomCen.share_scribe_box}>
-                  <div
-                    className={
-                      activeTag === 1
-                        ? HomCen.share_tag_active
-                        : HomCen.share_tag_non_active
-                    }
-                    onClick={() => setActiveTag(1)}
-                  >
-                    Scribbe
-                  </div>
-                  <div
-                    className={
-                      activeTag === 2
-                        ? HomCen.share_tag_active
-                        : HomCen.share_tag_non_active
-                    }
-                    onClick={() => setActiveTag(2)}
-                  >
-                    Blog
-                  </div>
+            <div className="px-3">
+              <div className={bn.seprator}></div>
+            </div>
+            <div className={bn.mbl_media_wrap}>
+              <div className={bn.media_inner_box}>
+                <div className={bn.media_item}>
+                  <Image src={imgV} width="15px" height="15px" />
                 </div>
-	</div>
+                <div className={bn.media_item}>
+                  <Image src={LinkV} width="15px" height="15px" />
+                </div>
+                <div className={bn.media_item}>
+                  <Image src={gifV} width="15px" height="15px" />
+                </div>
+              </div>
+              <div className={HomCen.share_scribe_box}>
+                <div
+                  className={
+                    activeTag === 1
+                      ? HomCen.share_tag_active
+                      : HomCen.share_tag_non_active
+                  }
+                  onClick={() => setActiveTag(1)}
+                >
+                  Scribbe
+                </div>
+                <div
+                  className={
+                    activeTag === 2
+                      ? HomCen.share_tag_active
+                      : HomCen.share_tag_non_active
+                  }
+                  onClick={() => setActiveTag(2)}
+                >
+                  Blog
+                </div>
+              </div>
+            </div>
           </div>
         </Modal.Body>
       </Modal>

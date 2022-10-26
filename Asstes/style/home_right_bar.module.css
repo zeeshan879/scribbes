@@ -6,6 +6,9 @@ border: 2px solid #BCBCBC;
 }
 .right_bar_wrap{
 	padding: 31px 29px 0px 23px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
 .trending_heading{
 	height: 52px;
