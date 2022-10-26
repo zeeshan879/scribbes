@@ -44,7 +44,7 @@ const HomeCommentPostView = () => {
               <Image src={vPost} />
             </div>
             <div>
-              <div className="flex text-[#000580] gap-[4px] font-DM font-bold text-[16px]">
+              <div className="flex text-[#000580] gap-[4px] font-DM font-bold text-[14px] mdtext-[16px]">
                 Mike Someone
                 <span className="text-[#BCBCBC]">@Johndoe . 2h ago</span>
               </div>

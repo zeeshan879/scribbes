@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <>
       <div className={Home.main_container}>
-        {/*<NavBar />*/}
+        <NavBar />
         <div className="flex h-full    justify-between w-[100%]">
           <div className={Home.left_menu}>
             <HomeLeftMenu />

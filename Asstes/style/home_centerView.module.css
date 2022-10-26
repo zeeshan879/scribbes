@@ -1186,7 +1186,8 @@ gap: 26px;
   }
   .post_comments_container {
     width: 100%;
-    padding: 20px 20px 0px 20px;
+    
+    padding: 20px 20px 50px 20px;
   }
   .post_comment_desc{
     max-width: 850px;
