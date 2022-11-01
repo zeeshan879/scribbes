@@ -1,4 +1,3 @@
-
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
 import pa from "../../Asstes/style/postAction.module.css";
@@ -28,7 +27,8 @@ export default function TextEditor({
           "& .ql-container.ql-snow": {
             overflow: "hidden",
             overflowY: "auto",
-			borderRadius: "16pxpx 16px 16px 16px",
+            
+            borderRadius: "16pxpx 16px 16px 16px",
             minHeight: "200px",
             maxHeight: "300px",
           },
@@ -36,7 +36,7 @@ export default function TextEditor({
           "& .ql-editor.ql-blank::before": {
             fontStyle: "normal",
             fontSize: "12px",
-			minHeight: "200px",
+            minHeight: "200px",
             maxHeight: "300px",
           },
         },
@@ -45,7 +45,7 @@ export default function TextEditor({
       <ReactQuill
         value={value}
         onChange={(e) => onChange(e)}
-        placeholder={placeholder}
+        placeholder={"Start writing your blog"}
         modules={modules}
         preserveWhitespace={true}
       />
@@ -59,16 +59,12 @@ export default function TextEditor({
  */
 const modules = {
   toolbar: [
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
-    ["bold", "italic", "underline", "strike"],
-    [{ list: "ordered" }, { list: "bullet" }],
-    [
-      { align: "" },
-      { align: "center" },
-      { align: "right" },
-      { align: "justify" },
-    ],
-    ["link"],
+ 
+
+    [{ bold: "B" },{ italic: "I" },{ underline: "u" }],
+    ['image']
+  
+
   ],
   clipboard: {
     // toggle to add extra line breaks when pasting HTML:

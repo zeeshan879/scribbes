@@ -12,7 +12,32 @@ font-weight: 700;
 gap: 18px;
 
   border-bottom: 2px solid #bcbcbc;
-  height: 110px;
+  /*height: 110px;*/
+}
+.userOpt_togle_items{
+  width: 100%;
+  height: 38px;
+  padding-left: 18px;
+  display: flex;
+  font-size: 16px;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+align-items: center;
+gap: 12px;
+}
+.userOpt_togle_items:hover{
+  width: 100%;
+  height: 38px;
+  padding-left: 18px;
+  display: flex;
+  font-size: 16px;
+  background-color: #D9D9D9;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+align-items: center;
+gap: 12px;
 }
 .main_container {
   width: 100%;
@@ -24,6 +49,14 @@ gap: 18px;
   padding-left: 17px;
   padding-right: 17px;
   border-bottom: 2px solid #bcbcbc;
+}
+.user_Profile_wrap{
+  margin-top: 41px;
+  margin-bottom: 29px;
+  padding-left: 31px;
+  padding-right: 30px;
+  border-bottom: 2px solid #bcbcbc;
+
 }
 .coment_post_btn{
   display: flex;
@@ -71,6 +104,149 @@ border-radius: 41px;
   border-radius: 30px;
   background-color: white;
   box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 7%);
+}
+.user_profile_cotent{
+width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.user_profile_name{
+  display: flex;
+  gap: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000580;
+  font-family: "DM Sans", sans-serif;
+  align-items: center;
+
+}
+.user_pro_email{
+  display: flex;
+  gap: 8px;
+  margin-top: -5px;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  align-items: center;
+}
+.userProfile_action_box{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.userProfile_dec{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  margin-top: 26px;
+  font-family: 'Space Grotesk', sans-serif;
+  max-width: 486px;
+
+}
+.userProfile_f_items{
+  display: flex;
+  gap:5px ;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  color: black;
+
+}
+.userProfile_folowers{
+  display: flex;
+  padding-top: 13px;
+  align-items: center;
+  gap: 20px;
+}
+.userProfile_location{
+  display: flex;
+  margin-top: 12px;
+  gap: 17px;
+  align-items: center;
+}
+.user_p_follow_btn{
+  display: flex;
+  align-items: center;
+  width: 162px;
+  height: 52px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  border-radius: 41px;
+  background-color: #1CAC19;
+  cursor: pointer;
+  justify-content: center;
+
+}
+.user_p_following_btn{
+  display: flex;
+  align-items: center;
+  width: 162px;
+  height: 52px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 41px;
+  background-color: white;
+  border: 2px solid #1CAC19;
+  color: #1CAC19;
+  cursor: pointer;
+  justify-content: center;
+
+}
+.userP_opt_toggle{
+  position: absolute;
+  width: 256px;
+  z-index: 5;
+  top: 20px;
+  padding: 32px 0px;
+  right: 10px;
+  height: 226px;
+  border-radius: 10px;
+  background: #FFFFFF;
+border: 0.3px solid #BCBCBC;
+box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+
+}
+.user_profile_option{
+  height: 42px;
+  width: 42px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #1CAC19;
+}
+.user_p_folow{
+  width: 99px;
+  height: 20px;
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: #000580;
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 41px;
+
+}
+.user_pro_email{
+
+}
+.user_profile_box{
+  width: 972px;
+  height: 353px;
+  display: flex;
+ gap: 32px;
+  background: #FFFFFF;
+box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.05);
+border-radius: 27px;
+margin-bottom: 29px;
+padding: 30px 47px 17px 26px;
 }
 .post_comment_box {
   width: 999px;

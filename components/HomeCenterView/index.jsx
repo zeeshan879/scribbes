@@ -14,7 +14,7 @@ import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
 import   PostOption from "../HomeCenterView/postOption"
 import { useState } from "react";
 import CreatepostModal from "../CreatePostModal"
-import UserProfile from "../HomeCenterView/userProfile"
+import UserProfile from "./userProfileView"
 const HomeCenterView = () => {
   const [activeTag, setActiveTag] = useState(1);
   const [lgShow, setLgShow] = useState(false);

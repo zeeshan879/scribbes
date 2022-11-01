@@ -50,3 +50,15 @@ border-radius: 30px !important;
 .post_share_modal .modal-content{
 border-radius: 30px !important;
 }
+.userblock .modal-content{
+  border-radius: 27px;
+  height: 564px !important;
+  /*width: 553px !important;*/
+  padding: 74px 79px;
+}
+.ql-toolbar.ql-snow { border: none !important;}
+.ql-container .ql-snow{
+  height: 255px !important;
+  border-radius: 16px !important;
+  border: 0px;
+}

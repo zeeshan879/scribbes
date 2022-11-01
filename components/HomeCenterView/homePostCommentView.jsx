@@ -14,7 +14,7 @@ import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
 import PostOption from "../HomeCenterView/postOption";
 import { useState } from "react";
 import CreatepostModal from "../CreatePostModal";
-import UserProfile from "../HomeCenterView/userProfile";
+import UserProfile from "./userProfileView";
 import CommentPost from "../CommentPost";
 import { BsArrowLeft } from "react-icons/bs";
 import coomentP from "../../Asstes/Images/coomentP.png";
@@ -44,7 +44,7 @@ const HomeCommentPostView = () => {
               <Image src={vPost} />
             </div>
             <div>
-              <div className="flex text-[#000580] gap-[4px] font-DM font-bold text-[14px] mdtext-[16px]">
+              <div className="flex text-[#000580] gap-[4px] font-DM font-normal md:font-bold text-[14px] mdtext-[16px]">
                 Mike Someone
                 <span className="text-[#BCBCBC]">@Johndoe . 2h ago</span>
               </div>
