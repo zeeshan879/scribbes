@@ -11,25 +11,42 @@ import { AiOutlineLink } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";
 import psm from "../../Asstes/style/post_share_modal.module.css";
 import { BsArrowLeftShort } from "react-icons/bs";
-import saveVedio from "../../Asstes/Images/saveVedio.png"
-import face from "../../Asstes/Images/face.png"
-import messanger from "../../Asstes/Images/messanger.png"
-import tt from "../../Asstes/Images/tt.png"
-import instaM from "../../Asstes/Images/instaM.png"
-import whatsapp from "../../Asstes/Images/whatsapp.png"
+import saveVedio from "../../Asstes/Images/saveVedio.png";
+import face from "../../Asstes/Images/face.png";
+import messanger from "../../Asstes/Images/messanger.png";
+import tt from "../../Asstes/Images/tt.png";
+import instaM from "../../Asstes/Images/instaM.png";
+import whatsapp from "../../Asstes/Images/whatsapp.png";
+import { IoIosArrowUp } from "react-icons/io";
 
 const PostNotification = () => {
   const [shareactive, setSahreActive] = useState(false);
   const [show, setShow] = useState(false);
-
+  const [like, setLike] = useState(10);
+  const [isLike, setIsLike] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleLike = () => {
+    if (isLike == false) {
+      setLike(like + 1);
+    } else {
+      setLike(like - 1);
+      setIsLike(false);
+      return;
+    }
+    setIsLike(true);
+  };
+
   return (
     <>
       <div className={HomCen.post_noti_wrap}>
-        <div className={HomCen.noti_box}>
-          <Image src={arrowUp} />
-          <div>10</div>
+        <div
+          className={isLike == true ? HomCen.noti_box_clicked : HomCen.noti_box}
+          onClick={() => handleLike()}
+        >
+          <IoIosArrowUp className="text-2xl" />
+          <div className={HomCen.like_counter}>{like}</div>
         </div>
         <div className={HomCen.noti_box}>
           <Image src={comnt} />
@@ -71,7 +88,12 @@ const PostNotification = () => {
       </div>
       {/*<===========share modal=======>*/}
 
-    <Modal className="post_share_modal" show={show} onHide={handleClose} centered>
+      <Modal
+        className="post_share_modal"
+        show={show}
+        onHide={handleClose}
+        centered
+      >
         <div className={psm.main_container}>
           <div className={psm.modal_header}>
             <div
@@ -110,10 +132,6 @@ const PostNotification = () => {
           </div>
         </div>
       </Modal>
-
-  
-
-
     </>
   );
 };

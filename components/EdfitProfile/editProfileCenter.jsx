@@ -1,18 +1,19 @@
 import React from "react";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 import { BsArrowLeft } from "react-icons/bs";
-import UserDescritipnPost from "./userDescritipnPost";
+import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
 import { useState } from "react";
 import CreatepostModal from "../CreatePostModal";
 import UserProfileSection2 from "../UserProfile/userProfileSection";
 import BlogPost from "../HomeCenterView/blogPost";
-const UserProfileView = () => {
+import EditProfileModal from "./editProfileModal";
+
+const EditProfilecenter = () => {
   const [activeTag, setActiveTag] = useState(1);
   const [lgShow, setLgShow] = useState(false);
 
   function onClick() {
     setLgShow(!lgShow);
-    console.log("parent true", lgShow);
   }
   return (
     <>
@@ -27,21 +28,18 @@ const UserProfileView = () => {
             145 Posts
           </div>
         </div>
-        <UserProfileSection2 />
-        <div className={HomCen.post_wraper}>
+        <UserProfileSection2 state={true} />
+        <div className={HomCen.edit_profile_post_wraper}>
           <div className={HomCen.text_post_wraper}>
             <BlogPost />
           </div>
           <div>
-            <UserDescritipnPost  check={false} />
+            <UserDescritipnPost check={false} />
           </div>
         </div>
-      </div>
-      <div>
-        <CreatepostModal state={lgShow} onClick={onClick} />
       </div>
     </>
   );
 };
 
-export default UserProfileView;
+export default EditProfilecenter;

@@ -18,7 +18,8 @@
     "react-dom": "18.2.0",
     "react-draft-wysiwyg": "^1.15.0",
     "react-icons": "^4.6.0",
-    "react-quill": "^2.0.0"
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",

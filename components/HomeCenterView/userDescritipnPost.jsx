@@ -16,23 +16,26 @@ import timage1 from "../../Asstes/Images/timage1.png";
 import timage2 from "../../Asstes/Images/timage2.png";
 import PostNotification from "../HomeCenterView/postNotification";
 import PostOption from "../HomeCenterView/postOption"
+import Link from "next/link";
 
-const UserDescritipnPost = () => {
+const UserDescritipnPost = (props) => {
   return (
     <>
       <div className={HomCen.post_type_container}>
         {/*<======== Post Type => description=======>*/}
         <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+ { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
       <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
+            <Link href="/user-profile">
               <div className={HomCen.post_profile}>
                 <Image src={profile} />
               </div>
+              </Link>
      <div className={HomCen.post_des_box}>
      <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
@@ -61,16 +64,18 @@ const UserDescritipnPost = () => {
         </div>
         {/*<======== Post Type => Image=======>*/}
         <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+        { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
+            <Link href="/user-profile">
             <div className={HomCen.post_profile}>
                 <Image src={postP} />
               </div>
+              </Link>
               <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
@@ -95,16 +100,18 @@ const UserDescritipnPost = () => {
         </div>
 		      {/*<======== Post Type => description=======>*/}
 			  <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+        { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
+            <Link href="/user-profile">
             <div className={HomCen.post_profile}>
                 <Image src={profile} />
               </div>
+              </Link>
               <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
@@ -133,16 +140,18 @@ const UserDescritipnPost = () => {
         </div>
 		     {/*<======== Post Type => Image=======>*/}
 			 <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+       { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
+            <Link href="/user-profile">
             <div className={HomCen.post_profile}>
                 <Image src={postP} />
               </div>
+              </Link>
               <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>Tom Brady</div>
               <div className={HomCen.des_post_userEmal}>@tombrady</div>
@@ -167,16 +176,18 @@ const UserDescritipnPost = () => {
         </div>
 				     {/*<======== Post Type => Vedio=======>*/}
 					 <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+           { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
+            <Link href="/user-profile">
             <div className={HomCen.post_profile}>
                 <Image src={vPost} />
               </div>
+              </Link>
               <div className={HomCen.post_des_box}>
               <div className={HomCen.des_post_userName}>John Doe</div>
               <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
@@ -208,11 +219,11 @@ with video looks like. #video #tech
         </div>
 						     {/*<======== Post Type => Vedio cake=======>*/}
 							 <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+               { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
             <div className={HomCen.post_profile}>
@@ -249,11 +260,11 @@ with video looks like. #video #tech
         </div>
 								     {/*<======== Post Type => card=======>*/}
 									 <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+                   { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
             <div className={HomCen.post_profile}>
@@ -290,11 +301,11 @@ with video looks like. #video #tech
         </div>
 										     {/*<======== Post Type => multi image=======>*/}
 <div className={HomCen.description_post_wrap}>
-          <div className={HomCen.post_action}>
+{ props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
-            <PostOption/>
+      <PostOption/>
             </div>
-          </div>
+          </div>}
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>
             <div className={HomCen.post_profile}>

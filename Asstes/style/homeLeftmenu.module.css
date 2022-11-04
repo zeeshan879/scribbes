@@ -115,14 +115,39 @@ align-items: center;
 	flex-direction: column;
 	gap: 36px;
 }
+.menu_opt_wrap_active{
+display: flex;
+align-items: center;
+gap: 14px;
+font-size: 24px;
+color: #1cac19 ;
+font-weight: 700;
+cursor: pointer;
+}
 .menu_opt_wrap{
 display: flex;
 align-items: center;
 gap: 14px;
+font-size: 24px;
+color: black ;
+font-weight: 700;
+cursor: pointer;
 }
 .menu_item_active{
 	font-size: 24px;
 	color: #1cac19;
+	font-weight: 700;
+	cursor: pointer;
+}
+.menu_icon_active{
+  font-size: 24px;
+	color: #1cac19 !important;
+	font-weight: 700;
+	cursor: pointer;
+}
+.menu_icon{
+  font-size: 24px;
+	color: black!important;
 	font-weight: 700;
 	cursor: pointer;
 }
@@ -281,6 +306,15 @@ gap: 14px;
     padding: 10px 0px 0px 20px;
     align-items: center;
   }
+  .menu_opt_wrap{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 20px;
+    color: black ;
+    font-weight: 700;
+    cursor: pointer;
+    }
   .logout{
     display: flex;
     align-items: center;
@@ -397,6 +431,15 @@ gap: 14px;
   box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
   
   }
+  .menu_opt_wrap_active{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 20px;
+    color: #1cac19 ;
+    font-weight: 700;
+    cursor: pointer;
+    }
 }
 @media screen and (max-width:768px){
   .post_btn{

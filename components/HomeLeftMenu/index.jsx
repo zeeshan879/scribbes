@@ -15,13 +15,24 @@ import addUser from "../../Asstes/Images/addUser.png";
 import logout from "../../Asstes/Images/logout.png";
 import Image from "next/image";
 import CreatepostModal from "../CreatePostModal";
+import { RiHomeLine } from "react-icons/ri";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { AiOutlineFire } from "react-icons/ai";
+import { GrNotification } from "react-icons/gr";
+import { MdOutlineExplore } from "react-icons/md";
+import { HiOutlineUser } from "react-icons/hi";
+import { RiSendPlane2Line } from "react-icons/ri";
+import { FiSettings } from "react-icons/fi";
+import { RiNotification4Line } from "react-icons/ri";
+import Link from 'next/link'
 
 const HomeLeftMenu = () => {
   const [lgShow, setLgShow] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
+  const [active, setActive] = useState(1);
+
   function onClick() {
     setLgShow(!lgShow);
-    console.log("parent true", lgShow);
   }
   return (
     <>
@@ -62,7 +73,7 @@ const HomeLeftMenu = () => {
                   <div>
                     <Image src={addUser} />
                   </div>
-         <div className="hidden md:block">Add an existing account</div>
+                  <div className="hidden md:block">Add an existing account</div>
                 </div>
                 <div className={lbar.logout_sep}></div>
                 <div className={lbar.logout}>
@@ -76,59 +87,123 @@ const HomeLeftMenu = () => {
           </div>
         </div>
         <div className={lbar.menu_content_wrap}>
-          <div className={lbar.menu_opt_wrap}>
+        <Link href="/">
+          <div
+            className={
+              active == 1 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(1)}
+          >
             <div>
-              <Image src={homeV} />
+              <RiHomeLine
+                className={active == 1 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item_active}>Home</div>
+            <div className="hidden md:block">Home</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          </Link>
+          <div
+            className={
+              active == 2 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(2)}
+          >
             <div>
-              <Image src={vedioV} />
+              <AiOutlinePlayCircle
+                className={active == 2 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Videos</div>
+            <div className="hidden md:block">Videos</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          <div
+            className={
+              active == 3 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(3)}
+          >
             <div>
               <Image src={com} />
             </div>
-            <div className={lbar.menu_item}>Communities</div>
+            <div className="hidden md:block">Communities</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          <div
+            className={
+              active == 4 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(4)}
+          >
             <div>
-              <Image src={fireV} />
+              <AiOutlineFire
+                className={active == 4 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Trending</div>
+            <div className="hidden md:block">Trending</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          <div
+            className={
+              active == 5 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(5)}
+          >
             <div>
-              <Image src={noti} />
+              <RiNotification4Line
+                className={active == 5 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Notifications</div>
+            <div className="hidden md:block">Notifications</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          <div
+            className={
+              active == 6 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(6)}
+          >
             <div>
-              <Image src={explor} />
+              <MdOutlineExplore
+                className={active == 6 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Explore</div>
+            <div className="hidden md:block">Explore</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+      <Link href="/edit-profile">
+           <div
+            className={
+              active == 7 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(7)}
+          >
             <div>
-              <Image src={userV} />
+              <HiOutlineUser
+                className={active == 7 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Profile</div>
+            <div className="hidden md:block">Profile</div>
+          </div></Link> 
+          <div
+            className={
+              active == 8 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(8)}
+          >
+            <div>
+              <RiSendPlane2Line
+                className={active == 8 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
+            </div>
+            <div className="hidden md:block">Messages</div>
           </div>
-          <div className={lbar.menu_opt_wrap}>
+          <div
+            className={
+              active == 9 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+            }
+            onClick={() => setActive(9)}
+          >
             <div>
-              <Image src={msgV} />
+              <FiSettings
+                className={active == 9 ? lbar.menu_icon_active : lbar.menu_icon}
+              />
             </div>
-            <div className={lbar.menu_item}>Messages</div>
-          </div>
-          <div className={lbar.menu_opt_wrap}>
-            <div>
-              <Image src={setV} />
-            </div>
-            <div className={lbar.menu_item}>Settings</div>
+            <div className="hidden md:block">Settings</div>
           </div>
         </div>
         <div className={lbar.post_btn_wrap} onClick={onClick}>
