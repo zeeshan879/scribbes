@@ -11,18 +11,17 @@ import Image from "next/image";
 import PostNotification from "../HomeCenterView/postNotification";
 import HomeTabsSection from "../HomeCenterView/HomeTabsSection";
 import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
-import   PostOption from "../HomeCenterView/postOption"
+import PostOption from "../HomeCenterView/postOption";
 import { useState } from "react";
-import CreatepostModal from "../CreatePostModal"
-import BlogPost from "../HomeCenterView/blogPost"
-import UserProfile from "./userProfileView"
+import CreatepostModal from "../CreatePostModal";
+import BlogPost from "../HomeCenterView/blogPost";
+import UserProfile from "./userProfileView";
 const HomeCenterView = () => {
   const [activeTag, setActiveTag] = useState(1);
   const [lgShow, setLgShow] = useState(false);
   function onClick() {
-
     setLgShow(!lgShow);
-    console.log("parent true",lgShow)
+    console.log("parent true", lgShow);
   }
   return (
     <>
@@ -78,7 +77,10 @@ const HomeCenterView = () => {
                   </div>
                 </div>
               </div>
-              <div className="h-[39px] w-[100px] 2xl:w-[144px] rounded-[41px] flex justify-center cursor-pointer items-center bg-action text-white" onClick={onClick}>
+              <div
+                className="h-[39px] w-[100px] 2xl:w-[144px] rounded-[41px] flex justify-center cursor-pointer items-center bg-action text-white"
+                onClick={onClick}
+              >
                 Post
               </div>
             </div>
@@ -89,14 +91,14 @@ const HomeCenterView = () => {
           <div className={HomCen.text_post_wraper}>
             <div className={HomCen.post_action}>
               <div className={HomCen.post_action_icon}>
-    <PostOption/>
+                <PostOption />
               </div>
             </div>
 
-            <BlogPost/>
+            <BlogPost />
           </div>
           <div>
-            <UserDescritipnPost  check={true} />
+            <UserDescritipnPost check={true} />
           </div>
         </div>
       </div>

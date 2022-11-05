@@ -7,7 +7,7 @@ import Image from "next/image";
 import uploadIcon from "../../Asstes/Images/uploadIcon.png";
 
 const EditProfileModal = (props) => {
-  console.log("edit profile modal", props);
+
 
   return (
     <>

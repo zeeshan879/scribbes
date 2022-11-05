@@ -3,7 +3,6 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 const UserMuteModal = (props) => {
-  console.log("userblock,", props);
   const [show, setShow] = useState(false);
 
   return (
