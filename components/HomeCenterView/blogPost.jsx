@@ -34,7 +34,7 @@ const BlogPost = () => {
           </div>
         </div>
         <div>
-          <PostNotification />
+          <PostNotification showValue={true} />
         </div>
       </div>
     </>

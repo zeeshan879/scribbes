@@ -1,0 +1,35 @@
+.main_container {
+  width: 100%;
+  position: relative;
+}
+.bottom_img {
+  position: fixed;
+  bottom: 0;
+right: 0;
+width: 49%;
+z-index: 1;
+}
+.inner_content{
+	min-height: 100vh;
+	width: 100%;
+	flex-direction: column;
+	display: flex;
+	padding-left: 195px;
+	align-items: flex-start;
+	justify-content: center;
+
+}
+.select_chat{
+	font-size: 30px;
+	color: black;
+	font-weight: 700;
+	font-family: "Space Grotesk", sans-serif;
+}
+.text{
+	max-width: 734px;
+	font-size: 30px;
+	color: #BCBCBC;
+	line-height: 39px;
+	font-family: "DM Sans", sans-serif;
+	font-weight: 400;
+}

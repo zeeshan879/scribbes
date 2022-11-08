@@ -8,7 +8,17 @@ min-height: 100vh;
   justify-content: center;
   background-color: #f8f8f8;
 }
+.centerView{
+  width: 100%;
+  
+}
 
+.Message_center{
+  width: 630px;
+}
+.message_right{
+  width: 100%;
+}
 
 
 @media screen and (max-width:1600px){

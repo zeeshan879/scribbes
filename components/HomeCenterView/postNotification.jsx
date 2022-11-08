@@ -21,7 +21,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
-const PostNotification = () => {
+const PostNotification = (props) => {
   const [shareactive, setSahreActive] = useState(false);
   const [show, setShow] = useState(false);
   const [like, setLike] = useState(10);
@@ -47,8 +47,7 @@ const PostNotification = () => {
     // Update the document title using the browser API
     if (activePageTab === 3) {
       setIsLike(true);
-    }
-    else{
+    } else {
       setIsLike(false);
     }
   }, [activePageTab]);
@@ -61,11 +60,11 @@ const PostNotification = () => {
           onClick={() => handleLike()}
         >
           <IoIosArrowUp className="text-2xl" />
-          <div className={HomCen.like_counter}>{like}</div>
+          <div className={HomCen.like_counter}> {props.showValue && like}</div>
         </div>
         <div className={HomCen.noti_box}>
           <Image src={comnt} />
-          <div>56</div>
+          <div className={HomCen.like_counter2}> {props.showValue && 56}</div>
         </div>
         {activePageTab != 3 ? (
           <div
@@ -73,7 +72,7 @@ const PostNotification = () => {
             onClick={() => setSahreActive(!shareactive)}
           >
             <Image src={share} />
-            <div>56</div>
+            <div className={HomCen.like_counter2}> {props.showValue && 56}</div>
             {shareactive && (
               <div className={HomCen.share_post_toggle}>
                 <div className={HomCen.share_toggle_container}>

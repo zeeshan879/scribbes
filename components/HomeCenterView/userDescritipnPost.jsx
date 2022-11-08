@@ -57,7 +57,7 @@ const UserDescritipnPost = (props) => {
                 </div>
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@ const UserDescritipnPost = (props) => {
                 </div>
               </div>
               <div className={HomCen.img_noti_wrap}>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -133,7 +133,7 @@ const UserDescritipnPost = (props) => {
                 </div>
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@ const UserDescritipnPost = (props) => {
                 </div>
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ with video looks like. #video #tech
                 </div>
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -253,7 +253,7 @@ with video looks like. #video #tech
                 </div>
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -294,7 +294,7 @@ with video looks like. #video #tech
  
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>
@@ -342,7 +342,7 @@ with video looks like. #video #tech
  
               </div>
               <div>
-                <PostNotification />
+                <PostNotification showValue={true}  />
               </div>
             </div>
           </div>

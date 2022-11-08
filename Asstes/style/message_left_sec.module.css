@@ -1,0 +1,110 @@
+.main_container {
+  width: 620px;
+  height: 100%;
+  border-right: 2px solid #bcbcbc;
+}
+.header_wrap {
+  height: 111px;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  padding: 0px 15px 0px 28px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #bcbcbc;
+}
+.header_content {
+  display: flex;
+  font-size: 30px;
+  color: black;
+  gap: 18px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 38px;
+  align-items: center;
+}
+.search_box {
+  width: 280px;
+  height: 63px;
+  border: 2px solid #bcbcbc;
+  border-radius: 41px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+.search_ele{
+	border: none;
+	outline: none;
+	border-radius: 41px;
+	height: 100%;
+	color: #BCBCBC;
+	font-size: 24px;
+	font-family: "DM Sans", sans-serif;
+	width: 100%;
+}
+.content_box{
+	display: flex;
+padding-top: 146px;
+
+	flex-direction: column;
+
+}
+.masg_wrap{
+	height: 93px;
+	display: flex;
+	width: 100%;
+}
+.masg_wrap:hover{
+	height: 93px;
+	display: flex;
+	width: 100%;
+	cursor: pointer;
+	background-color: #D9D9D957;
+}
+.msg_info_wrap{
+	display: flex;
+	gap: 14px;
+	padding: 0px 35px 0px 28px;
+	width: 100%;
+	align-items: center;
+}
+.msg_profile_box{
+	position: relative;
+}
+.online_status{
+	position: absolute;
+	z-index: 1;
+	right: 0;
+}
+.msg_des_box{
+	width: 100%;
+}
+.user_name{
+	font-weight: 400;
+	font-size: 16px;
+	color: black;
+	font-family: "DM Sans", sans-serif;
+
+}
+.user_text{
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	color: black;
+	font-weight: 700;
+	padding-top: 5px;
+	font-family: "DM Sans", sans-serif;
+
+}
+.user_text2{
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	color: #BCBCBC;
+	font-weight: 700;
+	padding-top: 5px;
+	font-family: "DM Sans", sans-serif;
+
+}

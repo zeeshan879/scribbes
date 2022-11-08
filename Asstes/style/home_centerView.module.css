@@ -39,6 +39,73 @@
   align-items: center;
   gap: 12px;
 }
+.notification_wraper{
+
+  padding: 40px 52px 48px 54px;
+  border-bottom: 2px solid #bcbcbc;
+
+}
+.noti_info{
+  padding-left: 58px;
+  padding-top: 11px;
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+}
+.noti_info2{
+  font-size: 20px;
+  color: black;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+}
+.noti_box_text{
+  max-width: 584px;
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+
+}
+.noti_desc_smallBox{
+  margin-left: 70px;
+  width: 733px;
+  margin-top: 29px;
+  padding: 12px 13px ;
+  gap: 19px;
+  align-items: center;
+  display: flex;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.noti_desc_box{
+  margin-left: 80px;
+  width: 712px;
+  padding: 18px 35px 16px 23px;
+  background-color: white;
+  box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+.notification_profile_box{
+  padding-top:8px ;
+
+}
+.seeFullPost{
+  font-size: 16px;
+  color: #000580;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: "DM Sans", sans-serif;
+
+}
 .edit_modal_header {
   height: 98px;
   display: flex;
@@ -48,7 +115,7 @@
   font-weight: 700;
   border-bottom: 2px solid #bcbcbc;
   font-family: "Space Grotesk", sans-serif;
-  padding: 0px 78px;
+  padding: 0px 50px;
 }
 .user_info_form {
   padding: 0px 50px 79px 50px;
@@ -108,6 +175,7 @@
 }
 .main_container {
   width: 100%;
+  
   border-right: 2px solid #bcbcbc;
 }
 .share_thoughts_wrap {
@@ -723,6 +791,20 @@
   background-color: #d9d9d9;
   border-radius: 41px;
 }
+.noti_web3_btn {
+  width: 125px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 9px 0px 7px;
+  gap: 5px;
+  font-size: 12px;
+  color: black;
+  font-weight: 700;
+  background-color: #d9d9d9;
+  border-radius: 41px;
+}
 .post_noti_wrap {
   display: flex;
   flex-direction: column;
@@ -799,6 +881,7 @@ color: black;
   justify-content: center;
   font-size: 12px;
   width: 35px;
+  padding-bottom: 3px;
   height: 35px;
   border-radius: 50%;
 
@@ -808,7 +891,12 @@ color: black;
   font-family: "DM Sans", sans-serif;
 }
 .like_counter{
-  margin-top: -3px;
+  margin-top: -5px;
+  height: 15px;
+}
+.like_counter2{
+
+  height: 15px;
 }
 .Text_user_info {
   display: flex;

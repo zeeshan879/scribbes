@@ -139,6 +139,7 @@ const HomeLeftMenu = () => {
             </div>
             <div className="hidden md:block">Trending</div>
           </div>
+          <Link href="/notification">
           <div
             className={
               active == 5 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
@@ -152,6 +153,7 @@ const HomeLeftMenu = () => {
             </div>
             <div className="hidden md:block">Notifications</div>
           </div>
+          </Link>
           <div
             className={
               active == 6 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
@@ -179,6 +181,7 @@ const HomeLeftMenu = () => {
             </div>
             <div className="hidden md:block">Profile</div>
           </div></Link> 
+          <Link href="/message">
           <div
             className={
               active == 8 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
@@ -190,8 +193,9 @@ const HomeLeftMenu = () => {
                 className={active == 8 ? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
-            <div className="hidden md:block">Messages</div>
+            <div className="hidden md:flex gap-[8px] items-center">Messages  {active == 8? <div className="flex h-[18px] w-[18px] bg-[#000580] justify-center items-center text-white rounded-[50%] text-xs">2</div>:""}</div>
           </div>
+          </Link>
           <div
             className={
               active == 9 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
