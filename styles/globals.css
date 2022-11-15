@@ -62,3 +62,229 @@ border-radius: 30px !important;
   border-radius: 16px !important;
   border: 0px;
 }
+
+.vedios_container2 {
+  display: flex;
+  gap: 12px;
+  width: 1010px;
+  overflow-x: scroll;
+  padding: 0px 26px 31px 38px;
+ 
+}
+.explore_content_wrap {
+  height: 80vh;
+  margin-top: 54px;
+  overflow-y: scroll;
+}
+
+
+
+#style-12::-webkit-scrollbar-track
+{
+	height: 5px;
+	border-radius: 10px;
+	background-color: #BCBCBC;
+}
+
+#style-12::-webkit-scrollbar
+{
+	max-width: 12px !important;
+  height: 17px;
+  
+}
+
+#style-12::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color:white;
+height: 2px !important;
+}
+@media screen and (max-width: 1850px) {
+
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 900px;
+    overflow-x: scroll;
+    padding: 0px 26px 31px 38px;
+   
+  }}
+  @media screen and (max-width: 1700px) {
+
+    .vedios_container2 {
+      display: flex;
+      gap: 12px;
+      width: 850px;
+      overflow-x: scroll;
+      padding: 0px 26px 31px 38px;
+     
+    }}
+    @media screen and (max-width: 1600px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 800px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1515px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 750px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1460px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 700px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1400px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 600px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }
+      .explore_content_wrap {
+        height: 80vh;
+        margin-top: 24px;
+        overflow-y: scroll;
+      }
+    }
+    @media screen and (max-width: 1310px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 500px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1150px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 450px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1090px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 400px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1050px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 750px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 1000px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 700px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 950px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 650px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 900px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 600px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 850px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 550px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 800px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 500px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 645px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 450px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 600px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 400px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+    @media screen and (max-width: 430px) {
+   
+      .vedios_container2 {
+        display: flex;
+        gap: 12px;
+        width: 345px;
+        overflow-x: scroll;
+        padding: 0px 20px 31px 20px;
+       
+      }}
+
+
+

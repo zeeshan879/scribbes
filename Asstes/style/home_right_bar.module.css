@@ -14,6 +14,21 @@
   position: sticky;
   top: 0;
 }
+.posting_follow_btn{
+  width: 114px;
+  height: 37px;
+  display: flex;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 41px;
+  background-color: #1CAC19;
+
+}
 .trending_heading {
   height: 52px;
   display: flex;
@@ -92,6 +107,120 @@
   max-width: 300px;
   line-height: 20px;
   font-family: "DM Sans", sans-serif;
+}
+.filter_body{
+  padding: 24px 24px;
+}
+.filter_heading{
+  height: 51px;
+  padding: 0px 19px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+  border-bottom: 2px solid #BCBCBC;
+  display: flex;
+  align-items: center;
+}
+.f_body{
+  padding: 10px 20px 45px;
+}
+.filter_inputs{
+  margin-top: 30px;
+  width: 100%;
+  height: 57px;
+  border-radius: 30px;
+  border: 2px solid #BCBCBC;
+  padding-left: 35px;
+}
+.input_ele{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: #BCBCBC;
+  font-size: 16px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+.from_box{
+  padding-top: 16px;
+}
+.small_inputs_wrap{
+  display: flex;
+  gap: 16px;
+  padding-top: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter_form_sep{
+
+  border: 2px solid #BCBCBC;
+  width: 100%;
+}
+.apply_fillter{
+  width: 180px;
+  height: 49px;
+  border-radius: 41px;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: #1CAC19;
+  color: white;
+
+}
+.filter_dates{
+  width: 177px;
+  height: 57px;
+  border-radius: 30px;
+  display: flex;
+  color: #BCBCBC;
+  padding: 0px 20px;
+  cursor: pointer;
+  border:2px solid #BCBCBC ;
+  justify-content: space-between;
+  align-items: center;
+}
+.advnce_fillter_header{
+  display: flex;
+  height: 57px;
+  padding: 0px 21px;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+  gap: 16px;
+  border-bottom: 2px solid #BCBCBC;
+  font-family: "Space Grotesk", sans-serif;
+  align-items: center;
+
+}
+.fillter_content{
+  display: flex;
+  gap: 14px;
+  padding-top:16px;
+  flex-direction: column;
+
+}
+.fillter_wraper{
+  width: 458px;
+  /*height: 253px;*/
+  margin-top: 56px;
+  background-color: white;
+  box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+}
+.advance_filter{
+  font-size: 16px;
+  font-weight: 400;
+  color: #4285F4;
+  cursor: pointer;
+  margin-top: 24px;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: underline;
+
 }
 ._vedio_tile_tag {
   width: 65px;

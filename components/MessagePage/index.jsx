@@ -5,7 +5,7 @@ import HomeRightmenu from "../HomeRightMenu";
 import Home from "../../styles/Home.module.css";
 import NavBar from "../Navbar";
 import MobileBottomNavigation from "../MobileBotomNavigation";
-import MessageRightSec from "./messageRightSec"
+import MessageRightSec from "./messageRightSec";
 
 const Messages = () => {
   return (
@@ -20,8 +20,8 @@ const Messages = () => {
             <MessageLeftSection />
           </div>
           <div className={Home.message_right}>
-			<MessageRightSec/>
-		  </div>
+            <MessageRightSec />
+          </div>
         </div>
         {/*<========Mobile Bottom navgation========>*/}
         <MobileBottomNavigation />

@@ -43,10 +43,10 @@ const NotificationCenterView = () => {
           </div>
           <div className={HomCen.notification_profile_box}>
             <div className="flex  gap-[22px]">
-              <div>
+              <div className={HomCen.noti_profile_dim}>
                 <Image src={notiUser} />
               </div>
-              <div>
+              <div className={HomCen.noti_profile_dim}>
                 <Image src={notiUsr} />
               </div>
             </div>
@@ -60,7 +60,7 @@ const NotificationCenterView = () => {
         <div className={HomCen.notification_wraper}>
           <div className={HomCen.notification_profile_box}>
             <div className="flex items-center gap-[19px]">
-              <div>
+              <div className={HomCen.noti_profile_dim}>
                 <Image src={notiUsr} />
               </div>
               <div className={HomCen.noti_info2}>
@@ -71,7 +71,7 @@ const NotificationCenterView = () => {
             </div>
           </div>
           <div className={HomCen.noti_desc_box}>
-            <div className="flex justify-between w-[100%]">
+            <div className={HomCen.noti_box1}>
               <div className={HomCen.noti_box_text}>
                 You have made a great point but not many will understand. But
                 still lets wait for the final results. More power to you 👊{" "}
@@ -85,13 +85,19 @@ const NotificationCenterView = () => {
         <div className={HomCen.notification_wraper}>
           <div className={HomCen.notification_profile_box}>
             <div className="flex  gap-[22px]">
-              <div className="cursor-pointer">
+            <div className={HomCen.noti_profile_dim}>
                 <Image src={notiarrowUp} />
               </div>
               <div className="flex gap-[10px]">
-                <Image src={notiUsr} />
-                <Image src={grl} />
-                <Image src={coomentP} />
+                <div className={HomCen.noti_profile_dim}>
+                  <Image src={notiUsr} />
+                </div>
+                <div className={HomCen.noti_profile_dim}>
+                  <Image src={grl} />
+                </div>
+                <div className={HomCen.noti_profile_dim}>
+                  <Image src={coomentP} />
+                </div>
               </div>
             </div>
             <div className={HomCen.noti_info}>
@@ -99,7 +105,7 @@ const NotificationCenterView = () => {
               liked your <span className="font-bold">post </span>
             </div>
             <div className={HomCen.noti_desc_smallBox}>
-              <div>
+              <div >
                 <Image src={notiImage} />
               </div>
               <div>
@@ -112,7 +118,7 @@ const NotificationCenterView = () => {
         </div>
         <div className={HomCen.notification_wraper}>
           <div className={HomCen.notification_profile_box}>
-            <div className="flex items-center gap-[19px]">
+            <div className="flex items-center gap-[10px] md:gap-[19px]">
               <div>
                 <Image src={notiUsr} />
               </div>
@@ -131,7 +137,7 @@ const NotificationCenterView = () => {
           </div>
 
           <div className={HomCen.noti_desc_box}>
-            <div className="flex justify-between w-[100%]">
+            <div className={HomCen.seFullPost_box}>
               <div className={HomCen.noti_box_text}>
                 Annoucing the first annual CODING COMPETITION 2022. All you web
                 3.0 enthusiasts join us.
@@ -150,7 +156,7 @@ const NotificationCenterView = () => {
             </div>
           </div>
         </div>
-		<div className={HomCen.notification_wraper}>
+        <div className={HomCen.notification_wraper}>
           <div className={HomCen.notification_profile_box}>
             <div className="flex items-center gap-[19px]">
               <div>
@@ -164,7 +170,7 @@ const NotificationCenterView = () => {
             </div>
           </div>
           <div className={HomCen.noti_desc_box}>
-            <div className="flex justify-between w-[100%]">
+          <div className={HomCen.seFullPost_box}>
               <div className={HomCen.noti_box_text}>
                 You have made a great point but not many will understand. But
                 still lets wait for the final results. More power to you 👊{" "}

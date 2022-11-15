@@ -17,6 +17,7 @@ import timage2 from "../../Asstes/Images/timage2.png";
 import PostNotification from "../HomeCenterView/postNotification";
 import PostOption from "../HomeCenterView/postOption"
 import Link from "next/link";
+import VedioTypePost from "./vedioTypePost"
 
 const UserDescritipnPost = (props) => {
   return (
@@ -175,89 +176,10 @@ const UserDescritipnPost = (props) => {
           </div>
         </div>
 				     {/*<======== Post Type => Vedio=======>*/}
-					 <div className={HomCen.description_post_wrap}>
-           { props?.check  &&        <div className={HomCen.post_action}>
-            <div className={HomCen.post_action_icon}>
-      <PostOption/>
-            </div>
-          </div>}
-          <div className={HomCen.desc_pots_wrap}>
-            <div className={HomCen.post_descition_wrap}>
-            <Link href="/user-profile">
-            <div className={HomCen.post_profile}>
-                <Image src={vPost} />
-              </div>
-              </Link>
-              <div className={HomCen.post_des_box}>
-              <div className={HomCen.des_post_userName}>John Doe</div>
-              <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
-              <div className={HomCen.des_post_time}>2d</div>
-              </div>
-          
-            </div>
-            <div className={HomCen.des_post_box}>
-              <div>
-                <div className={HomCen.des_post_text}>
-				Look at this amazing video of a man trying VR for the first time! This is elite
-entertainment, man. I am typing random things to just show you how a post
-with video looks like. #video #tech
-                </div>
-                <div className={HomCen.vedio_imagge_update}>
-              <div className={HomCen.vedio_post_like}>
-				<Image src={likes} />
-			  </div>
-			  <div className={HomCen.vedio_post_ply_btn}>
-				<Image src={play} />
-			  </div>
-                </div>
-              </div>
-              <div>
-                <PostNotification showValue={true}  />
-              </div>
-            </div>
-          </div>
-        </div>
-						     {/*<======== Post Type => Vedio cake=======>*/}
-							 <div className={HomCen.description_post_wrap}>
-               { props?.check  &&        <div className={HomCen.post_action}>
-            <div className={HomCen.post_action_icon}>
-      <PostOption/>
-            </div>
-          </div>}
-          <div className={HomCen.desc_pots_wrap}>
-            <div className={HomCen.post_descition_wrap}>
-            <div className={HomCen.post_profile}>
-                <Image src={vPost} />
-              </div>
-              <div className={HomCen.post_des_box}>
-              <div className={HomCen.des_post_userName}>John Doe</div>
-              <div className={HomCen.des_post_userEmal}>@@Johndoe</div>
-              <div className={HomCen.des_post_time}>2d</div>
-              </div>
-          
-            </div>
-            <div className={HomCen.des_post_box}>
-              <div>
-                <div className={HomCen.des_post_text}>
-				Look at this amazing video of a man trying VR for the first time! This is elite
-entertainment, man. I am typing random things to just show you how a post
-with video looks like. #video #tech
-                </div>
-                <div className={HomCen.vedio_imagge_cake}>
-              <div className={HomCen.vedio_post_like}>
-				<Image src={likes} />
-			  </div>
-			  <div className={HomCen.vedio_post_ply_btn}>
-				<Image src={play} />
-			  </div>
-                </div>
-              </div>
-              <div>
-                <PostNotification showValue={true}  />
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <VedioTypePost check={true} />
+						 
+
 								     {/*<======== Post Type => card=======>*/}
 									 <div className={HomCen.description_post_wrap}>
                    { props?.check  &&        <div className={HomCen.post_action}>

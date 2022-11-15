@@ -92,7 +92,7 @@ const MessageLeftSection = () => {
                             {data.userEmail}
                           </span>
                         </div>
-                        <div className="text-[#BCBCBC] font-DM font-normal text-base">
+                        <div className="text-[#BCBCBC] font-DM font-normal text-sm xl:text-base">
                           {data.hours}
                         </div>
                       </div>
@@ -102,7 +102,7 @@ const MessageLeftSection = () => {
                         }
                       >
                         <div>{data.sendImage && <Image src={sentImage} />}</div>
-                        Did you watch the match last night? It was epic!
+                     {data.des}
                       </div>
                     </div>
                   </div>

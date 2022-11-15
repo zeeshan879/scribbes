@@ -104,6 +104,7 @@
   .bottom_mobile_menu_container {
     position: fixed;
     bottom: 0;
+    z-index: 9;
     right: 0;
     left: 0;
   }

@@ -1,0 +1,205 @@
+.header_wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 62px 0px 60px;
+}
+.heder_heaind {
+  font-size: 30px;
+  color: black;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+}
+.new_community_btn {
+  width: 250px;
+  height: 63px;
+  border-radius: 41px;
+  display: flex;
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+
+  background-color: #1cac19;
+}
+.profile_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.tile_wraper {
+  display: flex;
+  gap: 14px;
+  padding: 87px 0px 39px 0px;
+  align-items: center;
+}
+.post_content {
+  position: absolute;
+  bottom: 11px;
+  left: 18px;
+}
+.postBg {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+width: 477px;
+  height: 270px;
+  position: relative;
+  background-image: url("../Images/pikacho.png");
+}
+.postBg2 {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    margin-top: 17px;
+    background-size: 100%;
+    cursor: pointer;
+	width: 477px;
+  height: 270px;
+  position: relative;
+  background-image: url("../Images/musicV.png");
+}
+.post_wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 22px;
+}
+.tile {
+  width: 246px;
+  padding: 16px 19px 10px 19px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 86px;
+  background-color: #1cac19;
+  border-radius: 16px;
+  box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+}
+.title_heading {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+.tile_followers {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+}
+.post_div {
+  display: flex;
+  gap: 52px;
+
+}
+@media screen and (max-width: 1440px) {
+  .header_wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+  }
+  .postBg {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+  width: 400px;
+  max-width: 100%;
+	height: 270px;
+	position: relative;
+	background-image: url("../Images/pikacho.png");
+  }
+  .post_div {
+    display: flex;
+    gap: 20px;
+  }
+  .post_wraper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 12px;
+    padding-left: 0px;
+  }
+  .heder_heaind {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+
+  .new_community_btn {
+    width: 200px;
+    height: 53px;
+    border-radius: 41px;
+    display: flex;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+
+    background-color: #1cac19;
+  }
+  .tile_wraper {
+    display: flex;
+    gap: 14px;
+    padding: 57px 0px 20px 0px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .new_community_btn {
+    width: 150px;
+    height: 43px;
+    border-radius: 41px;
+    display: flex;
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+
+    background-color: #1cac19;
+  }
+  .tile_wraper {
+    display: flex;
+    gap: 14px;
+    padding: 37px 0px 20px 0px;
+    align-items: center;
+  }
+}
+@media screen and (max-width:1260px){
+	.postBg {
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	  width: 350px;
+	  max-width: 100%;
+		height: 270px;
+		position: relative;
+		background-image: url("../Images/pikacho.png");
+	  }
+	  .post_content {
+		position: absolute;
+		bottom: 50px;
+		left: 18px;
+	  }
+}
