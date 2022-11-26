@@ -79,7 +79,7 @@ const BlockAccounts = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -108,7 +108,7 @@ const BlockAccounts = (props) => {
                         <div className="font-DM text-xs font-normal">
                           {data.email}
                         </div>
-                        <div className="pt-[13px] max-w-[450px] text-base font-DM leading-[20px]">
+                        <div className="pt-[13px]  max-w-[450px] text-base font-DM leading-[20px]">
                           {data.des}
                         </div>
                       </div>

@@ -68,7 +68,7 @@ const DeactivateAccounts = (props) => {
           </div>
         </div>
         <div className={scv.seprator}></div>
-        <div className="flex justify-center py-[44px]">
+        <div className="flex justify-center py-[20px] md:py-[44px]">
           <div className="cursor-pointer text-[20px] font-DM font-normal text-[#EA0000]">Deactivate Account</div>
         </div>
       </Modal>

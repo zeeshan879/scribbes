@@ -9,7 +9,7 @@ import Image from "next/image";
 import scv from "../../Asstes/style/setting_center_view.module.css";
 
 import MutedAccountsModal from "./muteAccounts";
-import BlockAccounts from "./BlockAccountsModal"
+import BlockAccounts from "./BlockAccountsModal";
 
 const MuteBlockModal = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -31,7 +31,7 @@ const MuteBlockModal = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -42,14 +42,14 @@ const MuteBlockModal = (props) => {
         </div>
         <div className={scv.mb_modal_body}>
           <div className="flex justify-between items-center">
-            <div >Blocked Accounts</div>
-            <div onClick={()=>handleBlockaccounts()}>
+            <div>Blocked Accounts</div>
+            <div onClick={() => handleBlockaccounts()}>
               {" "}
               <MdOutlineModeEdit className="text-[#BCBCBC] cursor-pointer text-xl" />
             </div>
           </div>
           <div className="flex justify-between items-center pt-[35px]">
-            <div >Muted Accounts</div>
+            <div>Muted Accounts</div>
             <div onClick={() => handleMutedAccountsModal()}>
               {" "}
               <MdOutlineModeEdit className="text-[#BCBCBC] cursor-pointer text-xl" />
@@ -57,8 +57,11 @@ const MuteBlockModal = (props) => {
           </div>
         </div>
       </Modal>
-      <MutedAccountsModal state={showModal} onClick={handleMutedAccountsModal} />
-	  <BlockAccounts state={blockAccounts}  onClick={handleBlockaccounts} />
+      <MutedAccountsModal
+        state={showModal}
+        onClick={handleMutedAccountsModal}
+      />
+      <BlockAccounts state={blockAccounts} onClick={handleBlockaccounts} />
     </>
   );
 };

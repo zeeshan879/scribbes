@@ -83,7 +83,7 @@ const MangeContacts = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -108,7 +108,7 @@ const MangeContacts = (props) => {
             </div>
           </div>
         </div>
-        <div className="mt-[3px] mr-[17px]  mb-[35px]">
+        <div className="mt-[20px] md:mt-[3px] mr-[17px]  mb-[35px]">
           <div className={scv.mc_content_body} id="style-desk">
             {removeContactList.map((data) => {
               return (
@@ -118,10 +118,10 @@ const MangeContacts = (props) => {
                       <Image src={data.profile} />
                     </div>
                     <div>
-                      <div className="text-[20px] font-medium text-[#000580] font-DM">
+                      <div className="text-[18px] md:text-[20px] font-medium text-[#000580] font-DM">
                         {data.name}
                       </div>
-                      <div className="text-base font-normal text-black font-DM ">
+                      <div className="text-sm md:text-base font-normal text-black font-DM ">
                         {data.contact}
                       </div>
                     </div>

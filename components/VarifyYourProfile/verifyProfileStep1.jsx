@@ -7,7 +7,7 @@ const VerifyProfileStep1 = () => {
   return (
     <>
       <div className={vp.step1_box}>
-        <div className="text-[20px] font-DM font-bold">
+        <div className="text-[18px] sm:text-[20px] font-DM font-bold">
           Step 1: Confirm authenticity
         </div>
         <div className="max-w-[900px] text-base font-DM leading-5 pt-3">

@@ -40,7 +40,7 @@ const AcountInformation = () => {
                 <Image src={acount} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+                <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Account Information
                 </div>
                 <div className="font-DM font-normal text-base">
@@ -60,7 +60,7 @@ const AcountInformation = () => {
                 <Image src={key} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+              <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Change Your Password
                 </div>
                 <div className="font-DM font-normal text-base">
@@ -78,7 +78,7 @@ const AcountInformation = () => {
                 <Image src={deactive} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+              <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Deactivate Your Account
                 </div>
                 <div className="font-DM font-normal text-base">

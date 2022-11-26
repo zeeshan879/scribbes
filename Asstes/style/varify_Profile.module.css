@@ -111,3 +111,109 @@ border-radius: 10px;
 	color: #BCBCBC;
 
 }
+@media screen and (max-width:1440px){
+	.main_container{
+		padding: 20px 20px 20px 20px;
+	}
+	.search_box{
+		max-width: 800px;
+		height: 53px;
+		border: 2px solid #BCBCBC;
+		border-radius: 41px;
+		padding-left: 20px;
+	
+	}
+	.heading{
+		font-size: 25px;
+		font-weight: 700;
+		color: black;
+		padding: 30px 0px 19px 0px;
+		line-height: 30px;
+		font-family: "Space Grotesk", sans-serif;
+	
+	}
+}
+@media screen and (max-width:580px){
+	.step1_driving_license{
+		display: flex;
+		margin-top: 12px;
+		cursor: pointer;
+		font-family: "DM Sans", sans-serif;
+		border-bottom: 1px solid #BCBCBC;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		
+	}
+	.form_wraper{
+		padding: 31px 15px 43px 15px;
+	}
+	.step1_box{
+		background: #FFFFFF;
+		box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+		border-radius: 16px;
+		max-width: 1187px;
+		padding: 10px 10px 14px 10px;
+	
+	}
+	.verify_profile_step2{
+		max-width: 1187px;
+		background: #FFFFFF;
+		box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+		border-radius: 16px;
+		margin-top: 24px;
+		padding: 10px 10px 20px 10px;
+	
+	}
+	.search_box{
+		max-width: 800px;
+		height: 43px;
+		border: 2px solid #BCBCBC;
+		border-radius: 41px;
+		padding-left: 20px;
+	
+	}
+	.form_item{
+		width: 100%;
+	padding-top: 12px;
+		border-bottom: 1px solid #BCBCBC;
+	}
+	.search_ele{
+		border-radius: 41px;
+		height: 100%;
+		width: 100%;
+		border: none;
+		font-family: "DM Sans", sans-serif;
+		outline: none;
+		background-color: transparent;
+		font-size: 18px;
+		font-weight: 400;
+		color: #BCBCBC;
+	
+	}
+	.form_item_link{
+		width: 100%;
+	padding-top: 30px;
+		border-bottom: 1px solid #BCBCBC;
+	}
+	.step2_save_btn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		background-color: #1CAC19;
+		color: white;
+		width: 180px;
+		margin-top: 15px;
+		height: 45px;
+		font-family: "DM Sans", sans-serif;
+		font-weight: 700;
+		font-size: 18px;
+		border-radius: 41px;
+	}
+}
+@media screen and (max-width:550px){
+	.main_container{
+		padding: 75px 20px 20px 20px;
+	}
+}

@@ -79,7 +79,7 @@ const MutedAccountsModal = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -97,7 +97,7 @@ const MutedAccountsModal = (props) => {
             {mutedAccounts.map((data) => {
               return (
                 <>
-                  <div className="flex justify-between w-[100%]">
+                  <div className="flex justify-between w-[100%] gap-2">
                     <div className="flex gap-[17px]">
                       <div>
                         <Image src={data.image} />

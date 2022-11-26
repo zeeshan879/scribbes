@@ -7,7 +7,7 @@ const VerifyProfileStep2 = () => {
   return (
     <>
       <div className={vp.verify_profile_step2}>
-        <div className="text-[20px] font-DM font-bold">
+        <div className="text-[18px] sm:text-[20px] font-DM font-bold">
           Step 2: Confirm notability
         </div>
         <div className="max-w-[900px] text-base font-DM leading-5 pt-3">

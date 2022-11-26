@@ -47,7 +47,7 @@ const PrivacyAndSafety = () => {
                 <Image src={Union} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+              <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Audience Tagging
                 </div>
                 <div className="font-DM font-normal text-base">
@@ -67,7 +67,7 @@ const PrivacyAndSafety = () => {
                 <Image src={mblock} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+                <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Mute and Block
                 </div>
                 <div className="font-DM font-normal text-base">
@@ -85,7 +85,7 @@ const PrivacyAndSafety = () => {
                 <Image src={direct} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+              <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Direct Messages
                 </div>
                 <div className="font-DM font-normal text-base">
@@ -103,7 +103,7 @@ const PrivacyAndSafety = () => {
                 <Image src={discovery} />
               </div>
               <div>
-                <div className="font-DM font-bold text-[20px]">
+              <div className="font-DM font-bold text-[16px] md:text-[18px] lg:text-[20px]">
                   Discoverability and Contacts
                 </div>
                 <div className="font-DM font-normal text-base">

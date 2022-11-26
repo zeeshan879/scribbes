@@ -48,7 +48,7 @@ const ChnagePassword = (props) => {
           <div className={scv.cp_forget_div}>
             <input placeholder="Confirm Password" className={scv.input_ele} />
           </div>
-          <div className="flex justify-end pt-[52px]">
+          <div className="flex justify-end pt-[20px] md:pt-[52px]">
             <div className={scv.cp_save_btn}>Save</div>
           </div>
         </div> 

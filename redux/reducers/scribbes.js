@@ -6,6 +6,7 @@ const initialState = {
   adminToolTabs: 1,
   specficInterestTab: 1,
   settingTabs: 1,
+  scribbesTabs:1
 };
 
 export const scribbes = createSlice({
@@ -27,9 +28,12 @@ export const scribbes = createSlice({
     handleSettingTabs(state, action) {
       state.settingTabs = action.payload;
     },
+    handleScrribsTabs(state, action) {
+      state.scribbesTabs = action.payload;
+    },
   },
 });
 // Action creators are generated for each case reducer function
-export const { chnagePageView,chnageSpecficInterst,handleSettingTabs, handleMessageView, chnageAdminToolTabs } =
+export const { chnagePageView,handleScrribsTabs,chnageSpecficInterst,handleSettingTabs, handleMessageView, chnageAdminToolTabs } =
   scribbes.actions;
 export default scribbes.reducer;

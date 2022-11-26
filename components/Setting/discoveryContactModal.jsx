@@ -24,7 +24,7 @@ const DiscoveablityContacts = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -36,14 +36,14 @@ const DiscoveablityContacts = (props) => {
         </div>
         <div className={scv.da_seprator}></div>
         <div className={scv.da_content_body}>
-          <div className="font-DM text-[30px] font-bold">Discoverability</div>
+          <div className={scv.dis_heading}>Discoverability</div>
           <div className="font-DM max-w-[500px] text-[#BCBCBC] leading-[20px] text-base font-normal">
             Decide whether people who have your email address or phone number
             can find and connect with you on Scribbes.
           </div>
-          <div className="flex pt-[43px] justify-between">
+          <div className="flex pt-[20px] mnd:pt-[43px] justify-between">
             <div>
-              <div className="font-DM font-normal text-[20px]">
+              <div className="font-DM font-normal text-[16px] md:text-[20px]">
                 Let people who have your phone number find you on Scribbes
               </div>
               <div className={scv.at_protect_learn}>
@@ -64,14 +64,14 @@ const DiscoveablityContacts = (props) => {
         </div>
         <div className={scv.da_seprator2}></div>
         <div className={scv.da_content_body}>
-          <div className="font-DM text-[30px] font-bold">Discoverability</div>
+        <div className={scv.dis_heading}>Discoverability</div>
           <div className={scv.at_protect_learn}>
             Manage contacts that you have imported from your mobile devices.
             <span className="text-[#1CAC19] cursor-pointer underline">
               Learn more
             </span>
           </div>
-          <div className="flex justify-between pt-[64px] items-center">
+          <div className={scv.mange_contact_text}>
             <div>Manage Contatcs</div>
             <div onClick={() => handleMangeContact()}>
               <MdOutlineModeEdit className="text-[#BCBCBC] cursor-pointer text-xl" />

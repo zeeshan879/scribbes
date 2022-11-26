@@ -16,7 +16,7 @@ const SettingCenterView = () => {
       <div className={scv.main_container}>
         <div className={scv.header_wraper}>
           <div className="flex gap-[18px]">
-            <div className="cursor-pointer pt-[10px]">
+            <div className={scv.backarrow}>
               <Image src={backscreen} />
             </div>
             <div>

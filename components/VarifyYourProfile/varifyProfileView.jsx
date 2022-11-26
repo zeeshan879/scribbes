@@ -1,7 +1,7 @@
 import React from "react";
 import vp from "../../Asstes/style/varify_Profile.module.css";
-import VerifyProfileStep1 from "./verifyProfileStep1"
-import VerifyProfileStep2 from "./verifyProfileStep2"
+import VerifyProfileStep1 from "./verifyProfileStep1";
+import VerifyProfileStep2 from "./verifyProfileStep2";
 
 const VarifyProfileView = () => {
   return (
@@ -17,10 +17,10 @@ const VarifyProfileView = () => {
             that Scribbes has confirmed theyre the real presence of the public
             figures, celebrities, and brands they represent.
           </div>
-		  <div className={vp.form_wraper}>
-			<VerifyProfileStep1/>
-			<VerifyProfileStep2/>
-		  </div>
+          <div className={vp.form_wraper}>
+            <VerifyProfileStep1 />
+            <VerifyProfileStep2 />
+          </div>
         </div>
       </div>
     </>

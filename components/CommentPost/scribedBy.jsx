@@ -8,13 +8,15 @@ import notMuted from "../../Asstes/Images/notMuted.png";
 import profile from "../../Asstes/Images/profile.png";
 import Image from "next/image";
 import scv from "../../Asstes/style/setting_center_view.module.css";
-import ScribbedModalTabs from "./scribbedModalTabs"
-import FollowAndUnFollowBtn from "./followBtn"
-import ScribbedByshares from "./shares"
-import QuotesScribes from "./quotesScribes"
-
+import ScribbedModalTabs from "./scribbedModalTabs";
+import FollowAndUnFollowBtn from "./followBtn";
+import ScribbedByshares from "./shares";
+import QuotesScribes from "./quotesScribes";
+import { useSelector } from "react-redux";
 const ScribbedBy = (props) => {
-
+  const scribbesTabs = useSelector(
+    (state) => state.allGernalFunction.scribbesTabs
+  );
 
   return (
     <>
@@ -33,10 +35,9 @@ const ScribbedBy = (props) => {
           <div>Scribbed By</div>
         </div>
         <div className={scv.sb_tabs_container}>
-			<ScribbedModalTabs/>
-		</div>
- {/*<ScribbedByshares/>*/}
- <QuotesScribes/>
+          <ScribbedModalTabs />
+        </div>
+        {scribbesTabs == 1 ? <ScribbedByshares /> : <QuotesScribes />}
       </Modal>
     </>
   );

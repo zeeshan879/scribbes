@@ -13,7 +13,7 @@ const AcountInformationModal = (props) => {
       <Modal
         size="lg"
         centered
-		className="post_action_modal"
+        className="post_action_modal"
         show={props.state}
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
@@ -25,10 +25,10 @@ const AcountInformationModal = (props) => {
           <div>Account Information</div>
         </div>
         <div className={scv.seprator}></div>
-        <div className="mr-[33px]">
+        <div className="mr-[15px] md:mr-[33px]">
           <div className={scv.ai_modal_body} id="style-desk">
             <div className={scv.ai_name_box}>
-              <div className="text-[18px] font-DM font-normal text-[#BCBCBC]">
+              <div className="text-[16px] md:text-[18px] font-DM font-normal text-[#BCBCBC]">
                 Name
               </div>
               <div className={scv.ai_name}>John Doe</div>
@@ -82,12 +82,12 @@ const AcountInformationModal = (props) => {
                 </div>
               </div>
             </div>
-			<div className={scv.ai_name_box}>
+            <div className={scv.ai_name_box}>
               <input placeholder="Age" className={scv.ai_form_ele} />
             </div>
-			<div className="flex justify-end pt-[52px]">
-				<div className={scv.ai_save_btn}>Save</div>
-			</div>
+            <div className="flex justify-end pt-[20px] md:pt-[52px]">
+              <div className={scv.ai_save_btn}>Save</div>
+            </div>
           </div>
         </div>
       </Modal>

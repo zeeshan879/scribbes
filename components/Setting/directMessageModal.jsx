@@ -18,7 +18,7 @@ const DirectMessagePopUp = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -27,7 +27,7 @@ const DirectMessagePopUp = (props) => {
         <div className={scv.at_text}>Manage who can message you directly.</div>
         <div className={scv.dm_seprator}></div>
         <div className={scv.dm_content_body}>
-          <div className="flex justify-between">
+          <div className="flex justify-between gap-[10px]">
             <div>
               <div className="font-DM font-normal text-[20px]">
                 Allow message requests from everyone
@@ -48,7 +48,7 @@ const DirectMessagePopUp = (props) => {
               />{" "}
             </div>
           </div>
-          <div className="pt-[73px] flex justify-between">
+          <div className="pt-[30px] md:pt-[73px] flex justify-between">
             <div>
               <div className="font-DM font-normal text-[20px]">
                 Filter low-quality messages
@@ -70,7 +70,7 @@ const DirectMessagePopUp = (props) => {
               />{" "}
             </div>
           </div>
-          <div className="pt-[52px] flex justify-between">
+          <div className="pt-[30px] md:pt-[73px] flex justify-between">
             <div>
               <div className="font-DM font-normal text-[20px]">
                 Show read receipts

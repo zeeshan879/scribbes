@@ -19,7 +19,7 @@ const AudienceTaggingModal = (props) => {
         onHide={() => props.onClick}
         aria-labelledby="example-modal-sizes-title-lg"
       >
-        <div className={scv.ai_header_wraper}>
+        <div className={scv.at_header_wraper}>
           <div onClick={() => props.onClick()} className="cursor-pointer">
             <Image src={mback} />
           </div>
@@ -52,7 +52,7 @@ const AudienceTaggingModal = (props) => {
         </div>
         <div className={scv.seprator}></div>
         <div className={scv.at_protect}>
-          <div className="pt-[35px] flex justify-between">
+          <div className="pt-[35px] flex justify-between gap-3">
             <div>
               <div className="font-DM font-normal text-[20px]">
                 Photo Tagging
