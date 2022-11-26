@@ -29,11 +29,31 @@ a {
   outline: none;
   cursor: pointer;
 }
-.rounded-checkbox:checked {
-  appearance: auto;
-  clip-path: circle(50% at 50% 50%);
-  background-color: #1CAC19 !important;
+.radius-checkbox {
+  width:20px;
+  height: 20px;
+  border-radius: 5px;
+  vertical-align: middle;
+  border: 1px solid #1CAC19;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
 }
+.form-switch .form-check-input {
+  width: 40px !important;
+  margin-left: -2.5em;
+ /*background-image: url("../Asstes/Images/ss.png") !important;*/
+  background-position: left center;
+  border-radius: 2em;
+height: 17px !important;
+  transition: background-position .15s ease-in-out;
+}
+.form-check-input:checked {
+  background-color:#1CAC19 !important;
+  border-color: #1CAC19 !important;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -46,9 +66,13 @@ a {
 }
 .post_action_modal .modal-content{
 border-radius: 30px !important;
+
 }
 .post_share_modal .modal-content{
 border-radius: 30px !important;
+}
+.add_mode_modal .modal-content{
+  border-radius: 27px !important;
 }
 .userblock .modal-content{
   border-radius: 27px;
@@ -99,6 +123,63 @@ border-radius: 30px !important;
 	background-color:white;
 height: 2px !important;
 }
+#style-desk::-webkit-scrollbar-track
+{
+	height: 5px;
+	border-radius: 10px;
+	background-color: #BCBCBC;
+}
+
+#style-desk::-webkit-scrollbar
+{
+	max-width: 12px !important;
+  height: 17px;
+  
+}
+
+#style-desk::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color:white;
+height: 2px !important;
+}
+.ai_dateOfBrith{
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding: 72px 0px 52px 0px;
+}
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+width: 85px;
+height: 20px;
+  color: white !important;
+  background-color: #1CAC19 !important;
+  padding: 7px 0px !important;
+  border-radius: 6px;
+  z-index: 1;
+  font-size: 12px !important;
+  font-weight: bold;
+  display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+
+
 @media screen and (max-width: 1850px) {
 
   .vedios_container2 {

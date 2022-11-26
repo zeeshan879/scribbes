@@ -31,7 +31,7 @@ const AdvanceFillterModal = (props) => {
           <div className={rbar.filter_inputs}>
             <input placeholder="Exclude Words" className={rbar.input_ele} />
           </div>
-          <div className="font-DM text-base font-bold mt-[32px] pl-[20px]">
+          <div className="font-DM text-base font-bold mt-[15px] md:mt-[32px] pl-[20px]">
             Date
           </div>
           <div className={rbar.from_box}>
@@ -44,13 +44,13 @@ const AdvanceFillterModal = (props) => {
                 </div>
               </div>
               <div className={rbar.filter_dates}>
-                <div>Month</div>
+                <div>Day</div>
                 <div>
                   <Image src={dateIcon} />
                 </div>
               </div>
               <div className={rbar.filter_dates}>
-                <div>Month</div>
+                <div>Year</div>
                 <div>
                   <Image src={dateIcon} />
                 </div>
@@ -65,13 +65,13 @@ const AdvanceFillterModal = (props) => {
                 </div>
               </div>
               <div className={rbar.filter_dates}>
-                <div>Month</div>
+                <div>Day</div>
                 <div>
                   <Image src={dateIcon} />
                 </div>
               </div>
               <div className={rbar.filter_dates}>
-                <div>Month</div>
+                <div>Year</div>
                 <div>
                   <Image src={dateIcon} />
                 </div>

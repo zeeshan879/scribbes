@@ -16,25 +16,8 @@ const HomeRightmenu = (props) => {
         <div className={rbar.serch_box_wrap}>
           <input className={rbar.seach_bar_ele} placeholder="Search " />
         </div>
-
- 
-            {/*<TrendingTopics />*/}
-  
-
-
-    
-              {/*<ComunicationWithVideos />*/}
-              {/*<Filtersetting />*/}
-
-              <TrendingInterst />
-
-
- <TrendingVedios /> 
-           {/*<ProfilePosting /> */}
-
-       
-
-
+        <TrendingInterst />
+        <TrendingVedios />
       </div>
     </>
   );

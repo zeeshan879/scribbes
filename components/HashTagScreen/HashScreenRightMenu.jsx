@@ -18,19 +18,7 @@ const HashScreenRightMenu = (props) => {
         <div className={rbar.serch_box_wrap}>
           <input className={rbar.seach_bar_ele} placeholder="Search " />
         </div>
-
-        {/*<TrendingTopics />*/}
-
-        {/*<ComunicationWithVideos />*/}
-        {/*<MostFollowedCommunity />*/}
-        {/*<TopTrendingCommunity />*/}
-
         <Filtersetting />
-
-        {/*<TrendingInterst />*/}
-
-        {/*<TrendingVedios /> */}
-        {/*<ProfilePosting />*/}
       </div>
     </>
   );

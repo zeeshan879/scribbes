@@ -19,18 +19,11 @@ const ComunityPageRightMenu = (props) => {
           <input className={rbar.seach_bar_ele} placeholder="Search " />
         </div>
 
-        {/*<TrendingTopics />*/}
-
-        {/*<ComunicationWithVideos />*/}
+    
         <MostFollowedCommunity />
         <TopTrendingCommunity />
 
-        {/*<Filtersetting />*/}
 
-        {/*<TrendingInterst />*/}
-
-        {/*<TrendingVedios /> */}
-        {/*<ProfilePosting />*/}
       </div>
     </>
   );

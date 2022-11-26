@@ -63,7 +63,7 @@ with video looks like. #video #tech
             </div>
           </div>
 		  {/*....................*/}
-		  <div className={HomCen.description_post_wrap}>
+{	props.hide==true?"":	  <div className={HomCen.description_post_wrap}>
                { props?.check  &&        <div className={HomCen.post_action}>
             <div className={HomCen.post_action_icon}>
       <PostOption/>
@@ -102,7 +102,7 @@ with video looks like. #video #tech
               </div>
             </div>
           </div>
-        </div>
+        </div>}
         </div>
 
 

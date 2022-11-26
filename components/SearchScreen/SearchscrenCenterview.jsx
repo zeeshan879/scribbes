@@ -22,11 +22,17 @@ const SearchScrenCenterview = () => {
         <div className="flex justify-center">
           <SearchScreenTabs />
         </div>
-		<div className={ss.seprator}></div>
-		<div className={ss.post_body}>
-			<BlogPost/>
-			<BlogPost/>
-		</div>
+        <div className={ss.seprator}></div>
+        <div className={ss.post_body}>
+          <div className={ss.post_box}>
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+            <BlogPost />
+          </div>
+        </div>
       </div>
     </>
   );

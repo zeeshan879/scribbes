@@ -43,35 +43,41 @@
   bottom: 11px;
   left: 18px;
 }
+.inner_post_view{
+width: 550px;
+  display: flex;
+
+  gap: 33px;
+}
 .postBg {
-  background-size: 100%;
+  background: url("../Images/pikacho.png");
   background-repeat: no-repeat;
   background-position: center;
+width: 100%;
+border-radius: 16px;
 
-width: 477px;
-  height: 270px;
+  height: 270px !important;
   position: relative;
-  background-image: url("../Images/pikacho.png");
+
 }
 .postBg2 {
-
+  background: url("../Images/musicV.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 12px;
-    margin-top: 17px;
-    background-size: 100%;
-    cursor: pointer;
-	width: 477px;
+ 
+	width: 100%;
+  padding: 10px 0px;
+  border-radius: 16px;
   height: 270px;
   position: relative;
-  background-image: url("../Images/musicV.png");
+ 
 }
 .post_wraper {
   display: flex;
   flex-direction: column;
   gap: 70px;
   width: 100%;
+  
   padding-top: 12px;
   padding-left: 22px;
 }
@@ -102,8 +108,9 @@ width: 477px;
 }
 .post_div {
   display: flex;
+  align-items: flex-start;
   gap: 52px;
-
+  width: 100%;
 }
 @media screen and (max-width: 1440px) {
   .header_wraper {
@@ -112,16 +119,7 @@ width: 477px;
     align-items: center;
     padding: 20px 20px 0px 20px;
   }
-  .postBg {
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-  width: 400px;
-  max-width: 100%;
-	height: 270px;
-	position: relative;
-	background-image: url("../Images/pikacho.png");
-  }
+
   .post_div {
     display: flex;
     gap: 20px;
@@ -163,15 +161,24 @@ width: 477px;
     align-items: center;
   }
 }
+@media screen and (max-width:1360px){
+  .inner_post_view{
+    width: 100%;
+      display: flex;
+      gap: 33px;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
   .new_community_btn {
     width: 150px;
     height: 43px;
     border-radius: 41px;
     display: flex;
-    font-size: 16px;
+    font-size: 16px; 
     font-family: "DM Sans", sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -186,20 +193,29 @@ width: 477px;
     align-items: center;
   }
 }
-@media screen and (max-width:1260px){
-	.postBg {
-		background-size: 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-	  width: 350px;
-	  max-width: 100%;
-		height: 270px;
-		position: relative;
-		background-image: url("../Images/pikacho.png");
-	  }
-	  .post_content {
-		position: absolute;
-		bottom: 50px;
-		left: 18px;
-	  }
+@media screen and (max-width:768px){
+  .inner_post_view{
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+    .post_div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    }
+    .postBg {
+      background: url("../Images/pikacho.png");
+      background-repeat: no-repeat;
+      background-position: center;
+    width: 100%;
+    border-radius: 16px;
+    padding: 10px 0px;
+      height: 220px !important;
+      position: relative;
+    
+    }
 }

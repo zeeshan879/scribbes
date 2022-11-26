@@ -102,6 +102,7 @@ const HomeLeftMenu = () => {
             <div className="hidden md:block">Home</div>
           </div>
           </Link>
+          <Link href="/video-screen">
           <div
             className={
               active == 2 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
@@ -115,6 +116,7 @@ const HomeLeftMenu = () => {
             </div>
             <div className="hidden md:block">Videos</div>
           </div>
+          </Link>
           <Link href="/community-page">
           <div
             className={
@@ -128,6 +130,7 @@ const HomeLeftMenu = () => {
             <div className="hidden md:block">Communities</div>
           </div>
           </Link>
+          <Link href="/trending-screen">
           <div
             className={
               active == 4 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
@@ -141,6 +144,7 @@ const HomeLeftMenu = () => {
             </div>
             <div className="hidden md:block">Trending</div>
           </div>
+          </Link>
           <Link href="/notification">
           <div
             className={

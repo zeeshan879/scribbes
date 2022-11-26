@@ -13,7 +13,7 @@ const ComunityPostSec = () => {
             <Image src={postP} />
             <div className="text-xs font-normal font-DM w-[60px]">Tom Brady</div>
           </div>
-          <div className="flex gap-[33px] ">
+          <div className={ct.inner_post_view}>
             <div className={ct.postBg}>
               <div className={ct.post_content}>
                 <div className="font-medium font-DM text-base text-white">
@@ -34,7 +34,7 @@ const ComunityPostSec = () => {
             <Image src={postP} />
             <div className="text-xs font-normal font-DM">Tom Brady</div>
           </div>
-          <div className="flex gap-[33px] w-[100%]">
+          <div className={ct.inner_post_view}>
             <div className={ct.postBg2}>
               <div className={ct.post_content}>
                 <div className="font-medium font-DM text-base text-white">

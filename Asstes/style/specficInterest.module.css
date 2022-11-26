@@ -1,0 +1,546 @@
+.header_wraper {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0px 28px;
+  gap: 28px;
+  font-size: 30px;
+  border-bottom: 2px solid #bcbcbc;
+  color: black;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+}
+.main_container {
+  width: 100%;
+  border-right: 2px solid #bcbcbc;
+}
+.bannder_wraper {
+  margin: 14px 25px 14px 36px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.73) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../Images/botbal.png");
+  position: relative;
+  border-radius: 30px 30px 0px 0px;
+  border-radius: 16px;
+  height: 305px;
+  background-size: cover;
+  background-position: center;
+}
+.tabs_items {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
+.active_tabs_items {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #000580;
+  height: 35px;
+  width: 163px;
+  border-radius: 41px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  font-family: "DM Sans", sans-serif;
+}
+.tabs_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d961;
+  border-radius: 32px;
+  height: 46px;
+  gap: 5px;
+  padding: 0px 28px;
+  width: 100%;
+}
+.banner_content {
+  position: absolute;
+  bottom: 17px;
+  left: 39px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  color: white;
+}
+.tabs_container {
+  margin: 9px 125px 7px 123px;
+}
+.about_container {
+}
+.about_heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+}
+.about_nba_box {
+  padding: 20px 20px 28px 75px;
+}
+.crated_by{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	font-family: "DM Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding-top: 20px;
+	font-family: "Space Grotesk", sans-serif;
+	color: black;
+
+}
+.rules_indicator{
+	min-width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	display: flex;
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	 background-color: #1cac19;
+	justify-content: center;
+	justify-content: center;
+
+}
+.rules_content{
+	padding-top: 21px;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	font-family: "DM Sans", sans-serif;
+}
+.admin_info{
+	display: flex;
+	gap: 18px;
+	align-items: center;
+}
+.admin_follow_btn{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	width: 114px;
+	justify-content: center;
+	font-family: "DM Sans", sans-serif;
+	height: 32px;
+	background-color: #1cac19;
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+	border-radius: 41px;
+}
+.total_mem{
+	margin-left: 90px;
+}
+.admin_btn{
+	width: 69px;
+	height: 20px;
+	display: flex;
+	border-radius: 41px;
+	font-size: 12px;
+	font-weight: 400;
+	font-family: "DM Sans", sans-serif;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	background-color: #D9D9D9;
+	color: #000580;
+
+}
+.admin_profile_box{
+	display: flex;
+	justify-content: space-between;
+align-items: center;
+}
+.admin_profile_wraper{
+	padding-top: 21px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.admin_modrate_status{
+	display: flex;
+	gap: 7px;
+	align-items: center;
+}
+.admin_heading{
+	font-size: 20px;
+	font-weight: 700;
+	color: black;
+	font-family: "Space Grotesk", sans-serif;
+}
+.admin_moderatr{
+	padding: 17px 54px 20px 75px;
+}
+.rules_heading{
+	font-size: 20px;
+	font-weight: 700;
+	font-family: "Space Grotesk", sans-serif;
+	color: black;
+}
+.about_rules{
+	padding: 18px 20px 28px 75px;
+}
+.specific_users_box{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	font-family: "DM Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+}
+.discussion_container {
+  padding: 40px 46px 40px 47px;
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+}
+.seprator1 {
+  width: 100%;
+  border-bottom: 2px solid #bcbcbc;
+}
+.member_wrapers {
+  display: flex;
+  padding: 0px 25px 23px 75px;
+  border-bottom: 2px solid #bcbcbc;
+  justify-content: space-between;
+  align-items: center;
+}
+.mem1 {
+  border: 2px solid white;
+  height: 40px;
+  width: 40px;
+}
+.follow_btn {
+  width: 162px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1cac19;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  border-radius: 41px;
+}
+.option_bnt {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1cac19;
+}
+.mem2 {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  left: 30px;
+}
+.mem3 {
+
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  left: 60px;
+}
+.mem4 {
+  border: 2px solid white;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  left: 90px;
+}
+@media screen and (max-width:1630px){
+	.tabs_container {
+		margin: 9px 50px 7px 50px;
+	  }
+}
+@media screen and (max-width:1440px){
+	.header_wraper {
+		height: 90px;
+		display: flex;
+		align-items: center;
+		padding: 0px 28px;
+		gap: 18px;
+		font-size: 20px;
+		border-bottom: 2px solid #bcbcbc;
+		color: black;
+		font-weight: 700;
+		font-family: "Space Grotesk", sans-serif;
+	  }
+	  .follow_btn {
+		width: 142px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #1cac19;
+		color: white;
+		font-size: 20px;
+		font-weight: 500;
+		font-family: "DM Sans", sans-serif;
+		cursor: pointer;
+		border-radius: 41px;
+	  }
+	  .option_bnt {
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #1cac19;
+	  }
+	  .admin_follow_btn{
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		width: 100px;
+		justify-content: center;
+		font-family: "DM Sans", sans-serif;
+		height: 32px;
+		background-color: #1cac19;
+		color: white;
+		font-size: 18px;
+		font-weight: 500;
+		border-radius: 41px;
+	}
+	  .about_rules{
+		padding: 18px 20px 20px 20px;
+	}
+	.admin_heading{
+		font-size: 18px;
+		font-weight: 700;
+		color: black;
+		font-family: "Space Grotesk", sans-serif;
+	}
+	  .admin_moderatr{
+		padding: 17px 20px 20px 20px;
+	}
+	  .tabs_items {
+		font-size: 18px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: black;
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .about_nba_box {
+		padding: 20px 20px 20px 20px;
+	  }
+	  .tabs_container {
+		margin: 9px 20px 7px 20px;
+	  }
+	  .bannder_wraper {
+		margin: 14px 20px 14px 20px;
+		background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.73) 0%,
+			rgba(0, 0, 0, 0) 100%
+		  ),
+		  url("../Images/botbal.png");
+		position: relative;
+		border-radius: 30px 30px 0px 0px;
+		border-radius: 16px;
+		height: 305px;
+		background-size: cover;
+		background-position: center;
+	  }
+	  .member_wrapers {
+		display: flex;
+		padding: 0px 20px 20px 20px;
+		border-bottom: 2px solid #bcbcbc;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	  .banner_content {
+		position: absolute;
+		bottom: 17px;
+		left: 39px;
+		font-size: 20px;
+		font-weight: 700;
+		font-family: "DM Sans", sans-serif;
+		color: white;
+	  }
+	  .active_tabs_items {
+		font-size: 18px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: #000580;
+		height: 35px;
+		width: 143px;
+		border-radius: 41px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .discussion_container {
+		padding: 20px 20px 0px 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 51px;
+	  }
+}
+@media screen and (max-width:1300px){
+	.active_tabs_items {
+		font-size: 16px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: #000580;
+		height: 35px;
+		width: 120px;
+		border-radius: 41px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .tabs_items {
+		font-size: 16px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: black;
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .specific_users_box{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 5px;
+		font-family: "DM Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	.total_mem{
+		margin-left: 5px;
+	}
+	  .tabs_box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #d9d9d961;
+		border-radius: 32px;
+		height: 46px;
+		padding: 0px 15px;
+		width: 100%;
+	  }
+}
+@media screen and (max-width:768px){
+	.active_tabs_items {
+		font-size: 16px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: #000580;
+		height: 35px;
+		width: 110px;
+		border-radius: 41px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .bannder_wraper {
+		margin: 14px 20px 14px 20px;
+		background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.73) 0%,
+			rgba(0, 0, 0, 0) 100%
+		  ),
+		  url("../Images/botbal.png");
+		position: relative;
+		border-radius: 30px 30px 0px 0px;
+		border-radius: 16px;
+		height: 250px;
+		background-size: cover;
+		background-position: center;
+	  }
+	  .admin_modrate_status{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 7px;
+		align-items: center;
+	}
+	.main_container {
+		width: 100%;
+		padding-bottom: 70px;
+		border-right: 2px solid #bcbcbc;
+	  }
+	.follow_btn {
+		width: 100px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #1cac19;
+		color: white;
+		font-size: 16px;
+		font-weight: 500;
+		font-family: "DM Sans", sans-serif;
+		cursor: pointer;
+		border-radius: 41px;
+	  }
+}
+@media screen and (max-width:440px){
+
+	  .active_tabs_items {
+		font-size: 14px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: #000580;
+		height: 35px;
+		width: 100px;
+		border-radius: 41px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		font-family: "DM Sans", sans-serif;
+	  }
+	  .tabs_container {
+		margin: 9px 15px 7px 15px;
+	  }
+	  .tabs_items {
+		font-size: 14px;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		color: black;
+		font-family: "DM Sans", sans-serif;
+	  }
+}

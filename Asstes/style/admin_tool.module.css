@@ -1,0 +1,964 @@
+.admin_wraper {
+  border-right: 2px solid #bcbcbc;
+  width: 100%;
+  min-height: 100%;
+}
+.rules_done_btn {
+  width: 162px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 41px;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: #1cac19;
+  cursor: pointer;
+  border: 2px solid #1cac19;
+}
+.setting_bannder_wraper {
+  margin: 31px 31px 62px 30px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.73) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../Images/botbal.png");
+  position: relative;
+  border-radius: 30px 30px 0px 0px;
+  border-radius: 16px;
+  height: 305px;
+  padding-top: 82px;
+  background-size: cover;
+  background-position: center;
+}
+.group_heaing {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Space Grotesk", sans-serif;
+  color: black;
+}
+.group_name {
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 22px;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
+.seting_info {
+  padding: 0px 35px 43px 30px;
+  border-bottom: 2px solid #bcbcbc;
+}
+.membership_box {
+  border-bottom: 2px solid #bcbcbc;
+  padding: 41px 30px 33px 30px;
+}
+.upload_image_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner_content {
+  position: absolute;
+  left: 39px;
+  bottom: 17px;
+  color: white;
+  font-size: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+}
+.header_wraper {
+  display: flex;
+
+  gap: 18px;
+  padding: 25px 28px;
+  height: 110px;
+  border-bottom: 2px solid #bcbcbc;
+}
+.mem_admin_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  color: #000580;
+  width: 69px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  height: 20px;
+  border-radius: 41px;
+}
+
+.tabs_items {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.active_tabs_items {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000580;
+  display: flex;
+  width: 115px;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 41px;
+  height: 35px;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.tabs_box {
+  width: 637px;
+  height: 46px;
+  border-radius: 32px;
+  padding: 0px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d961;
+}
+.rules_div {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.admin_body {
+  padding: 61px 64px 100px 65px;
+}
+.rules_indicator {
+  height: 22px;
+  min-width: 22px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #1cac19;
+  color: white;
+  font-size: 12px;
+}
+
+.cancel_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ea0000;
+  border: 1px solid #ea0000;
+  width: 114px;
+  height: 32px;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+
+  border-radius: 41px;
+  cursor: pointer;
+}
+.approve_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1cac19;
+  width: 114px;
+  height: 32px;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  border-radius: 41px;
+  cursor: pointer;
+}
+.member_option {
+  cursor: pointer;
+  position: relative;
+  margin-top: -10px;
+}
+.opt_items {
+  height: 38px;
+  padding-left: 16px;
+  display: flex;
+  gap: 9px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+}
+.opt_items:hover {
+  height: 38px;
+  background-color: #d9d9d9;
+  padding-left: 16px;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  gap: 9px;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  cursor: pointer;
+}
+.add_modal_body {
+  padding: 74px 82px;
+}
+.add_modal_addbtn {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  border-radius: 41px;
+  margin-top: 100px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  background-color: #1cac19;
+  color: white;
+}
+.rules_heading {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
+  color: black;
+}
+.rules_text {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 38px 0px;
+  max-width: 498px;
+  line-height: 25px;
+  font-family: "DM Sans", sans-serif;
+}
+.admin_rule_container {
+  padding: 57px 32px 20px 55px;
+}
+.add_modal_Cancelbtn {
+  width: 100%;
+  height: 63px;
+  display: flex;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  margin-top: 25px;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  background: #ffffff;
+  border: 0.3px solid #bcbcbc;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 41px;
+}
+.add_modal_text {
+  padding-top: 46px;
+  max-width: 384px;
+  line-height: 31px;
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+.member_profile {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.addRule_modal_heading {
+  padding: 18px 0px 0px 47px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+.opt_toggle_box {
+  width: 256px;
+  height: 146px;
+  display: flex;
+  position: absolute;
+  padding-top: 36px;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  background: #ffffff;
+  border: 0.3px solid #bcbcbc;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.req_pro_box {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.email_status_box {
+  display: flex;
+  gap: 31px;
+  align-items: center;
+}
+.req_email {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
+.remove_cancel_box {
+  display: flex;
+  gap: 24px;
+}
+
+.mem_req_div {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total_req {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 49px;
+}
+.modal_body {
+  padding: 18px 73px 32px 73px;
+}
+.add_rule_save_btn{
+	width: 180px;
+	height: 45px;
+	background-color: #1cac19;
+	color: white;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: "DM Sans", sans-serif;
+	border-radius: 41px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.edit_group_des_box{
+	height: 162px;
+	border: 1px solid #BCBCBC;
+	border-radius: 15px;
+	padding: 15px 8px 8px 15px;
+
+}
+.membership_modal_text{
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+
+  font-family: "DM Sans", sans-serif;
+}
+.membership_modal_subtext{
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 550px;
+  color: #BCBCBC;
+  font-family: "DM Sans", sans-serif;
+}
+.edit_grup_modal{
+	padding: 66px 73px 32px 73px;
+}
+.membership_type_m_heading{
+  display: flex;
+  gap: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+  padding: 18px 20px 0px 47px;
+  font-weight: 700;
+  color: black;
+
+}
+.edit_memship_type_modal{
+  padding: 54px 73px 53px 82px;
+}
+.membership_content_div{
+  padding: 53px 73px 66px 82px;
+  border-bottom: 2px solid #BCBCBC;
+
+}
+.add_rule_ele {
+  height: 80%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+  border: none !important;
+  outline: none !important;
+}
+.edit_des_ele {
+  height: 85%;
+  width: 100%;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 400;
+  border: none !important;
+  outline: none !important;
+}
+.addRule_des_modal {
+  height: 327px;
+  width: 100%;
+  padding: 36px 8px 8px 15px;
+  margin-top: 57px;
+  border-radius: 15px;
+  border: 1px solid #bcbcbc;
+}
+.textatea_ele{
+	height: 92%;
+	width: 100%;
+	border: none;
+	font-family: "DM Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #bcbcbc;
+	outline: none;
+}
+.add_rule_info {
+  padding:10px 15px 0px 15px;
+  height: 99px;
+  color: #bcbcbc;
+  width: 100%;
+  border: 1px solid #bcbcbc;
+  border-radius: 15px;
+  margin-top: 66px 0px 77px 0px;
+}
+.add_modal_heading {
+  font-size: 30px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: black;
+}
+.req_acount {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: #000580;
+  color: white;
+}
+
+.member_req_heading {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.tabs_wraper {
+  padding: 10px 20px;
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid #bcbcbc;
+  justify-content: center;
+  align-items: center;
+}
+.req_btn_box {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+}
+.header_text {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  font-family: "Space Grotesk", sans-serif;
+}
+@media screen and (max-width: 1440px) {
+  .admin_body {
+    padding: 20px 20px 20px 20px;
+  }
+  .setting_bannder_wraper {
+    margin: 20px 20px 20px 20px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.73) 0%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      url("../Images/botbal.png");
+    position: relative;
+    border-radius: 30px 30px 0px 0px;
+    border-radius: 16px;
+    height: 305px;
+    padding-top: 82px;
+    background-size: cover;
+    background-position: center;
+  }
+  .membership_content_div{
+    padding: 20px 40px 40px 40px;
+    border-bottom: 2px solid #BCBCBC;
+  
+  }
+  .edit_memship_type_modal{
+    padding: 30px 40px 40px 40px;
+  }
+  .membership_type_m_heading{
+    display: flex;
+    gap: 18px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    padding: 18px 20px 0px 20px;
+    font-weight: 700;
+    color: black;
+  
+  }
+  .seting_info {
+    padding: 0px 20px 20px 20px;
+    border-bottom: 2px solid #bcbcbc;
+  }
+  .addRule_modal_heading {
+    padding: 18px 0px 0px 47px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .rules_done_btn {
+    width: 122px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 41px;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    color: #1cac19;
+    cursor: pointer;
+    border: 2px solid #1cac19;
+  }
+  .add_modal_addbtn {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    border-radius: 41px;
+    margin-top: 100px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    background-color: #1cac19;
+    color: white;
+  }
+  .add_modal_text {
+    padding-top: 36px;
+    max-width: 384px;
+    line-height: 31px;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+  }
+  .add_modal_Cancelbtn {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+    background: #ffffff;
+    border: 0.3px solid #bcbcbc;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+  }
+  .add_modal_heading {
+    font-size: 20px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    color: black;
+  }
+  .banner_content {
+    position: absolute;
+    left: 39px;
+    bottom: 17px;
+    color: white;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+  }
+  .membership_box {
+    border-bottom: 2px solid #bcbcbc;
+    padding: 20px 20px 20px 20px;
+  }
+  .member_req_heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .rules_text {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 25px 0px;
+    max-width: 498px;
+    line-height: 25px;
+    font-family: "DM Sans", sans-serif;
+  }
+  .admin_rule_container {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .tabs_box {
+    width: 100%;
+    height: 46px;
+    border-radius: 32px;
+    padding: 0px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d961;
+  }
+  .add_modal_body {
+    padding: 50px 40px;
+  }
+  .rules_heading {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+    color: black;
+  }
+  .member_profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .remove_cancel_box {
+    display: flex;
+    gap: 10px;
+  }
+  .active_tabs_items {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000580;
+    display: flex;
+    width: 115px;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+    height: 35px;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .tabs_items {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .total_req {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  .cancel_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ea0000;
+    border: 1px solid #ea0000;
+    width: 100px;
+    height: 32px;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+
+    border-radius: 41px;
+    cursor: pointer;
+  }
+  .approve_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1cac19;
+    width: 100px;
+    height: 32px;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    border-radius: 41px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1330px) {
+  .req_pro_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+  .req_profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .member_profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+  }
+  .req_btn_box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .email_status_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .cancel_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ea0000;
+    border: 1px solid #ea0000;
+    width: 100px;
+    height: 32px;
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+
+    border-radius: 41px;
+    cursor: pointer;
+  }
+  .approve_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1cac19;
+    width: 100px;
+    height: 32px;
+    font-size: 16px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    border-radius: 41px;
+    cursor: pointer;
+  }
+  .req_btn_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .req_email {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    font-family: "DM Sans", sans-serif;
+  }
+  .tabs_box {
+    width: 100%;
+    height: 46px;
+    border-radius: 32px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9d9d961;
+  }
+}
+@media screen and (max-width:991px){
+  .addRule_modal_heading {
+    padding: 18px 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .membership_modal_subtext{
+    font-size: 14px;
+    font-weight: 400;
+    max-width: 300px;
+    color: #BCBCBC;
+    font-family: "DM Sans", sans-serif;
+  }
+  .membership_modal_text{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+  
+    font-family: "DM Sans", sans-serif;
+  }
+  .textatea_ele{
+    height: 92%;
+    width: 100%;
+    border: none;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #bcbcbc;
+    outline: none;
+  }
+  .edit_grup_modal{
+    padding: 40px 30px 30px 30px;
+  }
+  .addRule_des_modal {
+    height: 280px;
+    width: 100%;
+    padding: 20px 8px 8px 15px;
+    margin-top: 57px;
+    border-radius: 15px;
+    border: 1px solid #bcbcbc;
+  }
+  .add_rule_info {
+    padding:10px 15px 0px 15px;
+    height: 70px;
+    color: #bcbcbc;
+    width: 100%;
+    border: 1px solid #bcbcbc;
+    border-radius: 15px;
+    margin-top: 66px 0px 20px 0px;
+  }
+  .modal_body {
+    padding: 18px 50px 22px 50px;
+  }
+  .add_rule_ele {
+    height: 70%;
+    width: 100%;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    padding-top: 10px;
+    font-weight: 400;
+    border: none !important;
+    outline: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .active_tabs_items {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000580;
+    display: flex;
+    width: 100px;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 41px;
+    height: 35px;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .setting_wrapper {
+    padding-bottom: 90px;
+  }
+  .addRule_des_modal {
+    height: 280px;
+    width: 100%;
+    padding: 20px 8px 8px 15px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border: 1px solid #bcbcbc;
+  }
+  .add_modal_body {
+    padding: 50px 40px;
+  }
+  .tabs_items {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+  }
+  .admin_body {
+    padding: 20px 20px 100px 20px;
+  }
+  .header_text {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .header_wraper {
+    display: flex;
+
+    gap: 18px;
+    padding: 25px 28px;
+    height: 90px;
+    border-bottom: 2px solid #bcbcbc;
+  }
+  .req_acount {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000580;
+    color: white;
+  }
+  .cancel_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ea0000;
+    border: 1px solid #ea0000;
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+
+    border-radius: 41px;
+    cursor: pointer;
+  }
+  .approve_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1cac19;
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    border-radius: 41px;
+    cursor: pointer;
+  }
+}

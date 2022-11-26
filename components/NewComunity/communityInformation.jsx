@@ -48,16 +48,14 @@ const CommunityInformation = () => {
               {chose1 && (
                 <div className={nc.chose_privcy_toggle}>
                   <div className={nc.toggle_item}>
-			
                     <Image src={earth} />
-				
 
                     <div>Everyone</div>
                   </div>
                   <div className={nc.toggle_item}>
-               <div className="min-w-[25px]">
-			   <Image src={lock} />
-			   </div>
+                    <div className="min-w-[25px]">
+                      <Image src={lock} />
+                    </div>
 
                     <div>Private</div>
                   </div>

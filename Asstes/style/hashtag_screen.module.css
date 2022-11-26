@@ -38,6 +38,11 @@
 	font-family: "DM Sans", sans-serif;
 
 }
+.post_box1{
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
 .active_tab_item{
 	font-size: 20px;
 	display: flex;
@@ -60,4 +65,90 @@
 .seprator{
 	width: 100%;
 	border: 2px solid #BCBCBC;
+}
+@media screen and (max-width:1440px){
+	.header_box{
+		padding: 20px 0px 0px 20px;
+		font-size: 20px;
+		font-weight: 700;
+		color: black;
+		font-family: "Space Grotesk", sans-serif;
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		
+	}
+	.hash_tabs_wraper{
+		padding: 18px 20px 18px 20px;
+	
+	}
+	.tabs_box{
+		max-width: 451px;
+		height: 53px;
+		border-radius: 41px;
+		padding: 0px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #D9D9D961;
+	}
+	.active_tab_item{
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		width: 120px;
+		height: 43px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 41px;
+		cursor: pointer;
+		color: #000580;
+		font-family: "DM Sans", sans-serif;
+	
+	}
+	.tab_item{
+		font-size: 18px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		color: black;
+		cursor: pointer;
+		font-family: "DM Sans", sans-serif;
+	
+	}
+	.post_body_wraper{
+		padding: 20px 20px 40px 20px;
+	}
+}
+@media screen and (max-width:768px){
+	.active_tab_item{
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		width: 100px;
+		height: 43px;
+		background-color: white;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+		border-radius: 41px;
+		cursor: pointer;
+		color: #000580;
+		font-family: "DM Sans", sans-serif;
+	
+	}
+	.tab_item{
+		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		color: black;
+		cursor: pointer;
+		font-family: "DM Sans", sans-serif;
+	
+	}
 }

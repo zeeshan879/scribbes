@@ -259,9 +259,6 @@ const UserDescritipnPost = (props) => {
 			
 					</div>
 				</div>
-
-			
- 
               </div>
               <div>
                 <PostNotification showValue={true}  />

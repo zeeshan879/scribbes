@@ -3,7 +3,7 @@ import ht from "../../Asstes/style/hashtag_screen.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 import { useRouter } from "next/router";
 import Hashtagtabs from "./hashtag_tabs";
-import BlogPost	from "../HomeCenterView/blogPost"
+import BlogPost from "../HomeCenterView/blogPost";
 
 const HashTagCenterview = () => {
   const router = useRouter();
@@ -22,9 +22,17 @@ const HashTagCenterview = () => {
           <Hashtagtabs />
         </div>
         <div className={ht.seprator}></div>
-		<div className={ht.post_body_wraper}>
-		  <BlogPost />
-		</div>
+        <div className={ht.post_body_wraper}>
+          <div className={ht.post_box1}>
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          <BlogPost />
+          </div>
+        </div>
       </div>
     </>
   );

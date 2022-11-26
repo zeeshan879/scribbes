@@ -14,18 +14,28 @@ import indicator2 from "../../Asstes/Images/indicator2.png";
 import Image from "next/image";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 import PostOption from "../HomeCenterView/postOption";
+import {useState} from "react";
+import CommentPostEditHistory from "./editHistroyModal"
+import ScribbedBy from "./scribedBy"
 
 const CommentPost = () => {
+  const [edit ,setEdit]=useState(false)
+  const handleEditPost=()=>{
+    setEdit(!edit)
+  }
   return (
     <>
       <div className={HomCen.comment_post_header}>
         <div className="flex gap-[18px] items-center">
           {" "}
           <BsArrowLeft className="cursor-pointer" />
-          Post
-        </div>
-        <div className="text-sm sm:text-[18px] pl-[40px] lg:pl-[48px] text-[#BCBCBC] font-normal">
-          Mike Someone
+          <div>
+            <div> Post</div>
+
+            <div className="text-sm sm:text-[18px]  text-[#BCBCBC] font-normal">
+              Mike Someone
+            </div>
+          </div>
         </div>
       </div>
       <div className={HomCen.post_comment_wrap}>
@@ -111,8 +121,13 @@ const CommentPost = () => {
                   Mike Someone
                   <span className="text-[#BCBCBC]">@Johndoe . 2h ago</span>
                 </div>
-                <div>
-                  <PostOption />
+                <div className="flex gap-[8px] items-center">
+                  <div className="cursor-pointer text-xs pt-[5px] text-[#BCBCBC] font-DM" onClick={()=>handleEditPost()}>
+                    Edited
+                  </div>
+                  <div>
+                    <PostOption />
+                  </div>
                 </div>
               </div>
               <div className="font-DM font-normal text-[16px] max-w-[775px]">
@@ -143,13 +158,13 @@ const CommentPost = () => {
             </div>
           </div>
           <div className={HomCen.sub_comment_box2}>
-          <div className={HomCen.subComment_p_Img}>
-            <div>
-              <Image src={reply} />
-            </div>
-            <div className={HomCen.comnt_indicator2}>
-              <Image src={indicator2} />
-            </div>
+            <div className={HomCen.subComment_p_Img}>
+              <div>
+                <Image src={reply} />
+              </div>
+              <div className={HomCen.comnt_indicator2}>
+                <Image src={indicator2} />
+              </div>
             </div>
             <div>
               <div className="flex justify-between items-center">
@@ -157,8 +172,13 @@ const CommentPost = () => {
                   Mike Someone
                   <span className="text-[#BCBCBC]">@Johndoe . 2h ago</span>
                 </div>
-                <div>
-                  <PostOption />
+                <div className="flex gap-[8px] items-center">
+                <div className="cursor-pointer text-xs pt-[5px] text-[#BCBCBC] font-DM" onClick={()=>handleEditPost()}>
+                    Edited
+                  </div>
+                  <div>
+                    <PostOption />
+                  </div>
                 </div>
               </div>
               <div className="font-DM font-normal text-[16px] max-w-[760px]">
@@ -233,6 +253,8 @@ const CommentPost = () => {
           </div>
         </div>
       </div>
+      {/*<CommentPostEditHistory state={edit}  onClick={handleEditPost} />*/}
+      <ScribbedBy state={edit}  onClick={handleEditPost} />
     </>
   );
 };

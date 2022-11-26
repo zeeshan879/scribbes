@@ -4,6 +4,12 @@
   justify-content: space-between;
   align-items: center;
 }
+.post_des_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .comment_post_header {
   padding: 15px 28px;
 display: flex;
@@ -994,6 +1000,7 @@ color: black;
 .des_post_userName {
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
   margin-top: 5px;
   color: black;
   font-family: "DM Sans", sans-serif;
@@ -1030,6 +1037,21 @@ color: black;
   color: black;
   font-family: "DM Sans", sans-serif;
 }
+.des_nba_btn {
+  display: flex;
+  width: 142px;
+  height: 24px;
+  border-radius: 41px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-size: 12px;
+  background-color: #d9d9d9;
+  font-weight: 700;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
 .text_post_time {
   font-size: 12px;
   color: #bcbcbc;
@@ -1041,6 +1063,7 @@ color: black;
   color: #bcbcbc;
   font-size: 400;
   margin-top: 5px;
+  text-align: center;
   font-family: "DM Sans", sans-serif;
 }
 .text_post_userEmal {
@@ -1052,6 +1075,7 @@ color: black;
 .des_post_userEmal {
   font-size: 12px;
   font-weight: 700;
+  text-align: center;
   color: black;
   font-family: "DM Sans", sans-serif;
 }
@@ -2198,7 +2222,9 @@ font-family: "DM Sans", sans-serif;
   }
   .post_des_box {
     display: flex;
+    flex-direction: column;
     gap: 7px;
+    justify-content: center;
     align-items: center;
   }
   .post_profile {
