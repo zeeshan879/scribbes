@@ -22,11 +22,11 @@ a {
   width:20px;
   height: 20px;
   border-radius: 50%;
-  vertical-align: middle;
+  vertical-align: middle !important;
   border: 1px solid #1CAC19;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  outline: none !important;
   cursor: pointer;
 }
 .radius-checkbox {
@@ -52,6 +52,9 @@ height: 17px !important;
 .form-check-input:checked {
   background-color:#1CAC19 !important;
   border-color: #1CAC19 !important;
+}
+.full_secreen .modal-content{
+  background:rgba(0,0, 0, 0.8) ;
 }
 
 
@@ -369,3 +372,5 @@ justify-content: center !important;
 
 
 
+
+      

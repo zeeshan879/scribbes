@@ -175,7 +175,7 @@ const PostOption = () => {
                 <div>Spam</div>
                 <div>
                   <input
-                    class="rounded-checkbox accent-[#1CAC19]"
+                    class="d-checkbox accent-[#1CAC19]"
                     type="checkbox"
                   />{" "}
                 </div>

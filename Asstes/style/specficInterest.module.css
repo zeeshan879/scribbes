@@ -2,6 +2,7 @@
   height: 110px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0px 28px;
   gap: 28px;
   font-size: 30px;
@@ -9,6 +10,26 @@
   color: black;
   font-weight: 700;
   font-family: "Space Grotesk", sans-serif;
+}
+.setting_count{
+	height: 18px;
+	z-index: 2;
+	right: 0;
+	top: -5px;
+	width: 18px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: #000580;
+	display: flex;
+	font-weight: 500;
+	font-family: "Space Grotesk", sans-serif;
+	font-size: 12px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+.setiing_icon{
+	position: relative;
 }
 .main_container {
   width: 100%;
@@ -39,6 +60,16 @@
   color: black;
   font-family: "DM Sans", sans-serif;
 }
+.tabs2_items {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: black;
+  font-family: "DM Sans", sans-serif;
+}
 .active_tabs_items {
   font-size: 20px;
   font-weight: 400;
@@ -49,6 +80,21 @@
   color: #000580;
   height: 35px;
   width: 163px;
+  border-radius: 41px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  font-family: "DM Sans", sans-serif;
+}
+.active_tabs2_items {
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #000580;
+  height: 35px;
+  width: 115px;
   border-radius: 41px;
   background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -65,6 +111,17 @@
   padding: 0px 28px;
   width: 100%;
 }
+.tabs2_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d9d9d961;
+  border-radius: 32px;
+  height: 46px;
+  gap: 5px;
+  padding: 0px 28px;
+  width: 270px;
+}
 .banner_content {
   position: absolute;
   bottom: 17px;
@@ -75,6 +132,8 @@
   color: white;
 }
 .tabs_container {
+	display: flex;
+	justify-content: center;
   margin: 9px 125px 7px 123px;
 }
 .about_container {
@@ -235,12 +294,38 @@ align-items: center;
   cursor: pointer;
   border-radius: 41px;
 }
+.join_btn {
+  width: 162px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #1cac19;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #1cac19;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  border-radius: 41px;
+}
 .option_bnt {
   height: 42px;
   width: 42px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1cac19;
+}
+.aboutAdd_bnt {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  background-color: #1cac19;
   justify-content: center;
   align-items: center;
   border: 2px solid #1cac19;
@@ -300,6 +385,21 @@ align-items: center;
 		cursor: pointer;
 		border-radius: 41px;
 	  }
+	  .join_btn {
+		width: 142px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		color: #1cac19;
+		font-size: 20px;
+		font-weight: 500;
+		border: 1px solid #1cac19;
+		font-family: "DM Sans", sans-serif;
+		cursor: pointer;
+		border-radius: 41px;
+	  }
 	  .option_bnt {
 		height: 35px;
 		width: 35px;
@@ -308,6 +408,17 @@ align-items: center;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		border: 2px solid #1cac19;
+	  }
+	  .aboutAdd_bnt {
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #1cac19;
 		border: 2px solid #1cac19;
 	  }
 	  .admin_follow_btn{
@@ -508,6 +619,21 @@ align-items: center;
 		color: white;
 		font-size: 16px;
 		font-weight: 500;
+		font-family: "DM Sans", sans-serif;
+		cursor: pointer;
+		border-radius: 41px;
+	  }
+	.join_btn {
+		width: 100px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color:white;
+		color: #1cac19;
+		font-size: 16px;
+		font-weight: 500;
+		border: 1px solid #1cac19;
 		font-family: "DM Sans", sans-serif;
 		cursor: pointer;
 		border-radius: 41px;

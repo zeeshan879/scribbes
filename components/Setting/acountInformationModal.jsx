@@ -11,7 +11,7 @@ const AcountInformationModal = (props) => {
   return (
     <>
       <Modal
-        size="lg"
+        size="xl"
         centered
         className="post_action_modal"
         show={props.state}

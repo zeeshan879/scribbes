@@ -6,7 +6,7 @@ import flag from "../../Asstes/Images/flag.png";
 import chose from "../../Asstes/Images/chose.png";
 import Image from "next/image";
 import scv from "../../Asstes/style/setting_center_view.module.css";
-import Form from 'react-bootstrap/Form';
+import Form from "react-bootstrap/Form";
 
 const AudienceTaggingModal = (props) => {
   return (
@@ -43,10 +43,7 @@ const AudienceTaggingModal = (props) => {
               </div>
             </div>
             <div>
-              <input
-                class="radius-checkbox accent-[#1CAC19] "
-                type="checkbox"
-              />{" "}
+              <input class="accent-[#1CAC19] " type="checkbox" />{" "}
             </div>
           </div>
         </div>
@@ -63,15 +60,9 @@ const AudienceTaggingModal = (props) => {
               </div>
             </div>
             <div>
-			<Form>
-      <Form.Check 
-        type="switch"
-        id="custom-switch"
-		className=""
-
-      />
-
-    </Form>
+              <Form>
+                <Form.Check type="switch" id="custom-switch" className="" />
+              </Form>
             </div>
           </div>
           <div className="pt-[35px] flex justify-between">
@@ -82,7 +73,7 @@ const AudienceTaggingModal = (props) => {
               <input
                 class="rounded-checkbox accent-[#1CAC19] h-[20px] w-[20px] "
                 type="checkbox"
-				checked
+                checked
               />{" "}
             </div>
           </div>

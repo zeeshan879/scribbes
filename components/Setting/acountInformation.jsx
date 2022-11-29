@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineModeEdit } from "react-icons/md";
+import { MdOutlineVerifiedUser } from "react-icons/md";
 import acount from "../../Asstes/Images/acount.png";
 import key from "../../Asstes/Images/key.png";
 import deactive from "../../Asstes/Images/deactive.png";
@@ -9,6 +10,7 @@ import AcountInformationModal from "./acountInformationModal";
 import { useState } from "react";
 import ChnagePassword from "./changePasswordModal";
 import DeactivateAccounts from "./deactiveAccountModal"
+import Link from "next/link";
 
 const AcountInformation = () => {
   const [acountModal, setAccountModal] = useState(false);
@@ -89,6 +91,26 @@ const AcountInformation = () => {
             <div onClick={()=>handleDeactivate()}>
               <MdOutlineModeEdit className="text-[#BCBCBC] cursor-pointer text-xl" />
             </div>
+          </div>
+          <div className="flex justify-between w-[100%]">
+            <div className="flex gap-[21px]">
+              <div>
+           <MdOutlineVerifiedUser className="text-2xl"/>
+              </div>
+              <div>
+        <Link href="/varify-profile">
+        <div className="font-DM cursor-pointer font-bold text-[16px] md:text-[18px] lg:text-[20px]" >
+                  Verify Your Profile
+                </div>
+        </Link>
+                <div className="font-DM font-normal text-base">
+                  Find out how you can Verify your scribbes profile.
+                </div>
+              </div>
+            </div>
+            {/*<div onClick={()=>handleDeactivate()}>
+              <MdOutlineModeEdit className="text-[#BCBCBC] cursor-pointer text-xl" />
+            </div>*/}
           </div>
         </div>
       </div>

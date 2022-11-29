@@ -12,10 +12,126 @@
   padding: 0px 26px 31px 38px;
   overflow-x: scroll;
 }
-.vedio_bg {
+.Modal_header {
+  padding: 47px 20px 0px 27px;
+  display: flex;
+  gap: 10px;
+  font-size: 42px;
+  color: white;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  align-items: center;
+}
+.vedio_modal_content {
+  padding-top: 45px;
+  display: flex;
+  width: 100%;
+  padding-top: 250px;
+  height: 1000px;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.ply_btn {
+  height: 542px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.post_des{
+	max-width: 556px;
+	font-size: 16px;
+	position: absolute;
+	bottom: 20px;
+	line-height: 20px;
+	left: 55px;
+	font-family: "DM Sans", sans-serif;
+	color: white;
+	font-weight: 400;
+}
+.post_notification{
+	position: absolute;
+	top: 178px;
+	right: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18) -30.04%, rgba(0, 0, 0, 0) 42.02%, #000000 119.37%),
-  url("../Images/videoDog.png");
+}
+.noti_items{
+	height: 64px;
+	width: 64px;
+	border-radius: 50%;
+	color: white;
+	display: flex;
+	background: rgba(0, 0, 0, 0.39);
+	justify-content: center;
+	align-items: center;
+}
+.total_watch{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+top: 28px;
+background: rgba(0, 0, 0, 0.39);
+left: 30px;
+	border-radius: 50%;
+	display: flex;
+	color: white;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.bg_image {
+  background: url("../Images/musicV.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+width: 968px;
+  height: 542px;
+  box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 10%);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 7px 10px;
+  position: relative;
+}
+.post_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  justify-content: center;
+}
+.modal_post_wraper {
+  display: flex;
+  gap: 33px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+.back_arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 38px;
+  border-radius: 50%;
+  width: 38px;
+  background: rgba(0, 0, 0, 0.39);
+}
+.vedio_bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18) -30.04%,
+      rgba(0, 0, 0, 0) 42.02%,
+      #000000 119.37%
+    ),
+    url("../Images/videoDog.png");
   height: 293px;
   width: 315px;
   background-position: center;
@@ -36,76 +152,260 @@
   top: 125px;
   left: 136px;
 }
-.vedio_content_box{
-	position: absolute;
-	padding: 0px 31px 0px 21px;
-	bottom: 3px;
+.vedio_content_box {
+  position: absolute;
+  padding: 0px 31px 0px 21px;
+  bottom: 3px;
 }
-.vedio_text{
-	color: white;
-	font-size: 12px;
-	font-weight: 700;
-	font-family: "Space Grotesk", sans-serif;
+.vedio_text {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Space Grotesk", sans-serif;
 }
-.vedio_like_comnets{
+.vedio_like_comnets {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 7px;
+  font-size: 12px;
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+.vedio_bottom_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.vedio_b_content {
+  display: flex;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000580;
+  font-family: "DM Sans", sans-serif;
+  align-items: center;
+}
+.sm_btn {
+  width: 123px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: black;
+  padding: 0px 8px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  border-radius: 41px;
+
+  height: 24px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  align-items: center;
+}
+@media screen and (max-width:1880px){
+	.vedio_modal_content {
+		padding-top: 45px;
+		display: flex;
+		width: 100%;
+		padding-top: 350px;
+		height: 1000px;
+		overflow-y: scroll;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	  }
+}
+@media screen and (max-width: 1440px) {
+  .header_wrap {
+    padding: 20px 20px 20px 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .modal_post_wraper {
 	display: flex;
-	align-items: center;
-	gap: 18px;
-	padding-top: 7px;
-	font-size: 12px;
+	gap: 20px;
+	width: 100%;
+	padding: 0px 30px;
+	justify-content: center;
+	align-items: flex-start;
+  }
+  .Modal_header {
+	padding: 20px 20px 0px 20px;
+	display: flex;
+	gap: 10px;
+	font-size: 30px;
 	color: white;
+	font-weight: 700;
 	font-family: "DM Sans", sans-serif;
+	align-items: center;
+  }
+  .post_des{
+	max-width: 556px;
+	font-size: 16px;
+	position: absolute;
+	bottom: 40px;
+	line-height: 20px;
+	padding: 0px 10px;
+	left: 30px;
+	font-family: "DM Sans", sans-serif;
+	color: white;
 	font-weight: 400;
 }
-.vedio_bottom_wrap{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-top: 15px;
-
-}
-.vedio_b_content{
-	display: flex;
-	gap: 7px;
-	font-size: 12px;
-	font-weight: 500;
-	color: #000580;
-	font-family: "DM Sans", sans-serif;
-	align-items: center;
-
-}
-.sm_btn{
-	width: 123px;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	font-size: 12px;
-	color: black;
-	padding: 0px 8px;
-	font-family: "DM Sans", sans-serif;
-font-weight: 700;
-border-radius: 41px;
-
-	height: 24px;
+  .bg_image {
+	background: url("../Images/musicV.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  width: 868px;
+	height: 500px;
+	box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 10%);
+	border-radius: 12px;
 	cursor: pointer;
-	background-color: #D9D9D9;
+	padding: 7px 10px;
+	position: relative;
+  }
+  .ply_btn {
+	height: 500px;
+	display: flex;
 	align-items: center;
+	justify-content: center;
+  }
 }
-@media screen and (max-width:1440px){
-	.header_wrap {
+@media screen and (max-width: 1050px) {
+  .header_wrap {
+    padding: 20px 20px 0px 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    font-family: "Space Grotesk", sans-serif;
+  }
+  .bg_image {
+	background: url("../Images/musicV.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  width: 768px;
+	height: 500px;
+	box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 10%);
+	border-radius: 12px;
+	cursor: pointer;
+	padding: 7px 10px;
+	position: relative;
+  }
+}
+@media screen and (max-width:900px){
+	.bg_image {
+		background: url("../Images/musicV.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  width: 100%;
+		height: 500px;
+		box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 10%);
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 7px 10px;
+		position: relative;
+	  }
+}
+@media screen and (max-width:768px){
+	.post_notification{
+		position: absolute;
+		top: 100px;
+		right: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	
+	}
+	.Modal_header {
 		padding: 20px 20px 20px 20px;
+		display: flex;
+		gap: 10px;
 		font-size: 20px;
-		color: black;
+		color: white;
 		font-weight: 700;
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "DM Sans", sans-serif;
+		align-items: center;
 	  }
-}
-@media screen and (max-width:1050px){
-	.header_wrap {
-		padding: 20px 20px 0px 20px;
-		font-size: 20px;
-		color: black;
-		font-weight: 700;
-		font-family: "Space Grotesk", sans-serif;
+	.noti_items{
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		color: white;
+		display: flex;
+		background: rgba(0, 0, 0, 0.39);
+		justify-content: center;
+		align-items: center;
+	}
+	.modal_post_wraper {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		width: 100%;
+		padding: 0px 30px;
+		justify-content: center;
+		align-items: flex-start;
 	  }
+	  .vedio_modal_content {
+		padding-top: 45px;
+		display: flex;
+		width: 100%;
+		padding-top: 400px;
+		height: 1000px;
+		overflow-y: scroll;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	  }
+	  .total_watch{
+		width: 54px;
+		height: 54px;
+		position: absolute;
+	top: 28px;
+	background: rgba(0, 0, 0, 0.39);
+	left: 10px;
+		border-radius: 50%;
+		display: flex;
+		color: white;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.bg_image {
+		background: url("../Images/musicV.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  width: 100%;
+		height: 450px;
+		box-shadow: 0px 3px 21px 0px rgb(0 0 0 / 10%);
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 7px 10px;
+		position: relative;
+	  }
+	  .ply_btn {
+		height: 450px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+	  .post_des{
+		max-width: 556px;
+		font-size: 16px;
+		position: absolute;
+		bottom: 30px;
+		line-height: 20px;
+		padding: 0px 10px;
+		left: 10px;
+		font-family: "DM Sans", sans-serif;
+		color: white;
+		font-weight: 400;
+	}
 }
