@@ -1,6 +1,7 @@
 .main_container {
   width: 620px;
   height: 100%;
+
   border-right: 2px solid #bcbcbc;
 }
 .header_wrap {
@@ -9,6 +10,7 @@
   position: fixed;
 gap: 105px;
   top: 0;
+  background-color:#f8f8f8;
   z-index: 5;
   padding: 0px 15px 0px 28px;
   justify-content: space-between;

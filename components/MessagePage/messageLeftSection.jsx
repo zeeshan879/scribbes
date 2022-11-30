@@ -52,6 +52,16 @@ const MessageLeftSection = () => {
       hours: "8 Aug",
       sendImage: false,
     },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+
   ];
 
   return (

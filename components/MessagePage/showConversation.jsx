@@ -56,7 +56,7 @@ const ShowConversation = () => {
           )}
         </div>
       </div>
-      <div className={sc.message_container}>
+      <div className={sc.message_container} id="style-desk" >
         <div className={sc.message_ui}>
           <div>
             <Image src={msgUser} />
