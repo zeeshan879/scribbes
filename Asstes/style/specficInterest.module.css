@@ -259,7 +259,7 @@ align-items: center;
 	font-weight: 700;
 }
 .discussion_container {
-  padding: 40px 46px 40px 47px;
+  padding: 20px 46px 40px 47px;
   display: flex;
   flex-direction: column;
   gap: 51px;

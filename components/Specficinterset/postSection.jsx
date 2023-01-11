@@ -20,11 +20,14 @@ import Link from "next/link";
 import VedioTypePost from "../HomeCenterView/vedioTypePost"
 import ft from "../../Asstes/Images/ft.png"
 
+
 const SpecficPostSec = (props) => {
   return (
     <>
+
       <div className={HomCen.post_type_container}>
         {/*<======== Post Type => description=======>*/}
+
         <div className={HomCen.description_post_wrap}>
           <div className={HomCen.desc_pots_wrap}>
             <div className={HomCen.post_descition_wrap}>

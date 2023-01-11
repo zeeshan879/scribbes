@@ -30,12 +30,12 @@ const EditProfileModal = (props) => {
           </div>
         </div>
         <div className={HomCen.user_info_form}>
-          <div className={HomCen.user_name}>
+          {/*<div className={HomCen.user_name}>
             <div className="font-DM text-[16px] sm:text-[20px] font-normal text-[#BCBCBC]">
               Name
             </div>
             <input className={HomCen.user_input_ele} />
-          </div>
+          </div>*/}
           <div className={HomCen.user_bio}>
             <div className="font-DM text-[16px] sm:text-[20px] font-normal text-[#BCBCBC]">
               Bio

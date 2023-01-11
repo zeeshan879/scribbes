@@ -61,6 +61,78 @@ const MessageLeftSection = () => {
       hours: "8 Aug",
       sendImage: false,
     },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
+    {
+      title: "Maisy ",
+      userEmail: "(@maisycrazy)",
+      profile: userGrl,
+      des: "Did you watch the match last night? It was epic! Broo, I really enjo...",
+      active: false,
+      hours: "8 Aug",
+      sendImage: false,
+    },
 
   ];
 
@@ -79,7 +151,8 @@ const MessageLeftSection = () => {
             <input placeholder="Search" className={mls.search_ele} />
           </div>
         </div>
-        <div className={mls.content_box}>
+  <div className={mls.message_reader} >
+  <div className={mls.content_box} id="style-desk">
           {mesageUser.map((data) => {
             return (
               <>
@@ -121,6 +194,7 @@ const MessageLeftSection = () => {
             );
           })}
         </div>
+  </div>
       </div>
     </>
   );

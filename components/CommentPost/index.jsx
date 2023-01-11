@@ -20,8 +20,12 @@ import ScribbedBy from "./scribedBy"
 
 const CommentPost = () => {
   const [edit ,setEdit]=useState(false)
+  const [sharepost ,setSharepost]=useState(false)
   const handleEditPost=()=>{
     setEdit(!edit)
+  }
+  const handleSharePost=()=>{
+    setSharepost(!sharepost)
   }
   return (
     <>
@@ -78,13 +82,14 @@ const CommentPost = () => {
               <div className="cursor-pointer">
                 <Image src={comnt} width="24px" height="21px" />
               </div>
-              56
+              <div className="cursor-pointer" onClick={()=>handleSharePost()}>   56</div>
+           
             </div>
             <div className={HomCen.post_noti_items}>
               <div className="cursor-pointer">
                 <Image src={share} width="20px" height="20px" />
               </div>
-              56
+              <div className="cursor-pointer" onClick={()=>handleSharePost()}>   56</div>       
             </div>
           </div>
         </div>
@@ -152,7 +157,8 @@ const CommentPost = () => {
                   <div className="cursor-pointer">
                     <Image src={share} />
                   </div>
-                  56
+                  <div className="cursor-pointer" onClick={()=>handleSharePost()}>56</div>
+     
                 </div>
               </div>
             </div>
@@ -253,8 +259,8 @@ const CommentPost = () => {
           </div>
         </div>
       </div>
-      {/*<CommentPostEditHistory state={edit}  onClick={handleEditPost} />*/}
-      <ScribbedBy state={edit}  onClick={handleEditPost} />
+      <CommentPostEditHistory state={edit}  onClick={handleEditPost} />
+      <ScribbedBy state={sharepost}  onClick={handleSharePost} />
     </>
   );
 };
