@@ -8,6 +8,8 @@ const initialState = {
   settingTabs: 1,
   scribbesTabs:1,
   searchView: "",
+  isBlogOrPost:1,
+  mobileDesktopView:true
 };
 
 export const scribbes = createSlice({
@@ -35,9 +37,15 @@ export const scribbes = createSlice({
     handelValue: (state, action) => {
       state.searchView = action.payload
   },
+  handleDeskTopView: (state, action) => {
+    state.mobileDesktopView = action.payload;
+  },
+  handlePostAndBlogView: (state, action) => {
+    state.isBlogOrPost = action.payload;
+  },
   },
 });
 // Action creators are generated for each case reducer function
-export const { chnagePageView,handelValue,handleScrribsTabs,chnageSpecficInterst,handleSettingTabs, handleMessageView, chnageAdminToolTabs } =
+export const { chnagePageView,handelValue,handlePostAndBlogView,handleScrribsTabs,chnageSpecficInterst,handleSettingTabs, handleMessageView, chnageAdminToolTabs,handleDeskTopView } =
   scribbes.actions;
 export default scribbes.reducer;

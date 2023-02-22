@@ -19,6 +19,8 @@ import arrowDown from "../../Asstes/Images/arrowDown.png";
 import upMedia from "../../Asstes/Images/upMedia.png";
 import embed from "../../Asstes/Images/embed.png";
 import BlogPost from "./blogPost";
+import InsertMedia from "../InsertMedia"
+import InsertMediaAndInsertUrlBtn from "../InsertMedia"
 
 const CreatepostModal = (prop) => {
   const [insertMedia, setInsertMedia] = useState(false);
@@ -60,7 +62,7 @@ const CreatepostModal = (prop) => {
             <div className={pa.create_post_share}>
               <textarea
                 className={pa.text_ele}
-                placeholder="Share your thoughts...."
+                placeholder="share your thoughts...."
               ></textarea>
             </div>
           )}
@@ -82,39 +84,7 @@ const CreatepostModal = (prop) => {
             }
           >
             {post === false ? (
-              <div className="flex gap-[16px] items-center justify-between w-full sm:justify-start ">
-                <div
-                  className={
-                    insertMedia === true
-                      ? pa.active_create_bottom_media_items
-                      : pa.create_bottom_media_items
-                  }
-                  onClick={() => setInsertMedia(!insertMedia)}
-                >
-                  {insertMedia === true ? (
-                    <Image src={activeinsert} />
-                  ) : (
-                    <Image src={insert} />
-                  )}
-                  Insert Media
-                  {insertMedia && (
-                    <div className={pa.create_insert_media_toggle}>
-                      <div className={pa.create_insert_up_bnt}>
-                        <Image src={upMedia} />
-                        Upload from computer
-                      </div>
-                      <div className={pa.create_insert_up_bnt}>
-                        <Image src={embed} />
-                        Embed Media
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className={pa.create_bottom_media_items}>
-                  <Image src={enoji} />
-                  Insert Emoji
-                </div>
-              </div>
+      <InsertMediaAndInsertUrlBtn/>
             ) : (
               ""
             )}

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import notiUser from "../../Asstes/Images/notiUser.png";
 import notiUsr from "../../Asstes/Images/notiUsr.png";
-import notiarrowUp from "../../Asstes/Images/notiarrowUp.png";
+import notiarrowUp2 from "../../Asstes/Images/notiarrowUp2.png";
 import grl from "../../Asstes/Images/grl.png";
 import coomentP from "../../Asstes/Images/coomentP.png";
 import notiImage from "../../Asstes/Images/notiImage.png";
@@ -86,7 +86,7 @@ const NotificationCenterView = () => {
           <div className={HomCen.notification_profile_box}>
             <div className="flex  gap-[22px]">
             <div className={HomCen.noti_profile_dim}>
-                <Image src={notiarrowUp} />
+                <Image src={notiarrowUp2} />
               </div>
               <div className="flex gap-[10px]">
                 <div className={HomCen.noti_profile_dim}>

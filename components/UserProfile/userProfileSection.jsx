@@ -1,8 +1,8 @@
 import React from "react";
 import profile from "../../Asstes/Images/profile.png";
-import imgV from "../../Asstes/Images/imgV.png";
-import LinkV from "../../Asstes/Images/LinkV.png";
-import gifV from "../../Asstes/Images/gifV.png";
+import imgV from "../../Asstes/Images/imgV2.png";
+import LinkV from "../../Asstes/Images/LinkV2.png";
+import gifV from "../../Asstes/Images/gifV2.png";
 import postAction from "../../Asstes/Images/postAction.png";
 import postP from "../../Asstes/Images/postP.png";
 import postWeb from "../../Asstes/Images/postWeb.png";
@@ -23,7 +23,7 @@ import PostOption from "../HomeCenterView/postOption";
 import { useState } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { TiVolumeMute } from "react-icons/ti";
-import { BsFillShareFill } from "react-icons/bs";
+import { BsFillshareFill } from "react-icons/bs";
 import { AiOutlineLink } from "react-icons/ai";
 import { MdBlockFlipped } from "react-icons/md";
 import UserProfileTabs from "../HomeCenterView/userProfileTabs";
@@ -87,8 +87,8 @@ const UserProfileSection2 = (props) => {
                     {userOpt && (
                       <div className={HomCen.userP_opt_toggle}>
                         <div className={HomCen.userOpt_togle_items}>
-                          <BsFillShareFill />
-                          Share Profile
+                          <BsFillshareFill />
+                          share Profile
                         </div>
                         <div className={HomCen.userOpt_togle_items}>
                           <AiOutlineLink />

@@ -1,8 +1,8 @@
 import React from "react";
 import profile from "../../Asstes/Images/profile.png";
-import imgV from "../../Asstes/Images/imgV.png";
-import LinkV from "../../Asstes/Images/LinkV.png";
-import gifV from "../../Asstes/Images/gifV.png";
+import imgV from "../../Asstes/Images/imgV2.png";
+import LinkV from "../../Asstes/Images/LinkV2.png";
+import gifV from "../../Asstes/Images/gifV2.png";
 import postAction from "../../Asstes/Images/postAction.png";
 import postP from "../../Asstes/Images/postP.png";
 import postWeb from "../../Asstes/Images/postWeb.png";
@@ -18,9 +18,9 @@ import UserProfile from "./userProfileView";
 import CommentPost from "../CommentPost";
 import { BsArrowLeft } from "react-icons/bs";
 import coomentP from "../../Asstes/Images/coomentP.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import pcment from "../../Asstes/Images/pcment.png";
-import comnt from "../../Asstes/Images/comnt.png";
+import comnt2 from "../../Asstes/Images/comnt2.png";
 import share from "../../Asstes/Images/share.png";
 import vPost from "../../Asstes/Images/vPost.png";
 import reply from "../../Asstes/Images/reply.png";
@@ -56,13 +56,13 @@ const HomeCommentPostView = () => {
               <div className={HomCen.sub_comment_notification}>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={arrowUp} />
+                    <Image src={arrowUp2} />
                   </div>
                   <div className="min-h-[10px]">1</div>
                 </div>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={comnt} />
+                    <Image src={comnt2} />
                   </div>
                   <div className="min-h-[10px]">2</div>
                 </div>

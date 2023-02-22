@@ -2,9 +2,9 @@ import React from "react";
 import cp from "../../Asstes/style/comment_post.module.css";
 import { BsArrowLeft } from "react-icons/bs";
 import coomentP from "../../Asstes/Images/coomentP.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import pcment from "../../Asstes/Images/pcment.png";
-import comnt from "../../Asstes/Images/comnt.png";
+import comnt2 from "../../Asstes/Images/comnt2.png";
 import share from "../../Asstes/Images/share.png";
 import vPost from "../../Asstes/Images/vPost.png";
 import reply from "../../Asstes/Images/reply.png";
@@ -20,12 +20,12 @@ import ScribbedBy from "./scribedBy"
 
 const CommentPost = () => {
   const [edit ,setEdit]=useState(false)
-  const [sharepost ,setSharepost]=useState(false)
+  const [sharepost ,setsharepost]=useState(false)
   const handleEditPost=()=>{
     setEdit(!edit)
   }
-  const handleSharePost=()=>{
-    setSharepost(!sharepost)
+  const handlesharePost=()=>{
+    setsharepost(!sharepost)
   }
   return (
     <>
@@ -74,22 +74,22 @@ const CommentPost = () => {
           <div className={HomCen.post_comment_notification}>
             <div className={HomCen.post_noti_items}>
               <div className="cursor-pointer">
-                <Image src={arrowUp} width="26px" height="14px" />
+                <Image src={arrowUp2} width="26px" height="14px" />
               </div>
               10
             </div>
             <div className={HomCen.post_noti_items}>
               <div className="cursor-pointer">
-                <Image src={comnt} width="24px" height="21px" />
+                <Image src={comnt2} width="24px" height="21px" />
               </div>
-              <div className="cursor-pointer" onClick={()=>handleSharePost()}>   56</div>
+              <div className="cursor-pointer" onClick={()=>handlesharePost()}>   56</div>
            
             </div>
             <div className={HomCen.post_noti_items}>
               <div className="cursor-pointer">
                 <Image src={share} width="20px" height="20px" />
               </div>
-              <div className="cursor-pointer" onClick={()=>handleSharePost()}>   56</div>       
+              <div className="cursor-pointer" onClick={()=>handlesharePost()}>   56</div>       
             </div>
           </div>
         </div>
@@ -143,13 +143,13 @@ const CommentPost = () => {
               <div className={HomCen.sub_comment_notification}>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={arrowUp} />
+                    <Image src={arrowUp2} />
                   </div>
                   10
                 </div>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={comnt} />
+                    <Image src={comnt2} />
                   </div>
                   56
                 </div>
@@ -157,7 +157,7 @@ const CommentPost = () => {
                   <div className="cursor-pointer">
                     <Image src={share} />
                   </div>
-                  <div className="cursor-pointer" onClick={()=>handleSharePost()}>56</div>
+                  <div className="cursor-pointer" onClick={()=>handlesharePost()}>56</div>
      
                 </div>
               </div>
@@ -168,7 +168,7 @@ const CommentPost = () => {
               <div>
                 <Image src={reply} />
               </div>
-              <div className={HomCen.comnt_indicator2}>
+              <div className={HomCen.comnt2_indicator2}>
                 <Image src={indicator2} />
               </div>
             </div>
@@ -195,13 +195,13 @@ const CommentPost = () => {
               <div className={HomCen.sub_comment_notification}>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={arrowUp} />
+                    <Image src={arrowUp2} />
                   </div>
                   <div className="min-h-[10px]">1</div>
                 </div>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={comnt} />
+                    <Image src={comnt2} />
                   </div>
                   <div className="min-h-[10px]">2</div>
                 </div>
@@ -238,13 +238,13 @@ const CommentPost = () => {
               <div className={HomCen.sub_comment_notification}>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={arrowUp} />
+                    <Image src={arrowUp2} />
                   </div>
                   <div className="min-h-[10px]">1</div>
                 </div>
                 <div className={HomCen.sub_noti_items}>
                   <div className="cursor-pointer">
-                    <Image src={comnt} />
+                    <Image src={comnt2} />
                   </div>
                   <div className="min-h-[10px]">2</div>
                 </div>
@@ -260,7 +260,7 @@ const CommentPost = () => {
         </div>
       </div>
       <CommentPostEditHistory state={edit}  onClick={handleEditPost} />
-      <ScribbedBy state={sharepost}  onClick={handleSharePost} />
+      <ScribbedBy state={sharepost}  onClick={handlesharePost} />
     </>
   );
 };

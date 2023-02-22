@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import con from "../../Asstes/style/startconversation.module.css";
 import tell from "../../Asstes/style/tellUsAboutYourSelf.module.css";
+import pa from "../../Asstes/style/postAction.module.css";
 import profile from "../../Asstes/Images/profile.png";
 import downArrow from "../../Asstes/Images/arrowDown.png";
-import insert from "../../Asstes/Images/insert.png";
-import LinkV from "../../Asstes/Images/LinkV.png";
-import closeIcon from "../../Asstes/Images/closeIcon.png";
+import con from "../../Asstes/style/startconversation.module.css";
 import Image from "next/image";
+import ChoseInterstToggle from "../ChoseInterst";
+import InsertMediaAndInsertUrlBtn from "../InsertMedia";
+import BlogPost from "../CreatePostModal/blogPost";
+import { useSelector,useDispatch } from "react-redux";
+import {handlePostAndBlogView } from "../../redux/reducers/scribbes"
 
 const StartConverstion = () => {
   const [active, setActive] = useState(1);
+  const [choseInterst, setChoseInterst] = useState(false);
+const chnagePostType =useSelector((state)=>state.allGernalFunction.isBlogOrPost)
+console.log("chnagePostType===>",chnagePostType)
+const dispatch=useDispatch()
+  const handleInterstToggle = () => {
+    setChoseInterst(!choseInterst);
+  };
   return (
     <>
       <div className={con.start_Conversation_wrap}>
@@ -18,49 +28,54 @@ const StartConverstion = () => {
           Make your first scribbe and start a conversation
         </div>
         <div className={con.con_wraper}>
-          <div className={con.conversation_ele}>
+          <div className={chnagePostType==2?con.conversation_ele2:con.conversation_ele}>
             <div className={con.profile_wrap}>
               <div>
                 {" "}
                 <Image src={profile} />
               </div>
               <div className={con.chose_drop}>
-                <div className={con.chose_interst}>
+                <div
+                  className={con.chose_interst}
+                  onClick={() => setChoseInterst(!choseInterst)}
+                >
                   Choose Interest <Image src={downArrow} />
                 </div>
-           {/*<div className="relative">
-           <div className={con.chose_toggle}>
-                  <div className={con.togle_heading}>
-                    <div>Followed Interests</div>
-                    <div className="cursor-pointer">
-                      <Image src={closeIcon} />
-                    </div>
-                  </div>
-                </div>
-           </div>*/}
+
+                {choseInterst && (
+                  <ChoseInterstToggle
+                    state={choseInterst}
+                    onClick={handleInterstToggle}
+                  />
+                )}
               </div>
             </div>
-            <div className={con.text_area}>
-              <textarea
-                placeholder="Share your thoughts...."
-                className={con.text_ele}
-              />
-            </div>
+            {chnagePostType == 2 ? (
+              <BlogPost />
+            ) : (
+              <div className={con.text_area}>
+                <textarea
+                  placeholder="share your thoughts...."
+                  className={con.text_ele}
+                />
+              </div>
+            )}
+
             <div className={con.scrbe_wrap}>
               <div className={con.blog_btn_wrp}>
                 <div
                   className={
-                    active == 1 ? con.active_scribe_btn : con.scribe_btn
+                    chnagePostType == 1 ? con.active_scribe_btn : con.scribe_btn
                   }
-                  onClick={() => setActive(1)}
+                  onClick={() => dispatch(handlePostAndBlogView(1))}
                 >
                   Scribbe
                 </div>
                 <div
                   className={
-                    active == 2 ? con.active_scribe_btn : con.scribe_btn
+                    chnagePostType == 2 ? con.active_scribe_btn : con.scribe_btn
                   }
-                  onClick={() => setActive(2)}
+                  onClick={() => dispatch(handlePostAndBlogView(2))}
                 >
                   Blog
                 </div>
@@ -71,17 +86,12 @@ const StartConverstion = () => {
             </div>
             <div className={con.seprator}></div>
             <div className={con.action_btn_wrap}>
-              <div className={con.media_btn_wrap}>
-                <div className={con.inser_media}>
-                  <Image src={insert} />
-                  Insert Media
-                </div>
-                <div className={con.inser_media}>
-                  <Image src={LinkV} />
-                  Insert URL
-                </div>
+              <div>
+        { chnagePostType===2?"":  <InsertMediaAndInsertUrlBtn />}
               </div>
-              <div className={con.post_btn}>Post</div>
+              <div className={pa.modal_post_btn}>
+                {chnagePostType === 2 ? "Post Blog" : "Post"}{" "}
+              </div>
             </div>
           </div>
         </div>

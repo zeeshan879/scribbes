@@ -17,7 +17,7 @@ import Link from "next/link";
 import { useSelector } from "react-redux";
 import SpecficAbout2Tabs from "./about2Tabs";
 import { useState } from "react";
-import ShareThoughtsSec from "../HomeCenterView/shareThoughtsSec"
+import shareThoughtsSec from "../HomeCenterView/shareThoughtsSec"
 
 const SpecficInterestCenterView = () => {
   const specficTabs = useSelector(
@@ -91,7 +91,7 @@ const SpecficInterestCenterView = () => {
           <SpecficTabAbout />
         ) : (
        <div>
-  {isFollow &&         <ShareThoughtsSec/>}
+  {isFollow &&         <shareThoughtsSec/>}
            <div className={si.discussion_container}>
             <SpecficPostSec />
           </div>

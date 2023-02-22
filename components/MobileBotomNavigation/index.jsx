@@ -11,9 +11,9 @@ import Home from "../../styles/Home.module.css";
 import bn from "../../Asstes/style/mobileBottomNavigation.module.css";
 import profile from "../../Asstes/Images/profile.png";
 import Image from "next/image";
-import imgV from "../../Asstes/Images/imgV.png";
-import LinkV from "../../Asstes/Images/LinkV.png";
-import gifV from "../../Asstes/Images/gifV.png";
+import imgV from "../../Asstes/Images/imgV2.png";
+import LinkV from "../../Asstes/Images/LinkV2.png";
+import gifV from "../../Asstes/Images/gifV2.png";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 
 const MobileBottomNavigation = () => {
@@ -64,7 +64,7 @@ const MobileBottomNavigation = () => {
               <div className={bn.share_thougts_box}>
                 <textarea
                   className={bn.mbl_share_thougts}
-                  placeholder="Share your thoughts..."
+                  placeholder="share your thoughts..."
                 ></textarea>
               </div>
             </div>

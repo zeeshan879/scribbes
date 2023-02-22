@@ -6,13 +6,11 @@ import DeskTopPreview from "./deskTopPreview"
 const CreateNewCommunity = () => {
   return (
     <>
-      <div className={nc.content_wraper} id="style-desk">
-        <div>
+      <div className={nc.content_wraper} >
+   
           <CommunityInformation />
-        </div>
-        <div className="w-[100%]">
           <DeskTopPreview/>
-        </div>
+   
       </div>
     </>
   );

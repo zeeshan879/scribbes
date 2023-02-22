@@ -5,9 +5,9 @@ import Image from "next/image";
 import postAction from "../../Asstes/Images/postAction.png";
 import notiImage from "../../Asstes/Images/notiImage.png";
 import cardImge from "../../Asstes/Images/cardImge.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import share from "../../Asstes/Images/share.png";
-import comnt from "../../Asstes/Images/comnt.png";
+import comnt2 from "../../Asstes/Images/comnt2.png";
 import lineCounter from "../../Asstes/Images/lineCounter.png";
 
 const QuotesScribes = () => {
@@ -83,7 +83,7 @@ const QuotesScribes = () => {
                   </div>
                   <div className={scv.qoutes_notification}>
                     <div>
-                      <Image src={comnt} />
+                      <Image src={comnt2} />
                     </div>
                     <div>56</div>
                   </div>
@@ -168,7 +168,7 @@ const QuotesScribes = () => {
                   </div>
                   <div className={scv.qoutes_notification}>
                     <div>
-                      <Image src={comnt} />
+                      <Image src={comnt2} />
                     </div>
                     <div>56</div>
                   </div>

@@ -18,7 +18,7 @@ const ScribbedModalTabs = () => {
           }
           onClick={() => dispatch(handleScrribsTabs(1))}
         >
-          Shares
+          shares
         </div>
         <div
           className={

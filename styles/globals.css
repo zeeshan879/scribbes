@@ -56,7 +56,71 @@ height: 17px !important;
 .full_secreen .modal-content{
   background:rgba(0,0, 0, 0.8) ;
 }
+.select_privy{
+  border: none !important;
+  outline: none;
+  height: 30%;
+  width: 100%;
+}
+button select option{
+  border: none !important;
+  outline: none !important;
+}
 
+ 
+
+/* .............upload file.............. */
+#form-file-upload {
+  height: 16rem;
+
+  border: none !important;
+  background-size: 100%;
+  text-align: center;
+  outline: none !important;
+  position: relative;
+  background-repeat: no-repeat;
+  /* background-image: url("../Asstes/DashboardImages/upload_profile.png"); */
+}
+
+#input-file-upload {
+  display: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border: none !important;
+  outline: none !important;
+}
+
+#label-file-upload.drag-active {
+  background-color: #ffffff;
+  outline: none !important;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  outline: none !important;
+  background-color: transparent;
+}
+
+#drag-file-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  outline: none !important;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

@@ -10,6 +10,10 @@
   display: flex;
   justify-content: center;
   margin-top: 25px;
+
+}
+.start_Conversation_wrap{
+
 }
 .conversation_ele {
   border: 1.2px solid #bcbcbc;
@@ -19,13 +23,22 @@
   border-radius: 30px 48px 32px 31px;
   box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 7%);
 }
+.conversation_ele2 {
+  border: 1.2px solid #bcbcbc;
+  width: 1028px;
+  height: auto;
+  padding: 40px;
+  border-radius: 30px 48px 32px 31px;
+  box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 7%);
+}
 .profile_wrap {
   display: flex;
   gap: 11px;
+z-index: 1085;
   align-items: center;
 }
 .text_area {
-  z-index: -1;
+  z-index: -5;
   height: 147px;
   padding-left: 70px;
   padding-top: 26px;
@@ -43,6 +56,7 @@
 .scrbe_wrap {
   padding: 0px 2px;
   display: flex;
+  z-index: -1;
   height: 40px;
   justify-content: space-between;
   align-items: center;
@@ -86,9 +100,10 @@
 }
 .chose_drop {
   position: relative;
+  z-index: 99;
 }
 .togle_heading {
-  padding: 10px 15px;
+  padding: 10px 0px;
   display: flex;
   font-size: 16px;
   font-weight: 700;
@@ -96,14 +111,37 @@
   justify-content: space-between;
   align-items: center;
 }
-.chose_toggle {
+.chose_toggle2 {
+  position: absolute;
   width: 264px;
   height: 314px;
+  background-color: white;
   border-radius: 23px;
   box-shadow: 0 7px 21px 0px rgba(0, 0, 0, 15%);
-  position: absolute;
-  z-index: 100;
-  top: 0px;
+padding: 0px 13px;
+  top: 40px;
+  z-index: 100 !important;
+}
+.chose_interst_box{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: scroll;
+  height: 250px;
+  width: 100%;
+}
+.interst_tile{
+  height: 55px;
+  box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
+border-radius: 16px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 13px;
+  cursor: pointer;
+  background-color: white;
+
 }
 .post_btn {
   font-size: 20px;

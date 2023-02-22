@@ -7,7 +7,7 @@ import vb from "../../Asstes/Images/vb.png";
 import arrowNext from "../../Asstes/Images/arrowNext.png";
 import cardLink from "../../Asstes/Images/cardLink.png";
 import postWeb from "../../Asstes/Images/postWeb.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import card1 from "../../Asstes/Images/card1.png";
 import card2 from "../../Asstes/Images/card2.png";
 import Image from "next/image";
@@ -89,7 +89,7 @@ const ExplorescreenRighView = () => {
                         </div>
                         <div className={es.like_coment}>
                           <div className="cursor-pointer">
-                            <Image src={arrowUp} /> 256
+                            <Image src={arrowUp2} /> 256
                           </div>
                           <div>56 comments</div>
                         </div>
@@ -139,7 +139,7 @@ const ExplorescreenRighView = () => {
                         </div>
                         <div className={es.like_coment}>
                           <div className="cursor-pointer">
-                            <Image src={arrowUp} /> 256
+                            <Image src={arrowUp2} /> 256
                           </div>
                           <div>56 comments</div>
                         </div>
@@ -180,7 +180,7 @@ const ExplorescreenRighView = () => {
                         </div>
                         <div className={es.like_coment}>
                           <div className="cursor-pointer">
-                            <Image src={arrowUp} /> 256
+                            <Image src={arrowUp2} /> 256
                           </div>
                           <div>56 comments</div>
                         </div>

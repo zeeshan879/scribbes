@@ -27,8 +27,9 @@
 .upload_btn_wrapper {
 	position: relative;
 	overflow: hidden;
-	
+	padding-top: 6px;
 cursor: pointer;
+
 	display: inline-block;
   }
   

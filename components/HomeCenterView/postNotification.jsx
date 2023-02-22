@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
-import comnt from "../../Asstes/Images/comnt.png";
-import share from "../../Asstes/Images/share.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
+import comnt2 from "../../Asstes/Images/comnt2.png";
+import share from "../../Asstes/Images/share2.png";
 import Image from "next/image";
-import { RiShareForwardLine } from "react-icons/ri";
+import { RishareForwardLine } from "react-icons/ri";
 import { MdOutlineCreate } from "react-icons/md";
-import { BsShare } from "react-icons/bs";
+import { Bsshare } from "react-icons/bs";
 import { AiOutlineLink } from "react-icons/ai";
 import Modal from "react-bootstrap/Modal";
 import psm from "../../Asstes/style/post_share_modal.module.css";
@@ -17,7 +17,7 @@ import messanger from "../../Asstes/Images/messanger.png";
 import tt from "../../Asstes/Images/tt.png";
 import instaM from "../../Asstes/Images/instaM.png";
 import whatsapp from "../../Asstes/Images/whatsapp.png";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosarrowUp2 } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 
@@ -59,11 +59,11 @@ const PostNotification = (props) => {
           className={isLike == true ? HomCen.noti_box_clicked : HomCen.noti_box}
           onClick={() => handleLike()}
         >
-          <IoIosArrowUp className="text-2xl" />
+          <IoIosarrowUp2 className="text-2xl" />
           <div className={HomCen.like_counter}> {props.showValue && like}</div>
         </div>
         <div className={HomCen.noti_box}>
-          <Image src={comnt} />
+          <Image src={comnt2} />
           <div className={HomCen.like_counter2}> {props.showValue && 56}</div>
         </div>
         {activePageTab != 3 ? (
@@ -77,9 +77,9 @@ const PostNotification = (props) => {
               <div className={HomCen.share_post_toggle}>
                 <div className={HomCen.share_toggle_container}>
                   <div className={HomCen.share_toggle_item}>
-                    <RiShareForwardLine className="text-lg" />
+                    <RishareForwardLine className="text-lg text-black" />
 
-                    <div>Share</div>
+                    <div>share</div>
                   </div>
                   <div className={HomCen.share_toggle_item}>
                     <MdOutlineCreate className="text-lg" />
@@ -90,9 +90,9 @@ const PostNotification = (props) => {
                     className={HomCen.share_toggle_item}
                     onClick={handleShow}
                   >
-                    <BsShare className="text-lg" />
+                    <Bsshare className="text-lg" />
 
-                    <div>Share Via</div>
+                    <div>share Via</div>
                   </div>
                   <div className={HomCen.share_toggle_item}>
                     <AiOutlineLink className="text-lg" />
@@ -123,10 +123,10 @@ const PostNotification = (props) => {
             >
               <BsArrowLeftShort />
             </div>
-            <div className={psm.modal_heading}>Share Via</div>
+            <div className={psm.modal_heading}>share Via</div>
           </div>
           <div className={psm.header_text}>
-            Share this post through different platform.
+            share this post through different platform.
           </div>
           <div className={psm.seprator}></div>
           <div className={psm.social_media_wrap}>

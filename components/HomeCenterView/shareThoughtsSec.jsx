@@ -1,8 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 import profile from "../../Asstes/Images/profile.png";
-import imgV from "../../Asstes/Images/imgV.png";
-import LinkV from "../../Asstes/Images/LinkV.png";
-import gifV from "../../Asstes/Images/gifV.png";
+import imgV2 from "../../Asstes/Images/imgV2.png";
+import LinkV2 from "../../Asstes/Images/LinkV2.png";
+import gifV2 from "../../Asstes/Images/gifV2.png";
 import postAction from "../../Asstes/Images/postAction.png";
 import postP from "../../Asstes/Images/postP.png";
 import postWeb from "../../Asstes/Images/postWeb.png";
@@ -12,7 +12,6 @@ import PostNotification from "../HomeCenterView/postNotification";
 import HomeTabsSection from "../HomeCenterView/HomeTabsSection";
 import UserDescritipnPost from "../HomeCenterView/userDescritipnPost";
 import PostOption from "../HomeCenterView/postOption";
-import { useState } from "react";
 import CreatepostModal from "../CreatePostModal";
 import BlogPost from "../HomeCenterView/blogPost";
 import UserProfile from "./userProfileView";
@@ -35,7 +34,7 @@ const ShareThoughtsSec = () => {
               <div className={HomCen.share_input_box}>
                 <textarea
                   className={HomCen.share_thoughts_ele_}
-                  placeholder="Share your thoughts..."
+                  placeholder="share your thoughts..."
                 ></textarea>
               </div>
             </div>
@@ -44,13 +43,13 @@ const ShareThoughtsSec = () => {
               <div className={HomCen.share_post_tags_container}>
                 <div className="flex gap-[7px] xl:gap-[16px] items-center">
                   <div className="h-[37px] w-[37px] shadow-profile rounded-[50%] border-[1px] border-[#BCBCBC] flex justify-center items-center">
-                    <Image src={imgV} />
+                    <Image src={imgV2} />
                   </div>
                   <div className="h-[37px] w-[37px] shadow-profile rounded-[50%] border-[1px] border-[#BCBCBC] flex justify-center items-center">
-                    <Image src={LinkV} />
+                    <Image src={LinkV2} />
                   </div>
                   <div className="h-[37px] w-[37px] shadow-profile rounded-[50%] border-[1px] border-[#BCBCBC] flex justify-center items-center">
-                    <Image src={gifV} />
+                    <Image src={gifV2} />
                   </div>
                 </div>
                 <div className={HomCen.share_scribe_box}>

@@ -96,7 +96,7 @@ const PostOption = () => {
             <div className={pa.share_thoughts_container}>
               <textarea
                 className={pa.text_ele}
-                placeholder="Share your thoughts...."
+                placeholder="share your thoughts...."
               ></textarea>
             </div>
           </div>

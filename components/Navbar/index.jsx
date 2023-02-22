@@ -4,7 +4,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from "next/image";
 import profile from "../../Asstes/Images/profile.png"
-import arrowUp from "../../Asstes/Images/arrowUp.png"
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png"
 import Nav from "../../Asstes/style/navbar.module.css"
 import { BiUser } from 'react-icons/bi';
 import { BsBookmarkStarFill } from 'react-icons/bs';
@@ -37,7 +37,7 @@ const NavBar = () => {
      <div className={Nav.user_email}>@JohnDoeuser</div>
      <div className={Nav.followers}>190 Followers
      <div className={Nav.folloers_toggle}>
-      <Image src={arrowUp} />
+      <Image src={arrowUp2} />
       256</div>
      </div>
      <div className={Nav.profile_items}>

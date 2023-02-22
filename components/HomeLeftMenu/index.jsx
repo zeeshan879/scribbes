@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import lbar from "../../Asstes/style/homeLeftmenu.module.css";
 import profile from "../../Asstes/Images/profile.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
-import homeV from "../../Asstes/Images/homeV.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
+import homeV from "../../Asstes/Images/homeV2.png";
 import vedioV from "../../Asstes/Images/vedioV.png";
-import com from "../../Asstes/Images/com.png";
+import com22 from "../../Asstes/Images/com22.png";
 import fireV from "../../Asstes/Images/fireV.png";
 import noti from "../../Asstes/Images/noti.png";
 import explor from "../../Asstes/Images/explor.png";
@@ -25,11 +25,14 @@ import { RiSendPlane2Line } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
 import { RiNotification4Line } from "react-icons/ri";
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 const HomeLeftMenu = () => {
   const [lgShow, setLgShow] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
   const [active, setActive] = useState(1);
+  const router = useRouter();
+  const pathName = router.pathname;
 
   function onClick() {
     setLgShow(!lgShow);
@@ -37,7 +40,9 @@ const HomeLeftMenu = () => {
   return (
     <>
       <div className={lbar.home_left_bar}>
+      <Link href="/" className="cursor-pointer">
         <div className={lbar.left_bar_logo}>Scribbes</div>
+        </Link>
         <div className={lbar.left_bar_content_box}>
           <div
             className={lbar.left_bar_profile}
@@ -53,7 +58,7 @@ const HomeLeftMenu = () => {
                 <div className={lbar.profile_folowers}>
                   190 Followers{" "}
                   <div className={lbar.profile_toggle}>
-                    <Image src={arrowUp} /> 256
+                    <Image src={arrowUp2} /> 256
                   </div>
                 </div>
               </div>
@@ -90,13 +95,13 @@ const HomeLeftMenu = () => {
         <Link href="/">
           <div
             className={
-              active == 1 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/" ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
             onClick={() => setActive(1)}
           >
             <div>
               <RiHomeLine
-                className={active == 1 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={pathName == "/" ? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Home</div>
@@ -105,13 +110,13 @@ const HomeLeftMenu = () => {
           <Link href="/video-screen">
           <div
             className={
-              active == 2 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/video-screen" ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(2)}
+     
           >
             <div>
               <AiOutlinePlayCircle
-                className={active == 2 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={    pathName == "/video-screen"? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Videos</div>
@@ -120,12 +125,13 @@ const HomeLeftMenu = () => {
           <Link href="/community-page">
           <div
             className={
-              active == 3 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/community-page"? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(3)}
+
           >
             <div>
-              <Image src={com} />
+    
+              <Image src={com22}  />
             </div>
             <div className="hidden md:block">Communities</div>
           </div>
@@ -133,13 +139,14 @@ const HomeLeftMenu = () => {
           <Link href="/trending-screen">
           <div
             className={
-              active == 4 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/trending-screen"? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(4)}
+  
           >
             <div>
               <AiOutlineFire
-                className={active == 4 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={
+                  pathName == "/trending-screen"?  lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Trending</div>
@@ -148,13 +155,14 @@ const HomeLeftMenu = () => {
           <Link href="/notification">
           <div
             className={
-              active == 5 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/notification"?  lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(5)}
+
           >
             <div>
               <RiNotification4Line
-                className={active == 5 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={
+                  pathName == "/notification"? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Notifications</div>
@@ -163,13 +171,15 @@ const HomeLeftMenu = () => {
           <Link href="/explore-screen">
           <div
             className={
-              active == 6 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/explore-screen"? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(6)}
+   
           >
             <div>
               <MdOutlineExplore
-                className={active == 6 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={
+                  
+                  pathName == "/explore-screen"? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Explore</div>
@@ -178,13 +188,14 @@ const HomeLeftMenu = () => {
       <Link href="/edit-profile">
            <div
             className={
-              active == 7 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/edit-profile"? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(7)}
+
           >
             <div>
               <HiOutlineUser
-                className={active == 7 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={
+                  pathName == "/edit-profile"? lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:block">Profile</div>
@@ -192,13 +203,14 @@ const HomeLeftMenu = () => {
           <Link href="/message">
           <div
             className={
-              active == 8 ? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
+              pathName == "/message"? lbar.menu_opt_wrap_active : lbar.menu_opt_wrap
             }
-            onClick={() => setActive(8)}
+
           >
             <div>
               <RiSendPlane2Line
-                className={active == 8 ? lbar.menu_icon_active : lbar.menu_icon}
+                className={
+                  pathName == "/message"?  lbar.menu_icon_active : lbar.menu_icon}
               />
             </div>
             <div className="hidden md:flex gap-[8px] items-center">Messages  {active == 8? <div className="flex h-[18px] w-[18px] bg-[#000580] justify-center items-center text-white rounded-[50%] text-xs">2</div>:""}</div>

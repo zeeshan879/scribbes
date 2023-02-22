@@ -2,7 +2,7 @@ import React from "react";
 import vv from "../../Asstes/style/video_views.module.css";
 import Image from "next/image";
 import play2 from "../../Asstes/Images/play2.png";
-import arrowUp from "../../Asstes/Images/arrowUp.png";
+import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import vb from "../../Asstes/Images/vb.png";
 import postWeb from "../../Asstes/Images/postWeb.png";
 import VideosPopUp from "./videosPopUp";
@@ -68,7 +68,7 @@ const VediosView = () => {
                       <div className={vv.vedio_text}>{data.title}</div>
                       <div className={vv.vedio_like_comnets}>
                         <div>
-                          <Image src={arrowUp} /> 255
+                          <Image src={arrowUp2} /> 255
                         </div>
                         <div>56 comments</div>
                       </div>

@@ -7,7 +7,7 @@ import postP from "../../Asstes/Images/postP.png";
 import play3 from "../../Asstes/Images/play3.png";
 import watch from "../../Asstes/Images/watch.png";
 import postLike from "../../Asstes/Images/postLike.png";
-import postShare from "../../Asstes/Images/postShare.png";
+import postshare from "../../Asstes/Images/postshare.png";
 import pstCmnt from "../../Asstes/Images/pstCmnt.png";
 
 const VideosPopUp = (props) => {
@@ -60,7 +60,7 @@ const VideosPopUp = (props) => {
                 <div className={vv.noti_items}>
                   <div className="flex flex-col items-center justify-center">
                     <div className="pt-[10px]">
-                      <Image src={postShare} />
+                      <Image src={postshare} />
                     </div>
                     <div className="mt-[-10px]">10</div>
                   </div>
@@ -111,7 +111,7 @@ const VideosPopUp = (props) => {
                 <div className={vv.noti_items}>
                   <div className="flex flex-col items-center justify-center">
                     <div className="pt-[10px]">
-                      <Image src={postShare} />
+                      <Image src={postshare} />
                     </div>
                     <div className="mt-[-10px]">10</div>
                   </div>

@@ -784,7 +784,7 @@ align-items: center;
   padding-top: 6px;
   line-height: 20px;
 }
-.comnt_indicator2 {
+.comnt2_indicator2 {
   position: absolute;
   top: 60px;
   height: 100px;
@@ -1545,7 +1545,7 @@ font-family: "DM Sans", sans-serif;
     gap: 20px;
     justify-content: space-between;
   }
-  .comnt_indicator2 {
+  .comnt2_indicator2 {
     position: absolute;
     top: 40px;
     height: 120px;
@@ -2076,7 +2076,7 @@ font-family: "DM Sans", sans-serif;
     padding-left: 23px;
     margin-top: 10px;
   }
-  .comnt_indicator2 {
+  .comnt2_indicator2 {
     position: absolute;
     top: 40px;
     height: 170px;

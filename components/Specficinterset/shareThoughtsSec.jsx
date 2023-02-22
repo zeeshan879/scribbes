@@ -1,6 +1,6 @@
 import React from 'react'
 import HomCen from "../../Asstes/style/home_centerView.module.css";
-const ShareThoughtsSec = () => {
+const shareThoughtsSec = () => {
   return (
 <>
 dsfopgj
@@ -8,4 +8,4 @@ dsfopgj
   )
 }
 
-export default ShareThoughtsSec
+export default shareThoughtsSec
