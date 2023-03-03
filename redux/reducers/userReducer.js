@@ -31,7 +31,34 @@ export const userSignUP = createAsyncThunk("userSignUP", async (data) => {
     console.log(err);
   }
 });
-
+// get requests
+export const getCurrentUser = createAsyncThunk(
+  "getCurrentUser",
+  async (userId) => {
+    try {
+      const { data } = await axiosInstance.get(
+        `http://localhost:5000/user/get-current-user/${userId}`
+      );
+      return data.data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+);
+// putt requests
+export const updateUserprofile = createAsyncThunk(
+  "updateUserprofile",
+  async (userId) => {
+    try {
+      const { data } = await axiosInstance.get(
+        `http://localhost:5000/user/update-user-profile/${userId}`
+      );
+      // return data.data;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+);
 export const userReducer = createSlice({
   name: "userReducer",
   initialState: initialState,
@@ -43,6 +70,10 @@ export const userReducer = createSlice({
   },
   extraReducers: {
     [userLogin.fulfilled]: (state, action) => {
+      state.currentUser = action.payload;
+      // state.isLoading = false;
+    },
+    [getCurrentUser.fulfilled]: (state, action) => {
       state.currentUser = action.payload;
       // state.isLoading = false;
     },
