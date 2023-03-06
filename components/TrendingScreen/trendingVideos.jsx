@@ -4,7 +4,7 @@ import Image from "next/image";
 import play2 from "../../Asstes/Images/play2.png";
 import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import vb from "../../Asstes/Images/vb.png";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 const TrendingVideos = () => {
   const vedios = [
     {
@@ -53,7 +53,7 @@ const TrendingVideos = () => {
                       <Image src={vb} /> Michael Someone
                     </div>
                     <div className={vv.sm_btn}>
-                      <Image src={postWeb} />
+                      <Image src={postWeb1} />
                       Social Media
                     </div>
                   </div>

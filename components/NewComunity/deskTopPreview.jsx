@@ -10,8 +10,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaDesktop } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
 
-const DeskTopPreview = () => {
+const DeskTopPreview = (props) => {
   const [activeTab, setActiveTab] = useState(1);
+  const [file, setFile] = useState(null);
   const changeView = useSelector(
     (state) => state.allGernalFunction.mobileDesktopView
   );
@@ -33,13 +34,13 @@ const DeskTopPreview = () => {
     e.stopPropagation();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      // handleFiles(e.dataTransfer.files);
+      setFile(URL.createObjectURL(e.target.files[0]));
     }
   };
   const handleChange = function (e) {
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
-      // handleFiles(e.target.files);
+      setFile(URL.createObjectURL(e.target.files[0]));
     }
   };
   const onButtonClick = () => {
@@ -104,7 +105,21 @@ const DeskTopPreview = () => {
             >
               <div>
                 <button className="upload-button" onClick={onButtonClick}>
-                  <Image src={upload_profile} />
+                {file === null ? (
+                      <div className="h-[262px] w-[262px] object-cover">
+                         <Image src={upload_profile} />
+                      </div>
+                    ) : (
+                      <div className="h-[262px] w-[262px] object-contain">
+                        <Image
+                          src={file}
+                          height="262px"
+                          width="262px"
+                          className="object-contain"
+                        />
+                      </div>
+                    )}
+          
                 </button>
               </div>
             </label>
@@ -220,7 +235,7 @@ const DeskTopPreview = () => {
               hsainimmammmmajwjij awawdwa. No tu aiigramth logicially busrrt.
             </div>
           </div>
-          <div className={nc.create_com_btn}>Create Community</div>
+          <div className={nc.create_com_btn} onClick={props.CommunityFormSubmit}>Create Community</div>
         </div>
       </div>
     </>

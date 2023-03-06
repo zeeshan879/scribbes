@@ -2,39 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 a {
   color: inherit;
   text-decoration: none;
 }
-.fade{
+.fade {
   padding-left: 0px !important;
 }
-.show{
+.show {
   padding-left: 0px !important;
 }
- .modal{
+.modal {
   padding-left: 0px !important;
 }
 .rounded-checkbox {
-  width:20px;
+  width: 20px;
   height: 20px;
   border-radius: 50%;
   vertical-align: middle !important;
-  border: 1px solid #1CAC19;
+  border: 1px solid #1cac19;
   appearance: none !important;
   -webkit-appearance: none !important;
   outline: none !important;
   cursor: pointer;
 }
 .radius-checkbox {
-  width:20px;
+  width: 20px;
   height: 20px;
   border-radius: 5px;
   vertical-align: middle;
-  border: 1px solid #1CAC19;
+  border: 1px solid #1cac19;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
@@ -43,31 +40,29 @@ a {
 .form-switch .form-check-input {
   width: 40px !important;
   margin-left: -2.5em;
- /*background-image: url("../Asstes/Images/ss.png") !important;*/
+  /*background-image: url("../Asstes/Images/ss.png") !important;*/
   background-position: left center;
   border-radius: 2em;
-height: 17px !important;
-  transition: background-position .15s ease-in-out;
+  height: 17px !important;
+  transition: background-position 0.15s ease-in-out;
 }
 .form-check-input:checked {
-  background-color:#1CAC19 !important;
-  border-color: #1CAC19 !important;
+  background-color: #1cac19 !important;
+  border-color: #1cac19 !important;
 }
-.full_secreen .modal-content{
-  background:rgba(0,0, 0, 0.8) ;
+.full_secreen .modal-content {
+  background: rgba(0, 0, 0, 0.8);
 }
-.select_privy{
+.select_privy {
   border: none !important;
   outline: none;
   height: 30%;
   width: 100%;
 }
-button select option{
+button select option {
   border: none !important;
   outline: none !important;
 }
-
- 
 
 /* .............upload file.............. */
 #form-file-upload {
@@ -131,24 +126,25 @@ button select option{
     background: black;
   }
 }
-.post_action_modal .modal-content{
-border-radius: 30px !important;
-
+.post_action_modal .modal-content {
+  border-radius: 30px !important;
 }
-.post_share_modal .modal-content{
-border-radius: 30px !important;
+.post_share_modal .modal-content {
+  border-radius: 30px !important;
 }
-.add_mode_modal .modal-content{
+.add_mode_modal .modal-content {
   border-radius: 27px !important;
 }
-.userblock .modal-content{
+.userblock .modal-content {
   border-radius: 27px;
   height: 564px !important;
   /*width: 553px !important;*/
   padding: 74px 79px;
 }
-.ql-toolbar.ql-snow { border: none !important;}
-.ql-container .ql-snow{
+.ql-toolbar.ql-snow {
+  border: none !important;
+}
+.ql-container .ql-snow {
   height: 255px !important;
   border-radius: 16px !important;
   border: 0px;
@@ -160,7 +156,6 @@ border-radius: 30px !important;
   width: 1010px;
   overflow-x: scroll;
   padding: 0px 26px 31px 38px;
- 
 }
 .explore_content_wrap {
   height: 80vh;
@@ -168,49 +163,39 @@ border-radius: 30px !important;
   overflow-y: scroll;
 }
 
-
-
-#style-12::-webkit-scrollbar-track
-{
-	height: 5px;
-	border-radius: 10px;
-	background-color: #BCBCBC;
+#style-12::-webkit-scrollbar-track {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #bcbcbc;
 }
 
-#style-12::-webkit-scrollbar
-{
-	max-width: 12px !important;
+#style-12::-webkit-scrollbar {
+  max-width: 12px !important;
   height: 17px;
-  
 }
 
-#style-12::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color:white;
-height: 2px !important;
+#style-12::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+  height: 2px !important;
 }
-#style-desk::-webkit-scrollbar-track
-{
-	height: 5px;
-	border-radius: 10px;
-	background-color: #BCBCBC;
+#style-desk::-webkit-scrollbar-track {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #bcbcbc;
 }
 
-#style-desk::-webkit-scrollbar
-{
-	max-width: 12px !important;
+#style-desk::-webkit-scrollbar {
+  max-width: 12px !important;
   height: 17px;
-  
 }
 
-#style-desk::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color:white;
-height: 2px !important;
+#style-desk::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+  height: 2px !important;
 }
-.ai_dateOfBrith{
+.ai_dateOfBrith {
   display: flex;
   gap: 25px;
   align-items: center;
@@ -223,21 +208,21 @@ height: 2px !important;
 }
 
 .btn {
-width: 85px;
-height: 20px;
+  width: 85px;
+  height: 20px;
   color: white !important;
-  background-color: #1CAC19 !important;
+  background-color: #1cac19 !important;
   padding: 7px 0px !important;
   border-radius: 6px;
   z-index: 1;
   font-size: 12px !important;
   font-weight: bold;
   display: flex !important;
-align-items: center !important;
-justify-content: center !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
-.upload-btn-wrapper input[type=file] {
+.upload-btn-wrapper input[type="file"] {
   font-size: 100px;
   position: absolute;
   left: 0;
@@ -245,196 +230,170 @@ justify-content: center !important;
   opacity: 0;
 }
 
-
-
 @media screen and (max-width: 1850px) {
-
   .vedios_container2 {
     display: flex;
     gap: 12px;
     width: 900px;
     overflow-x: scroll;
     padding: 0px 26px 31px 38px;
-   
-  }}
-  @media screen and (max-width: 1700px) {
-
-    .vedios_container2 {
-      display: flex;
-      gap: 12px;
-      width: 850px;
-      overflow-x: scroll;
-      padding: 0px 26px 31px 38px;
-     
-    }}
-    @media screen and (max-width: 1600px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 800px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1515px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 750px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1460px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 700px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1400px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 600px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }
-      .explore_content_wrap {
-        height: 80vh;
-        margin-top: 24px;
-        overflow-y: scroll;
-      }
-    }
-    @media screen and (max-width: 1310px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 500px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1150px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 450px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1090px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 400px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1050px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 750px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 1000px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 700px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 950px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 650px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 900px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 600px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 850px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 550px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 800px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 500px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 645px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 450px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 600px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 400px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-    @media screen and (max-width: 430px) {
-   
-      .vedios_container2 {
-        display: flex;
-        gap: 12px;
-        width: 345px;
-        overflow-x: scroll;
-        padding: 0px 20px 31px 20px;
-       
-      }}
-
-
-
-
-      
+  }
+}
+@media screen and (max-width: 1700px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 850px;
+    overflow-x: scroll;
+    padding: 0px 26px 31px 38px;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 800px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1515px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 750px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1460px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 700px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 600px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+  .explore_content_wrap {
+    height: 80vh;
+    margin-top: 24px;
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 1310px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 500px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 450px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 400px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 750px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 700px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 650px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 600px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 550px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 500px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 645px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 450px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 400px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .vedios_container2 {
+    display: flex;
+    gap: 12px;
+    width: 345px;
+    overflow-x: scroll;
+    padding: 0px 20px 31px 20px;
+  }
+}

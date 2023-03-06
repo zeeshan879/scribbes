@@ -1,7 +1,7 @@
 import React from "react";
 import postP from "../../Asstes/Images/postP.png";
 import PostNotification from "../HomeCenterView/postNotification";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const BlogPost = () => {
                 <div className={HomCen.text_post_userName}>Tom Brady</div>
                 <div className={HomCen.text_post_userEmal}>@tombrady</div>
                 <div className={HomCen.text_web3_btn}>
-                  <Image src={postWeb} />
+                  <Image src={postWeb1} />
                   WEB 3.0
                 </div>
               </div>

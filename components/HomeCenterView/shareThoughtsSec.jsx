@@ -5,7 +5,7 @@ import LinkV2 from "../../Asstes/Images/LinkV2.png";
 import gifV2 from "../../Asstes/Images/gifV2.png";
 import postAction from "../../Asstes/Images/postAction.png";
 import postP from "../../Asstes/Images/postP.png";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 import Image from "next/image";
 import PostNotification from "../HomeCenterView/postNotification";

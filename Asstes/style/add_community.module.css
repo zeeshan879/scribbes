@@ -304,7 +304,7 @@ border-radius: 16px;
 	width: 100%;
 	margin-top: 20px;
 	padding: 9px 48px 15px 43px;
-	transition: width 2s;
+	transition: width 3s;
 	box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.07);
 	border-radius: 30px;
 	background-color:white;
@@ -314,7 +314,7 @@ border-radius: 16px;
 	width: 400px;
 	margin-top: 20px;
 	padding: 9px 48px 15px 43px;
-	transition: width 2s;
+	transition: width 3s;
 	box-shadow: 0px 7px 21px rgba(0, 0, 0, 0.07);
 	border-radius: 30px;
 	background-color: white;
@@ -358,7 +358,7 @@ border-radius: 16px;
 .comunity_name {
 	width: 100%;
 	background: #FFFFFF;
-	height: 121px;
+	height: auto;
 	padding: 7px 25px 10px 25px;
 	box-shadow: 0px 3px 21px rgba(0, 0, 0, 0.1);
 	border-radius: 16px;
@@ -375,7 +375,7 @@ border-radius: 16px;
 }
 
 .name_box {
-	margin-top: 8px;
+	margin-top: 0px;
 	border-bottom: 2px solid #BCBCBC;
 	max-width: 336px;
 }

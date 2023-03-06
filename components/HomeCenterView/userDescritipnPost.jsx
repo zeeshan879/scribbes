@@ -1,7 +1,7 @@
 import React from "react";
 import HomCen from "../../Asstes/style/home_centerView.module.css";
 import postAction from "../../Asstes/Images/postAction.png";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 import Image from "next/image";
 import profile from "../../Asstes/Images/profile.png";
 import postP from "../../Asstes/Images/postP.png";
@@ -53,7 +53,7 @@ const UserDescritipnPost = (props) => {
                   🔥🔥🔥
                 </div>
                 <div className={HomCen.des_micro_btn}>
-                  <Image src={postWeb} />
+                  <Image src={postWeb1} />
                   MicroSaaS
                 </div>
               </div>
@@ -129,7 +129,7 @@ const UserDescritipnPost = (props) => {
                   🔥🔥🔥
                 </div>
                 <div className={HomCen.des_micro_btn}>
-                  <Image src={postWeb} />
+                  <Image src={postWeb1} />
                   MicroSaaS
                 </div>
               </div>

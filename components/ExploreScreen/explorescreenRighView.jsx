@@ -6,7 +6,7 @@ import fire1 from "../../Asstes/Images/fire1.png";
 import vb from "../../Asstes/Images/vb.png";
 import arrowNext from "../../Asstes/Images/arrowNext.png";
 import cardLink from "../../Asstes/Images/cardLink.png";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
 import card1 from "../../Asstes/Images/card1.png";
 import card2 from "../../Asstes/Images/card2.png";
@@ -84,7 +84,7 @@ const ExplorescreenRighView = () => {
 
                       <div className={es.card_bottom_content}>
                         <div className={es.social_media_btn}>
-                          <Image src={postWeb} />
+                          <Image src={postWeb1} />
                           Social Media
                         </div>
                         <div className={es.like_coment}>
@@ -134,7 +134,7 @@ const ExplorescreenRighView = () => {
 
                       <div className={es.card_bottom_content}>
                         <div className={es.social_media_btn}>
-                          <Image src={postWeb} />
+                          <Image src={postWeb1} />
                           Social Media
                         </div>
                         <div className={es.like_coment}>
@@ -175,7 +175,7 @@ const ExplorescreenRighView = () => {
 
                       <div className={es.card_bottom_content}>
                         <div className={es.social_media_btn}>
-                          <Image src={postWeb} />
+                          <Image src={postWeb1} />
                           Social Media
                         </div>
                         <div className={es.like_coment}>

@@ -5,8 +5,10 @@ import chose from "../../Asstes/images/chose.png";
 import earth from "../../Asstes/images/earth.png";
 import lock from "../../Asstes/images/lock.png";
 import { useSelector, useDispatch } from "react-redux";
-
-const CommunityInformation = () => {
+import * as yup from "yup";
+import { Form, Field, Formik, ErrorMessage } from "formik";
+import InviteFriens from "./inviteFriends"
+const CommunityInformation = (props) => {
   const [chose1, activeChose] = useState(false);
   const [selecyPrivcy, setPrivcy] = useState("Chose Privacy");
   const changeView = useSelector(
@@ -30,6 +32,8 @@ const CommunityInformation = () => {
       icon: lock,
     },
   ];
+
+
   return (
     <>
       <div
@@ -40,13 +44,23 @@ const CommunityInformation = () => {
         }
       >
         <div className={nc.header_wraper}>Community Information</div>
+        <Formik
+              initialValues={props.defaultData}
+              validationSchema={props.sechema}
+              onSubmit={props.CommunityFormSubmit}
+            >
+                            {({ values, setFieldValue, errors }) => (
+                <Form className="z-10">
         <div className={nc.info_body}>
           <div className={nc.comunity_name}>
             <div className="font-DM text-base font-normal">
               Community Name ( Required)
             </div>
             <div className={nc.name_box}>
-              <input placeholder="Search" className={nc.name_ele} />
+              <Field placeholder="community name" name="communityName" className={nc.name_ele} />
+            </div>
+            <div className="text-danger">
+            <ErrorMessage name="communityName" />
             </div>
             <div className={nc.name_text}>
               Use the name of your business, Brand etc or a name what this
@@ -58,8 +72,11 @@ const CommunityInformation = () => {
               Category ( Required)
             </div>
             <div className={nc.name_box}>
-              <input placeholder="Search" className={nc.name_ele} />
+              <Field placeholder="category" name="category" className={nc.name_ele} />
             </div>
+    <div className="text-danger">
+    <ErrorMessage name="category" />
+    </div>
             <div className={nc.name_text}>
               Use the name of your business, Brand etc or a name what this
               Community is about....
@@ -101,7 +118,7 @@ const CommunityInformation = () => {
               Invite Friends ( Optional )
             </div>
             <div className={nc.name_box}>
-              <input placeholder="Search" className={nc.name_ele} />
+    <InviteFriens/>
             </div>
           </div>
           <div className={nc.coumity_des}>
@@ -114,6 +131,9 @@ const CommunityInformation = () => {
             </div>
           </div>
         </div>
+        </Form>
+              )}
+            </Formik>
       </div>
     </>
   );

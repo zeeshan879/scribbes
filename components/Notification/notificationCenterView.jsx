@@ -6,11 +6,11 @@ import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import notiUser from "../../Asstes/Images/notiUser.png";
 import notiUsr from "../../Asstes/Images/notiUsr.png";
-import notiarrowUp2 from "../../Asstes/Images/notiarrowUp2.png";
+import notiarrowUp from "../../Asstes/Images/notiarrowUp.png";
 import grl from "../../Asstes/Images/grl.png";
 import coomentP from "../../Asstes/Images/coomentP.png";
 import notiImage from "../../Asstes/Images/notiImage.png";
-import postWeb from "../../Asstes/Images/postWeb.png";
+import postWeb1 from "../../Asstes/Images/postWeb1.png";
 import Image from "next/image";
 import PostOption from "../HomeCenterView/postOption";
 import PostNotification from "../HomeCenterView/postNotification";
@@ -86,7 +86,7 @@ const NotificationCenterView = () => {
           <div className={HomCen.notification_profile_box}>
             <div className="flex  gap-[22px]">
             <div className={HomCen.noti_profile_dim}>
-                <Image src={notiarrowUp2} />
+                <Image src={notiarrowUp} />
               </div>
               <div className="flex gap-[10px]">
                 <div className={HomCen.noti_profile_dim}>
@@ -130,7 +130,7 @@ const NotificationCenterView = () => {
                 </div>
               </div>
               <div className={HomCen.noti_web3_btn}>
-                <Image src={postWeb} />
+                <Image src={postWeb1} />
                 WEB 3.0
               </div>
             </div>

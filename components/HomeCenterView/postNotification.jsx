@@ -17,9 +17,10 @@ import messanger from "../../Asstes/Images/messanger.png";
 import tt from "../../Asstes/Images/tt.png";
 import instaM from "../../Asstes/Images/instaM.png";
 import whatsapp from "../../Asstes/Images/whatsapp.png";
-import { IoIosarrowUp2 } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+
 
 const PostNotification = (props) => {
   const [shareactive, setSahreActive] = useState(false);
@@ -59,7 +60,7 @@ const PostNotification = (props) => {
           className={isLike == true ? HomCen.noti_box_clicked : HomCen.noti_box}
           onClick={() => handleLike()}
         >
-          <IoIosarrowUp2 className="text-2xl" />
+          <IoIosArrowUp className="text-2xl" />
           <div className={HomCen.like_counter}> {props.showValue && like}</div>
         </div>
         <div className={HomCen.noti_box}>
