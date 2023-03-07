@@ -31,8 +31,11 @@ import UserBlockModal from "./blockModal";
 import UserMuteModal from "../UserProfile/muteModal";
 import EditProfileModal from "../EdfitProfile/editProfileModal";
 import Link from "next/link";
+import { useSelector, useDispatch } from "react-redux";
 
 const UserProfileSection2 = (props) => {
+  const user = useSelector((store) => store.user);
+
   const [follow, setFollow] = useState(false);
   const [userOpt, setUserOpt] = useState(false);
   const [userBlock, setIsBlock] = useState(false);
@@ -62,11 +65,13 @@ const UserProfileSection2 = (props) => {
             <div className={HomCen.user_profile_cotent}>
               <div>
                 <div className={HomCen.user_profile_name}>
-                  Mike Someone
+                  {user?.currentUser?.firstName +
+                    " " +
+                    user?.currentUser?.lastName}
                   <Image src={check} />
                 </div>
                 <div className={HomCen.user_pro_email}>
-                  @mikesomeoneuser{" "}
+                  @{user?.currentUser?.userName}
                   <div className={HomCen.user_p_folow}>Follows you</div>
                 </div>
               </div>
@@ -114,7 +119,6 @@ const UserProfileSection2 = (props) => {
                   </div>
                   {follow && (
                     <div className={HomCen.user_profile_option}>
-                      
                       <FaTelegramPlane className="text-[#1CAC19] text-xl mt-[2px]" />
                     </div>
                   )}
@@ -142,39 +146,36 @@ const UserProfileSection2 = (props) => {
               )}
             </div>
             <div className={HomCen.userProfile_location}>
-              <div
-                className={HomCen.profie_loc_info}
-              >
+              <div className={HomCen.profie_loc_info}>
                 <Image src={loc} />
-                USA
+                {user?.currentUser?.userLocation}
               </div>
-              <div
-                className={HomCen.profie_loc_clnder}
-              >
-                <Image src={calendar} /> Joined January 2022
+              <div className={HomCen.profie_loc_clnder}>
+                <Image src={calendar} /> {user?.currentUser?.dob}
               </div>
             </div>
             <div className={HomCen.userProfile_folowers}>
               <Link href="/profile-followers">
                 <div className={HomCen.userProfile_f_items}>
-                  1728{" "}
+                  {user?.currentUser?.followers?.length}
                   <span className="font-normal text-[#BCBCBC]">Followers</span>
                 </div>
               </Link>
               <Link href="/profile-followers">
                 <div className={HomCen.userProfile_f_items}>
-                  3567{" "}
+                  {user?.currentUser?.following?.length}
                   <span className="font-normal text-[#BCBCBC]">Following</span>
                 </div>
               </Link>
               <div className={HomCen.userProfile_f_items}>
-                156{" "}
+                {user?.currentUser?.communities?.length}
                 <span className="font-normal text-[#BCBCBC]">Communities</span>
               </div>
             </div>
             <div className={HomCen.userProfile_dec}>
-              This is my bio. This where you find about me and my Communities in
-              life.⚽ Love Soccer and travelling
+              {/* This is my bio. This where you find about me and my Communities in
+              life.⚽ Love Soccer and travelling */}
+              {user?.currentUser?.introduction}
             </div>
             <div>
               <UserProfileTabs />

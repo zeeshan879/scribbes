@@ -8,12 +8,18 @@ import uploadIcon from "../../Asstes/Images/uploadIcon.png";
 import bg from "../../Asstes/Images/uploadvector.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { updateUserprofile } from "../../redux/reducers/userReducer";
+import { useSelector, useDispatch } from "react-redux";
+import Editprofile from "../../pages/edit-profile";
 
 const EditProfileModal = (props) => {
   const [file, setFile] = useState(null);
-  const [eidtProfole, setEditProfile] = useState({ startData: new Date() });
+  const [eidtProfole, setEditProfile] = useState({ dob: new Date() });
   const [dragActive, setDragActive] = React.useState(false);
   const inputRef = React.useRef(null);
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store?.user);
+  console.log("user data", user?.currentUser);
 
   const handleDrag = function (e) {
     e.preventDefault();
@@ -43,19 +49,20 @@ const EditProfileModal = (props) => {
       setEditProfile((values) => ({ ...values, [name]: value }));
     }
   };
-
   const onButtonClick = () => {
     inputRef.current.click();
   };
-
-  const handleInputsValue = (e) => {    
+  const handleInputsValue = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log("date check",name,value)
+
     setEditProfile((values) => ({ ...values, [name]: value }));
   };
-  console.log("eidtProfole.startData",eidtProfole.startData)
-  
+  const handleupdateProfile = () => {
+    // dispatch(updateUserprofile(eidtProfole))
+    console.log("update data",eidtProfole)
+
+  };
 
   return (
     <>
@@ -89,7 +96,7 @@ const EditProfileModal = (props) => {
                 type="file"
                 id="input-file-upload"
                 multiple={true}
-                name="file"
+                name="profilePic"
                 value={eidtProfole.file}
                 onChange={handleChange}
               />
@@ -121,13 +128,17 @@ const EditProfileModal = (props) => {
             <div className="font-DM text-[16px] sm:text-[20px] font-normal text-[#BCBCBC]">
               Name
             </div>
-            <div className="font-DM text-[18px]">John Doe</div>
+            <div className="font-DM text-[18px]">
+              {user?.currentUser?.firstName}
+            </div>
           </div>
           <div className={HomCen.user_name}>
             <div className="font-DM text-[16px] sm:text-[20px] font-normal text-[#BCBCBC]">
               User Name
             </div>
-            <div className="font-DM text-[18px]">John_Doe</div>
+            <div className="font-DM text-[18px]">
+              {user?.currentUser?.userName}
+            </div>
           </div>
           <div className={HomCen.user_bio}>
             <div className="font-DM text-[16px] sm:text-[20px] font-normal text-[#BCBCBC]">
@@ -135,7 +146,7 @@ const EditProfileModal = (props) => {
             </div>
             <textarea
               value={eidtProfole.bio}
-              name="bio"
+              name="introduction"
               onChange={(e) => handleInputsValue(e)}
               className={HomCen.user_input_ele}
             />
@@ -158,17 +169,21 @@ const EditProfileModal = (props) => {
 
             <DatePicker
               className="w-full outline-none text-lg font-DM"
-              selected={eidtProfole.startData}
+              selected={eidtProfole.dob}
               onChange={(date) =>
                 handleInputsValue({
-                    target: { name: "startDate", value: date } ,
+                  target: { name: "dob", value: date },
                 })
               }
-         
             />
           </div>
           <div className="flex justify-center  sm:justify-end">
-            <div className={HomCen.user_info_save_btn}>Save</div>
+            <div
+              className={HomCen.user_info_save_btn}
+              onClick={() => handleupdateProfile()}
+            >
+              Save
+            </div>
           </div>
         </div>
       </Modal>

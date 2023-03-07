@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import nc from "../../Asstes/style/new_community.module.css";
 import ac from "../../Asstes/style/add_community.module.css";
-import * as yup from "yup";
-import { Form, Field, Formik, ErrorMessage } from "formik";
 import Image from "next/image";
 import chose from "../../Asstes/images/chose.png";
 import earth from "../../Asstes/images/earth.png";
@@ -22,12 +20,13 @@ const CreateNewCommunity = () => {
   const [selecyPrivcy, setPrivcy] = useState("Chose Privacy");
   const [activeTab, setActiveTab] = useState(1);
   const [file, setFile] = useState(null);
+  const [inputError, setInputError] = useState(false);
+  const [comunityForm, setCommunityFrom] = useState();
   const changeView = useSelector(
     (state) => state.allGernalFunction.mobileDesktopView
   );
   const inputRef = React.useRef(null);
   const dispatch = useDispatch();
-
   const handleDrag = function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -54,29 +53,6 @@ const CreateNewCommunity = () => {
   const onButtonClick = () => {
     inputRef.current.click();
   };
-  const handleSubmit = (value) => {
-    const CommunityInformation = {
-      communityName: value.communityName,
-      category: value.category,
-      friends: value.friends,
-      description: value.description,
-    };
-
-    console.log("CommunityInformation", CommunityInformation);
-  };
-
-  const defaultValues = {
-    communityName: "",
-    category: "",
-    friends: "",
-    description: "",
-  };
-  const UserValidateSchema = yup.object().shape({
-    communityName: yup.string().required("community name is Required*"),
-    category: yup.string().required("category is required*"),
-    friends: yup.string(),
-    description: yup.string(),
-  });
   const privayData = [
     {
       name: "Everyone",
@@ -95,118 +71,131 @@ const CreateNewCommunity = () => {
       activeChose(false);
     }
   };
+  const handleAddNewCommunity = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setCommunityFrom((values) => ({ ...values, [name]: value }));
+    if (comunityForm?.communityName.trim().length === 0) {
+      setInputError(true);
+    } else {
+      setInputError(false);
+    }
+  };
+  const handleSubmitNewCommunity = () => {
+    if (comunityForm?.communityName.trim().length == 0) {
+      setInputError(true);
+    } else {
+      setInputError(false);
+    }
+
+    console.log("comunityForm========>", comunityForm?.communityName);
+  };
   return (
     <>
       <div className={nc.content_wraper}>
-                {/* <=============Mobile Preview===============> */}
+        {/* <=============Mobile Preview===============> */}
         <div
           className={
             changeView === true
               ? nc.create_community_wraper
               : ac.create_community_wraper_mblView
           }
-        >	
+        >
           <div className={nc.header_wraper}>Community Information</div>
-          <Formik
-            initialValues={privayData}
-            validationSchema={UserValidateSchema}
-            onSubmit={handleSubmit}
-          >
-            {({ values, setFieldValue, errors }) => (
-              <Form className="z-10">
-                <div className={nc.info_body}>
-                  <div className={nc.comunity_name}>
-                    <div className="font-DM text-base font-normal">
-                      Community Name ( Required)
-                    </div>
-                    <div className={nc.name_box}>
-                      <Field
-                        placeholder="community name"
-                        name="communityName"
-                        className={nc.name_ele}
-                      />
-                    </div>
-                    <div className="text-danger">
-                      <ErrorMessage name="communityName" />
-                    </div>
-                    <div className={nc.name_text}>
-                      Use the name of your business, Brand etc or a name what
-                      this Community is about....
-                    </div>
-                  </div>
-                  <div className={nc.comunity_name}>
-                    <div className="font-DM text-base font-normal">
-                      Category ( Required)
-                    </div>
-                    <div className={nc.name_box}>
-                      <Field
-                        placeholder="category"
-                        name="category"
-                        className={nc.name_ele}
-                      />
-                    </div>
-                    <div className="text-danger">
-                      <ErrorMessage name="category" />
-                    </div>
-                    <div className={nc.name_text}>
-                      Use the name of your business, Brand etc or a name what
-                      this Community is about....
-                    </div>
-                  </div>
-                  <div className={nc.chose_Privcy}>
-                    <div className="font-DM">{selecyPrivcy}</div>
-                    <div className={nc.chose_select}>
-                      <Image src={chose} onClick={() => handlePrivacy(true)} />
 
-                      {chose1 && (
-                        <div className={nc.chose_privcy_toggle}>
-                          {privayData.map((data) => {
-                            return (
-                              <>
-                                <div className={nc.toggle_item}>
-                                  <Image src={data.icon} />
-
-                                  <div
-                                    className="font-DM w-full h-full items-center flex"
-                                    onClick={() => handlePrivacy(data.name)}
-                                  >
-                                    {data.name}
-                                  </div>
-                                </div>
-                              </>
-                            );
-                          })}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className={nc.comunity_name}>
-                    <div className="font-DM text-base font-normal">
-                      Invite Friends ( Optional )
-                    </div>
-                    <div className={nc.name_box}>
-                      <InviteFriens />
-                    </div>
-                  </div>
-                  <div className={nc.coumity_des}>
-                    <div className="font-DM text-base font-normal">
-                      Description
-                    </div>
-                    <div className={nc.comunity_des_text}>
-                      <textarea
-                        placeholder="write...."
-                        className={ac.des_textarea_ele}
-                      ></textarea>
-                    </div>
-                  </div>
+          <div className="z-10">
+            <div className={nc.info_body}>
+              <div className={nc.comunity_name}>
+                <div className="font-DM text-base font-normal">
+                  Community Name ( Required)
                 </div>
-              </Form>
-            )}
-          </Formik>
+                <div className={nc.name_box}>
+                  <input
+                    placeholder="community name"
+                    className={nc.name_ele}
+                    name="communityName"
+                    value={comunityForm?.communityName}
+                    onChange={(e) => handleAddNewCommunity(e)}
+                  />
+                </div>
+                <div className="text-danger text-s">
+                  {inputError && <span>This feild is required*</span>}
+                </div>
+                <div className={nc.name_text}>
+                  Use the name of your business, Brand etc or a name what this
+                  Community is about....
+                </div>
+              </div>
+              <div className={nc.comunity_name}>
+                <div className="font-DM text-base font-normal">
+                  Category ( Required)
+                </div>
+                <div className={nc.name_box}>
+                  <input
+                    placeholder="category"
+                    className={nc.name_ele}
+                    value={comunityForm?.category}
+                    onChange={(e) => handleAddNewCommunity(e)}
+                    name="category"
+                  />
+                </div>
+                <div className="text-danger"></div>
+                <div className={nc.name_text}>
+                  Use the name of your business, Brand etc or a name what this
+                  Community is about....
+                </div>
+              </div>
+              <div className={nc.chose_Privcy}>
+                <div className="font-DM">{selecyPrivcy}</div>
+                <div className={nc.chose_select}>
+                  <Image src={chose} onClick={() => handlePrivacy(true)} />
+
+                  {chose1 && (
+                    <div className={nc.chose_privcy_toggle}>
+                      {privayData.map((data) => {
+                        return (
+                          <>
+                            <div className={nc.toggle_item}>
+                              <Image src={data.icon} />
+
+                              <div
+                                className="font-DM w-full h-full items-center flex"
+                                onClick={() => handlePrivacy(data.name)}
+                              >
+                                {data.name}
+                              </div>
+                            </div>
+                          </>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className={nc.comunity_name}>
+                <div className="font-DM text-base font-normal">
+                  Invite Friends ( Optional )
+                </div>
+                <div className={nc.name_box}>
+                  <InviteFriens />
+                </div>
+              </div>
+              <div className={nc.coumity_des}>
+                <div className="font-DM text-base font-normal">Description</div>
+                <div className={nc.comunity_des_text}>
+                  <textarea
+                    placeholder="write...."
+                    className={ac.des_textarea_ele}
+                    value={comunityForm?.description}
+                    onChange={(e) => handleAddNewCommunity(e)}
+                    name="description"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
         {/* <=============desktop Preview===============> */}
         <div
           className={
@@ -399,7 +388,10 @@ const CreateNewCommunity = () => {
                 hsainimmammmmajwjij awawdwa. No tu aiigramth logicially busrrt.
               </div>
             </div>
-            <div className={ac.create_com_btn} onClick={() => handleSubmit()}>
+            <div
+              className={ac.create_com_btn}
+              onClick={() => handleSubmitNewCommunity()}
+            >
               Create Community
             </div>
           </div>

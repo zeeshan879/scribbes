@@ -1,8 +1,10 @@
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import HomePage from "../components/Home";
 
 export default function Home() {
+
   return (
     <>
       <Head>

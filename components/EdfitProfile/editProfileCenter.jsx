@@ -16,6 +16,7 @@ const EditProfilecenter = () => {
   const activePageTab = useSelector(
     (state) => state.allGernalFunction.activePageTab
   );
+  const user = useSelector((store) => store.user);
   function onClick() {
     setLgShow(!lgShow);
   }
@@ -29,7 +30,7 @@ const EditProfilecenter = () => {
               className="cursor-pointer"
               onClick={() => router.back()}
             />
-            Mike Someone
+            {user.currentUser?.firstName}
           </div>
           <div className="text-sm font-DM sm:text-[18px] pl-[40px] lg:pl-[48px] text-[#BCBCBC] font-normal">
             145 Posts
@@ -47,19 +48,19 @@ const EditProfilecenter = () => {
           </div>
         ) : activePageTab == 2 ? (
           <div className={HomCen.edit_profile_post_wraper}>
-          <div className={HomCen.text_post_wraper}>
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-          </div>
+            <div className={HomCen.text_post_wraper}>
+              <BlogPost />
+              <BlogPost />
+              <BlogPost />
+            </div>
           </div>
         ) : activePageTab == 3 ? (
           <div className={HomCen.edit_profile_post_wraper}>
-          <div className={HomCen.text_post_wraper}>
-            <BlogPost />
-            <BlogPost />
-            <BlogPost />
-          </div>
+            <div className={HomCen.text_post_wraper}>
+              <BlogPost />
+              <BlogPost />
+              <BlogPost />
+            </div>
           </div>
         ) : (
           ""
