@@ -4,8 +4,11 @@ import Image from "next/image";
 import growth from "../../Asstes/Images/growth.png";
 import ecno from "../../Asstes/Images/ecno.png";
 import Link from "next/link";
-
+import jwt_decode from "jwt-decode";
+import Cookies from "universal-cookie";
+import {getUserCommunity} from "../../redux/reducers/userReducer"
 const CommunityTiles = () => {
+  const cookies = new Cookies();
   const titles = [
     {
       image: growth,

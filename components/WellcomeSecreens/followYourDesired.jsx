@@ -110,6 +110,7 @@ const FollowYourDesired = () => {
     tempArray[find_id].active = !tempArray[find_id].active;
     setfollowDesired(tempArray)
   };
+  console.log("followDesired",followDesired)
   return (
     <div className={foll.tellUS_wrap}>
       <div className={tell.tellus_heading}>Follow your desired interests</div>

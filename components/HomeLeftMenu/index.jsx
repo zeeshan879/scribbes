@@ -26,6 +26,8 @@ import { FiSettings } from "react-icons/fi";
 import { RiNotification4Line } from "react-icons/ri";
 import Link from 'next/link'
 import { useRouter } from "next/router";
+import Cookies from "universal-cookie";
+
 
 const HomeLeftMenu = () => {
   const [lgShow, setLgShow] = useState(false);
@@ -33,9 +35,12 @@ const HomeLeftMenu = () => {
   const [active, setActive] = useState(1);
   const router = useRouter();
   const pathName = router.pathname;
-
+  const cookies = new Cookies();
   function onClick() {
     setLgShow(!lgShow);
+  }
+  const handleSignOut=()=>{
+    cookies.remove("token");
   }
   return (
     <>
@@ -81,7 +86,7 @@ const HomeLeftMenu = () => {
                   <div className="hidden md:block">Add an existing account</div>
                 </div>
                 <div className={lbar.logout_sep}></div>
-                <div className={lbar.logout}>
+                <div className={lbar.logout} onClick={()=>handleSignOut()}>
                   <div>
                     <Image src={logout} />
                   </div>

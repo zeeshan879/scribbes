@@ -180,7 +180,7 @@ export default function InviteFriens() {
     <Root>
       <div {...getRootProps()}>
  
-        <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
+        <InputWrapper ref={setAnchorEl} >
           {value.map((option, index) => (
             <StyledTag label={option.title} key={index} {...getTagProps({ index })} />
           ))}

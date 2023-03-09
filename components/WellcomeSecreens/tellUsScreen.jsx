@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import tell from "../../Asstes/style/tellUsAboutYourSelf.module.css";
 import Image from "next/image";
 
 const TellUsView = () => {
+  const [intro, setIntro] = useState();
+  const handleUserIntroduction = (e) => {
+    const bio = e.target.value;
+    setIntro(bio);
+  };
+  console.log("introducton", intro);
   return (
     <>
       <div className={tell.tellUS_wrap}>
@@ -16,6 +22,8 @@ const TellUsView = () => {
             <textarea
               className={tell.teaxt_ele}
               placeholder="Introduce yourself...."
+              onChange={(e) => handleUserIntroduction(e)}
+              value={intro}
             ></textarea>
             <div className={tell.text_limit}>0/2000</div>
           </div>
