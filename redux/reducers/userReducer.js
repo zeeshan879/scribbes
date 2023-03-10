@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../axiosInstance";
+import axios from "axios";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 const initialState = {
@@ -39,7 +40,7 @@ export const getCurrentUser = createAsyncThunk(
       const { data } = await axiosInstance.get(
         `http://localhost:5000/user/get-current-user/${userId}`
       );
-      return data.data;
+      return data;
     } catch (err) {
       console.log(err);
     }
@@ -49,13 +50,14 @@ export const getCurrentUser = createAsyncThunk(
 export const updateUserprofile = createAsyncThunk(
   "updateUserprofile",
   async (obj) => {
-    console.log("whats is obj",obj)
+    console.log("whats is obj", obj);
     try {
-      const { data } = await axiosInstance.put(
-        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.data
+      const res = await axiosInstance.put(
+        `http://localhost:5000/user/update-user-profile/${obj.userId}`,
+        obj.data
       );
-  
-      return data.data;
+
+      return res;
     } catch (err) {
       console.log(err);
     }
@@ -76,11 +78,11 @@ export const userReducer = createSlice({
       // state.isLoading = false;
     },
     [getCurrentUser.fulfilled]: (state, action) => {
-      state.currentUser = action.payload;
+      state.currentUser = action.payload.data;
       // state.isLoading = false;
     },
   },
 });
 // Action creators are generated for each case reducer function
-export const { chnagePageView, } = userReducer.actions;
+export const { chnagePageView } = userReducer.actions;
 export default userReducer.reducer;

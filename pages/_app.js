@@ -4,11 +4,10 @@ import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import { useDispatch } from "react-redux";
 import { getCurrentUser } from "../redux/reducers/userReducer";
+import Router from 'next/router'
 import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
-
-
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -22,16 +21,15 @@ export default MyApp;
 
 const Application = ({ Component, pageProps }) => {
   const dispatch = useDispatch();
-  const token = cookies.get("token")
-
+  const token = cookies.get("token");
 
   useEffect(() => {
-    if(token){
+    if (token) {
       const user = jwt_decode(token);
       dispatch(getCurrentUser(user.user?.id));
+    } else {
+      Router.push('/login')
     }
- 
-    
   }, []);
   return <Component {...pageProps} />;
 };
