@@ -10,13 +10,22 @@ import TellUsView from "../WellcomeSecreens/tellUsScreen";
 import FollowYourDesired from "../WellcomeSecreens/followYourDesired";
 import StartConverstion from "../WellcomeSecreens/startConverstion";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { updateUserprofile,userIntroduction } from "../../redux/reducers/userReducer";
 
 const WellcomeScreen1 = () => {
   const [activeView, setActiveView] = useState(1);
-  const chnagePostType =useSelector((state)=>state.allGernalFunction.isBlogOrPost)
+  const chnagePostType = useSelector(
+    (state) => state.allGernalFunction.isBlogOrPost
+  );
+  const userProfile = useSelector((state) => state.user.userProfile);
+  const temBio = useSelector((state) => state.user.temBio);
+  const dispatch = useDispatch();
   const handleChngeScreen = () => {
     setActiveView(activeView + 1);
+    if (activeView === 3) {
+      dispatch(userIntroduction(temBio));
+    }
   };
   const handlePrevScreen = () => {
     setActiveView(activeView - 1);
@@ -29,7 +38,13 @@ const WellcomeScreen1 = () => {
         <div className={well1.login_main}>
           <div className={well1.well_sec_1_container}>
             <div className={well1.scrren1_wrap}>
-              <div className={chnagePostType===2? well1.well_sec__wrapper2:well1.well_sec__wrapper}>
+              <div
+                className={
+                  chnagePostType === 2
+                    ? well1.well_sec__wrapper2
+                    : well1.well_sec__wrapper
+                }
+              >
                 <div className={well1.conditional_opt}>
                   {activeView === 1 ? (
                     <WellcomeView />
@@ -48,8 +63,9 @@ const WellcomeScreen1 = () => {
                 <div className={well1.sec1_action_box}>
                   <div className={well1.action_btn_wraperr}>
                     {activeView === 1 ? (
-                 <Link href="/">  
-                    <div className={well1.sce1_skip_now}>Skip for now</div></Link>
+                      <Link href="/">
+                        <div className={well1.sce1_skip_now}>Skip for now</div>
+                      </Link>
                     ) : (
                       <div
                         className={well1.backBtn}
@@ -106,14 +122,20 @@ const WellcomeScreen1 = () => {
                     {(activeView === 2 ||
                       activeView === 3 ||
                       activeView === 4) && (
-                      <div className={well1.sce1_skip_now2} onClick={() => setActiveView(activeView+1)}>Skip this step</div>
+                      <div
+                        className={well1.sce1_skip_now2}
+                        onClick={() => setActiveView(activeView + 1)}
+                      >
+                        Skip this step
+                      </div>
                     )}
 
                     {activeView === 5 ? (
-                     <Link href="/">
-                       <div className={well1.take_home_btn}>
-                        Take me to homepage
-                      </div></Link>
+                      <Link href="/">
+                        <div className={well1.take_home_btn}>
+                          Take me to homepage
+                        </div>
+                      </Link>
                     ) : (
                       <div
                         className={well1.sec1_show_around_btn}

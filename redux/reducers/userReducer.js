@@ -1,15 +1,19 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import axiosInstance from "../../axiosInstance";
+import {Base_Url} from "../../config/baseUrl"
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
 const initialState = {
   currentUser: null,
+  userProfile:null,
+  onlyHoldUserProfile:null,
+  temBio:""
 };
-
+console.log("Base_Url",Base_Url)
 export const userLogin = createAsyncThunk("userLogin", async (data) => {
   try {
     const res = await axiosInstance.post(
-      `http://localhost:5000/user/login`,
+      `${Base_Url}user/login`,
       data
     );
     cookies.set("token", res.data.data.token);
@@ -22,7 +26,7 @@ export const userLogin = createAsyncThunk("userLogin", async (data) => {
 export const userSignUP = createAsyncThunk("userSignUP", async (data) => {
   try {
     const res = await axiosInstance.post(
-      `http://localhost:5000/user/register`,
+      `${Base_Url}user/register`,
       data
     );
     console.log("signUpUser data====>", data);
@@ -35,7 +39,7 @@ export const userSignUP = createAsyncThunk("userSignUP", async (data) => {
 export const handleaddCommunity = createAsyncThunk("handleaddCommunity", async (data) => {
   try {
     const res = await axiosInstance.post(
-      `http://localhost:5000/community/add-community`,
+      `${Base_Url}community/add-community`,
       data
     );
     console.log("handleaddCommunity data====>", data);
@@ -92,23 +96,7 @@ export const updateUserprofile = createAsyncThunk(
     console.log("whats is obj",obj)
     try {
       const { data } = await axiosInstance.put(
-        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.data
-      );
-  
-      return data.data;
-    } catch (err) {
-      console.log(err);
-    }
-  }
-);
-// setUp new profile=====>
-export const setupProfilePic = createAsyncThunk(
-  "setupProfilePic",
-  async (obj) => {
-    console.log("whats is obj",obj)
-    try {
-      const { data } = await axiosInstance.put(
-        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.data
+        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.introduction 
       );
   
       return data.data;
@@ -124,7 +112,7 @@ export const userIntroduction = createAsyncThunk(
     console.log("whats is obj",obj)
     try {
       const { data } = await axiosInstance.put(
-        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.data
+        `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.introduction
       );
   
       return data.data;
@@ -141,6 +129,12 @@ export const userReducer = createSlice({
     chnagePageView(state, action) {
       state.activePageTab = action.payload;
     },
+    holdUserProfile(state, action) {
+      state.onlyHoldUserProfile = action.payload;
+    },
+    userBio(state, action) {
+      state.temBio = action.payload;
+    },
   },
   extraReducers: {
     [userLogin.fulfilled]: (state, action) => {
@@ -151,8 +145,13 @@ export const userReducer = createSlice({
       state.currentUser = action.payload;
       // state.isLoading = false;
     },
+    [updateUserprofile.fulfilled]: (state, action) => {
+  
+      state.userProfile = action.payload;
+      // state.isLoading = false;
+    },
   },
 });
 // Action creators are generated for each case reducer function
-export const { chnagePageView, } = userReducer.actions;
+export const { chnagePageView,holdUserProfile,userBio } = userReducer.actions;
 export default userReducer.reducer;

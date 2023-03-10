@@ -11,7 +11,7 @@ import upload_profile from "../../Asstes/images/upload_profile.png";
 import { handleDeskTopView } from "../../redux/reducers/scribbes";
 import { FaDesktop } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
-import {handleaddCommunity} from "../../redux/reducers/userReducer"
+import { handleaddCommunity } from "../../redux/reducers/userReducer";
 
 const CreateNewCommunity = () => {
   const [dragActive, setDragActive] = React.useState(false);
@@ -21,7 +21,11 @@ const CreateNewCommunity = () => {
   const [file, setFile] = useState(null);
   const [inputError, setInputError] = useState(false);
   const [categoryError, setcategoryError] = useState(false);
-  const [comunityForm, setCommunityFrom] = useState({name:"privacy",name:"invitations"});
+  const [comunityForm, setCommunityFrom] = useState({
+    name: "privacy",
+    name: "invitations",
+    name: "communityOwner",
+  });
   const privayData = [
     {
       name: "Everyone",
@@ -32,18 +36,20 @@ const CreateNewCommunity = () => {
       icon: lock,
     },
   ];
-  const friends=[
-    { title: 'Ali@450', year: 1994 },
-    { title: 'Afzal@562', year: 1972 },
-    { title: 'Yousaf@258', year: 1974 },
-    { title: 'Herry@258', year: 2008 },
-    { title: 'Haroon@654', year: 1957 },
+  const friends = [
+    { title: "Ali@450", year: 1994 },
+    { title: "Afzal@562", year: 1972 },
+    { title: "Yousaf@258", year: 1974 },
+    { title: "Herry@258", year: 2008 },
+    { title: "Haroon@654", year: 1957 },
     { title: "Herry@2645", year: 1993 },
-    { title: 'PulpFiction@254', year: 1994 },
-  ]
+    { title: "PulpFiction@254", year: 1994 },
+  ];
   const changeView = useSelector(
     (state) => state.allGernalFunction.mobileDesktopView
   );
+  const user = useSelector((state) => state.user?.currentUser);
+
   const inputRef = React.useRef(null);
   const dispatch = useDispatch();
   const handleDrag = function (e) {
@@ -80,8 +86,13 @@ const CreateNewCommunity = () => {
       activeChose(!chose1);
     } else {
       setPrivcy(data);
-      setCommunityFrom({...comunityForm,privacy:data,invitations:friends});
-      console.log("form state",comunityForm)
+      setCommunityFrom({
+        ...comunityForm,
+        privacy: data,
+        invitations: friends,
+        communityOwner: user?.id,
+      });
+      console.log("form state", comunityForm);
       activeChose(false);
     }
   };
@@ -94,20 +105,19 @@ const CreateNewCommunity = () => {
     } else {
       setInputError(false);
     }
-    if (comunityForm?.category?.trim().length == "" ) {
+    if (comunityForm?.category?.trim().length == "") {
       setcategoryError(true);
     } else {
       setcategoryError(false);
     }
   };
   const handleSubmitNewCommunity = () => {
-    if (comunityForm?.communityName?.trim().length == 0 ) {
+    if (comunityForm?.communityName?.trim().length == 0) {
       setInputError(true);
     } else {
       setInputError(false);
-      dispatch(handleaddCommunity(comunityForm))
+      dispatch(handleaddCommunity(comunityForm));
     }
-
 
     console.log("comunityForm========>", comunityForm);
   };
@@ -161,7 +171,7 @@ const CreateNewCommunity = () => {
                   />
                 </div>
                 <div className="text-danger text-sm h-[10px]">
-                {categoryError && <span>This feild is required*</span>}
+                  {categoryError && <span>This feild is required*</span>}
                 </div>
                 <div className={nc.name_text}>
                   Use the name of your business, Brand etc or a name what this
