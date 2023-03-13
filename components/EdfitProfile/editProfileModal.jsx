@@ -8,17 +8,20 @@ import uploadIcon from "../../Asstes/Images/uploadIcon.png";
 import bg from "../../Asstes/Images/uploadvector.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { updateUserprofile } from "../../redux/reducers/userReducer";
+import {
+  updateUserprofile,
+  getCurrentUser,
+} from "../../redux/reducers/userReducer";
 import { useSelector, useDispatch } from "react-redux";
 import Editprofile from "../../pages/edit-profile";
 
 const EditProfileModal = (props) => {
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store?.user);
   const [file, setFile] = useState(null);
   const [eidtProfole, setEditProfile] = useState({ dob: new Date() });
   const [dragActive, setDragActive] = React.useState(false);
   const inputRef = React.useRef(null);
-  const dispatch = useDispatch();
-  const user = useSelector((store) => store?.user);
   console.log("user data", user?.currentUser);
 
   const handleDrag = function (e) {
@@ -58,10 +61,23 @@ const EditProfileModal = (props) => {
 
     setEditProfile((values) => ({ ...values, [name]: value }));
   };
-  const handleupdateProfile = () => {
-    // dispatch(updateUserprofile(eidtProfole))
-    console.log("update data",eidtProfole)
-
+  const handleupdateProfile = async () => {
+    const res = await dispatch(
+      updateUserprofile({
+        data: {
+          ...eidtProfole,
+          oldProfilePick: user.currentUser.profilePic
+            ? user.currentUser.profilePic
+            : null,
+        },
+        userId: user.currentUser.id,
+      })
+    );
+    console.log("res", res);
+    if (res.payload.status === 200) {
+      dispatch(getCurrentUser(user.currentUser.id));
+    }
+    console.log("update data", eidtProfole);
   };
 
   return (

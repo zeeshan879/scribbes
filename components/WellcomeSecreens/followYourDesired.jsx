@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import foll from "../../Asstes/style/followyourdesire.module.css";
 import tell from "../../Asstes/style/tellUsAboutYourSelf.module.css";
 import growth from "../../Asstes/Images/growth.png";
@@ -13,104 +13,36 @@ import fit from "../../Asstes/Images/fit.png";
 import aple from "../../Asstes/Images/crypto.png";
 import Image from "next/image";
 import crypto from "../../Asstes/Images/crypto.png";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  temUserCommunity,
+
+} from "../../redux/reducers/userReducer";
 
 const FollowYourDesired = () => {
-  const [followDesired, setfollowDesired] = useState([
-    {
-      id: 1,
-      icon: crypto,
-      title: "Crypto Currency",
-      followers: "3.6k Followers",
-      active: false,
-    },
-    {
-      id: 2,
-      icon: growth,
-      active: true,
-      title: "Growth",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 3,
-      icon: ent,
-      active: false,
-      title: "Entrepreneurship",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 4,
-      icon: tech,
-      active: false,
-      title: "Technology Memes",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 5,
-      icon: meta,
-      active: true,
-      title: "Web 3.0",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 6,
-      icon: meta,
-      active: false,
-      title: "Metaverse",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 7,
-      icon: ecno,
-      active: false,
-      title: "Economy",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 8,
-      icon: leader,
-      active: false,
-      title: "Leadership",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 9,
-      icon: lea,
-      active: false,
-      title: "Premier League",
-      followers: "3.6k Followers",
-    },
-    {
-      id: 10,
-      icon: music,
-      title: "Music",
-      active: false,
-      followers: "3.6k Followers",
-    },
-    {
-      id: 11,
-      icon: fit,
-      title: "Fitness",
-      active: false,
-      followers: "3.6k Followers",
-    },
-    {
-      id: 12,
-      icon: aple,
-      title: "Apple",
-      active: false,
-      followers: "3.6k Followers",
-    },
-  ]);
+  const allcommunities = useSelector((state) => state.user.allcommunities);
+  const showAllCommunity=allcommunities.data
+  const [followDesired, setfollowDesired] = useState(showAllCommunity);
+  const user = useSelector((state) => state.user.currentUser);
+  const dispatch = useDispatch();
+
+
+
+
 
   const handleSelectCommunity = (data) => {
-    console.log("tile data==>", data);
     const find_id = followDesired?.findIndex((data1) => data1.id === data.id);
-    console.log("data.id,find_index", data.id, find_id);
     const tempArray = [...followDesired];
+    const temp2 = [];
     tempArray[find_id].active = !tempArray[find_id].active;
-    setfollowDesired(tempArray)
+    const activeCom = tempArray.filter((data) => data.active === true);
+    for (let i = 0; i <= activeCom.length - 1; i++) {
+      temp2?.push({ communityId: activeCom[i]?.id, userId: user?.id });
+    }
+    dispatch(temUserCommunity({ joinCommunities: temp2 }));
+    setfollowDesired(tempArray);
   };
-  console.log("followDesired",followDesired)
+
   return (
     <div className={foll.tellUS_wrap}>
       <div className={tell.tellus_heading}>Follow your desired interests</div>
@@ -124,11 +56,12 @@ const FollowYourDesired = () => {
           return (
             <>
               <div
-                className={data.active == true ? foll.active_tile : foll.tile}
+                // className={data.active == true ? foll.active_tile : foll.tile}
+                className={foll.tile}
                 onClick={() => handleSelectCommunity(data)}
               >
                 <div>
-                  <Image src={data.icon} />
+                  <Image src={growth} height="74px" width="74px" />
                 </div>
                 <div>
                   <div
@@ -138,7 +71,7 @@ const FollowYourDesired = () => {
                         : foll.tile_heading
                     }
                   >
-                    {data.title}
+                    {data.communityName}
                   </div>
                   <div
                     className={

@@ -12,11 +12,8 @@ const TellUsView = () => {
   const handleUserIntroduction = (e) => {
     const bio = e.target.value;
     setIntro(bio);
-    const data = {
-      introduction: bio,
-      userId:currentUser.id
-    };
-    dispatch(userBio(data));
+
+    dispatch(userBio(bio));
   };
   console.log("introducton", temBio);
   return (

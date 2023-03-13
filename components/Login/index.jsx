@@ -8,12 +8,13 @@ import Head from "next/head";
 import Link from "next/link";
 import * as yup from "yup";
 import { Form, Field, Formik, ErrorMessage } from "formik";
-import {userLogin} from "../../redux/reducers/userReducer"
+import { userLogin } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
+import Router from "next/router";
 
 const Login = () => {
-  const [remember,setRember]=useState(false)
-  const disptach =useDispatch()
+  const [remember, setRember] = useState(false);
+  const disptach = useDispatch();
 
   const showImage = {
     backgroundImage: `url(${loginBanner.src})`,
@@ -27,15 +28,19 @@ const Login = () => {
     email: yup.string().email("Invalid email format").required("Required"),
     password: yup.string().required("Please enter your password"),
   });
-  const handleSubmit = (value, { resetForm }) => {
+  const handleSubmit = async (value, { resetForm }) => {
     const formData = new FormData();
     formData.append("email", value.email);
     formData.append("password", value.password);
-    const userData={
-      email:value.email,
-      password:value.password
+    const userData = {
+      email: value.email,
+      password: value.password,
+    };
+    const loginRes = await disptach(userLogin(userData));
+    console.log("ali===", loginRes);
+    if (loginRes.payload.status===200) {
+      Router.push("/");
     }
-    disptach(userLogin(userData))
   };
 
   return (
@@ -71,88 +76,87 @@ const Login = () => {
           validationSchema={UserValidateSchema}
           onSubmit={handleSubmit}
         >
-              {({ values, setFieldValue }) => (
-          <Form>
-            <div className="flex justify-center w-full px-[10px]   md:w-[700px] xl:w-[950px] 2xl:w-[1050px] pt-[40px]   sm:pt-[50px] lg:pt-[40px] xl:pt-[50px] 2xl:pt-[120px]">
-              <div className="w-[350px] xl:w-[400px] 2xl:w-[472px] ">
-                <div className="text-[30px] text-center sm:text-start sm:text-[32px]  xl:text-[32px] 2xl:text-[42px] font-bold text-black font-grotesk">
-                  Login
-                </div>
-                <div className="pt-[15px] xl:pt-[24px] 2xl:pt-[54px]">
-                  <div className="text-black font-medium text-[16px] xl:text-[18px] 2xl:text-[20px] font-DM">
-                    Email<sup className="text-[#000580]">*</sup>
-                  </div>
-                  <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
-                    <Field
-                      placeholder="email@website.com"
-                      name="email"
-                      className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
-                    />
-                  </div>
-                  <div className="text-[red] text-base pt-1">
-                    <ErrorMessage name="email" />
-                  </div>
-                  <div className="text-black font-medium text-[16px] xl:text-[18px] 2xl:text-[20px] mt-[10px] xl:mt-[16px] 2xl:mt-[21px] font-DM">
-                    Password<sup className="text-[#000580]">*</sup>
-                  </div>
-                  <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
-                    <Field
-                      placeholder="Password"
-                      type="Password"
-                      name="password"
-                      className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
-                    />
-                  </div>
-                  <div className="text-[red] text-base pt-1">
-                    <ErrorMessage name="Password" />
-                  </div>
-                  <div className="flex justify-between items-center mt-[31px] xl:mt-[20px] 2xl:mt-[31px]">
-                    <div className="flex gap-[11px] items-center text-[16px] font-medium font-DM">
-                      <input
-                        type="checkbox"
-                        class="accent-[#1CAC19] rounded-[6px] h-[20px] w-[20px]"
-                    
-                      />{" "}
-                      Remember me
-                    </div>
-                    <div className="text-[14px] sm:text-[16px] xl:text-[17px] 2xl:text-[18px] font-medium text-[#1CAC19] cursor-pointer font-DM">
-                      Forget Password?
-                    </div>
-                  </div>
-                  <button
-                    type="submit"
-                    className="h-[50px] xl:h-[58px] 2xl:h-[63px]   w-full mt-[31px] xl:mt-[20px] 2xl:mt-[31px] font-DM rounded-[41px] bg-[#1CAC19] flex justify-center items-center cursor-pointer text-white text-[16px] sm:text-[18px] 2xl:text-[20px] font-bold"
-                  >
+          {({ values, setFieldValue }) => (
+            <Form>
+              <div className="flex justify-center w-full px-[10px]   md:w-[700px] xl:w-[950px] 2xl:w-[1050px] pt-[40px]   sm:pt-[50px] lg:pt-[40px] xl:pt-[50px] 2xl:pt-[120px]">
+                <div className="w-[350px] xl:w-[400px] 2xl:w-[472px] ">
+                  <div className="text-[30px] text-center sm:text-start sm:text-[32px]  xl:text-[32px] 2xl:text-[42px] font-bold text-black font-grotesk">
                     Login
-                  </button>
+                  </div>
+                  <div className="pt-[15px] xl:pt-[24px] 2xl:pt-[54px]">
+                    <div className="text-black font-medium text-[16px] xl:text-[18px] 2xl:text-[20px] font-DM">
+                      Email<sup className="text-[#000580]">*</sup>
+                    </div>
+                    <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
+                      <Field
+                        placeholder="email@website.com"
+                        name="email"
+                        className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
+                      />
+                    </div>
+                    <div className="text-[red] text-base pt-1">
+                      <ErrorMessage name="email" />
+                    </div>
+                    <div className="text-black font-medium text-[16px] xl:text-[18px] 2xl:text-[20px] mt-[10px] xl:mt-[16px] 2xl:mt-[21px] font-DM">
+                      Password<sup className="text-[#000580]">*</sup>
+                    </div>
+                    <div className="border-[2px] border-[#BCBCBC] h-[50px] xl:h-[58px] 2xl:h-[63px]  w-full mt-[7px] xl:mt-[4px] 2xl:mt-[7px] rounded-[41px]">
+                      <Field
+                        placeholder="Password"
+                        type="Password"
+                        name="password"
+                        className="h-full rounded-[41px] w-[100%] pl-[25px] sm:pl-[35px] border-none outline-none text-[#BCBCBC]"
+                      />
+                    </div>
+                    <div className="text-[red] text-base pt-1">
+                      <ErrorMessage name="Password" />
+                    </div>
+                    <div className="flex justify-between items-center mt-[31px] xl:mt-[20px] 2xl:mt-[31px]">
+                      <div className="flex gap-[11px] items-center text-[16px] font-medium font-DM">
+                        <input
+                          type="checkbox"
+                          class="accent-[#1CAC19] rounded-[6px] h-[20px] w-[20px]"
+                        />{" "}
+                        Remember me
+                      </div>
+                      <div className="text-[14px] sm:text-[16px] xl:text-[17px] 2xl:text-[18px] font-medium text-[#1CAC19] cursor-pointer font-DM">
+                        Forget Password?
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      className="h-[50px] xl:h-[58px] 2xl:h-[63px]   w-full mt-[31px] xl:mt-[20px] 2xl:mt-[31px] font-DM rounded-[41px] bg-[#1CAC19] flex justify-center items-center cursor-pointer text-white text-[16px] sm:text-[18px] 2xl:text-[20px] font-bold"
+                    >
+                      Login
+                    </button>
 
-                  <div className="flex justify-between items-center mt-[29px] xl:mt-[20px] 2xl:mt-[29px]">
-                    <div className="border-[2px] border-[#BCBCBC] w-[40%]  2xl:w-[205px]"></div>
-                    <div className="text-[#BCBCBC] text-[16px]">or</div>
-                    <div className="border-[2px] border-[#BCBCBC] w-[40%]  2xl:w-[205px]"></div>
+                    <div className="flex justify-between items-center mt-[29px] xl:mt-[20px] 2xl:mt-[29px]">
+                      <div className="border-[2px] border-[#BCBCBC] w-[40%]  2xl:w-[205px]"></div>
+                      <div className="text-[#BCBCBC] text-[16px]">or</div>
+                      <div className="border-[2px] border-[#BCBCBC] w-[40%]  2xl:w-[205px]"></div>
+                    </div>
+                    <div className="mt-[40px] xl:mt-[30px] 2xl:mt-[57px] flex justify-evenly items-center">
+                      <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
+                        <Image src={google} />
+                      </div>
+                      <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
+                        <Image src={fb} />
+                      </div>
+                      <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
+                        <Image src={apple} />
+                      </div>
+                    </div>
+                    <Link href="/signup">
+                      <div className="flex mt-[31px] z-10 xl:mt-[50px] 2xl:mt-[71px] justify-center font-DM items-center text-[16px] sm:text-[20px] font-bold cursor-pointer">
+                        Not a member?&nbsp;{" "}
+                        <span className="text-[#1CAC19]"> Sign up</span>
+                      </div>
+                    </Link>
                   </div>
-                  <div className="mt-[40px] xl:mt-[30px] 2xl:mt-[57px] flex justify-evenly items-center">
-                    <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
-                      <Image src={google} />
-                    </div>
-                    <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
-                      <Image src={fb} />
-                    </div>
-                    <div className="flex justify-center items-center h-[45px] lg:h-[40px] 2xl:h-[60px] w-[45px] lg:w-[40px] 2xl:w-[60px] rounded-[41px] shadow-social cursor-pointer">
-                      <Image src={apple} />
-                    </div>
-                  </div>
-                  <Link href="/signup">
-                    <div className="flex mt-[31px] z-10 xl:mt-[50px] 2xl:mt-[71px] justify-center font-DM items-center text-[16px] sm:text-[20px] font-bold cursor-pointer">
-                      Not a member?&nbsp;{" "}
-                      <span className="text-[#1CAC19]"> Sign up</span>
-                    </div>
-                  </Link>
                 </div>
               </div>
-            </div>
-          </Form>
-                  )}
+            </Form>
+          )}
         </Formik>
       </div>
     </>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import well1 from "../../Asstes/style/wellsec1.module.css";
 import Scribbes from "../../Asstes/Images/Scribbes.png";
 import Header from "../Header";
@@ -11,20 +11,46 @@ import FollowYourDesired from "../WellcomeSecreens/followYourDesired";
 import StartConverstion from "../WellcomeSecreens/startConverstion";
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
-import { updateUserprofile,userIntroduction } from "../../redux/reducers/userReducer";
+import {
+  updateUserprofile,
+  userJoinCommunity,getAllCommunity
+} from "../../redux/reducers/userReducer";
 
 const WellcomeScreen1 = () => {
   const [activeView, setActiveView] = useState(1);
   const chnagePostType = useSelector(
     (state) => state.allGernalFunction.isBlogOrPost
   );
-  const userProfile = useSelector((state) => state.user.userProfile);
+  const FollowCommunity = useSelector((state) => state.user.tempFollowCommunity);
+  const onlyHoldUserProfile = useSelector(
+    (state) => state.user.onlyHoldUserProfile
+  );
   const temBio = useSelector((state) => state.user.temBio);
+  const user = useSelector((state) => state.user.currentUser);
+
+
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllCommunity())
+
+  }, []);
   const handleChngeScreen = () => {
     setActiveView(activeView + 1);
-    if (activeView === 3) {
-      dispatch(userIntroduction(temBio));
+    if (activeView === 2) {
+      dispatch(updateUserprofile(onlyHoldUserProfile.file));
+    } else if (activeView === 3) {
+      dispatch(
+        updateUserprofile({
+          data: {
+            introduction: temBio,
+          },
+          userId: user?.id,
+        })
+      );
+    } else if (activeView == 4) {
+      dispatch(userJoinCommunity(FollowCommunity));
+    } else {
+      console.log("user create post action");
     }
   };
   const handlePrevScreen = () => {

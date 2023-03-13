@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import pro from "../../Asstes/style/setupProfileScreen.module.css";
 import upload from "../../Asstes/Images/upload.png";
 import Image from "next/image";
-import { holdUserProfile,updateUserprofile } from "../../redux/reducers/userReducer";
+import {
+  holdUserProfile,
+  updateUserprofile,
+} from "../../redux/reducers/userReducer";
 import { useDispatch, useSelector } from "react-redux";
 
 const SetUpProfileView = () => {
@@ -14,6 +17,8 @@ const SetUpProfileView = () => {
   const user = useSelector((state) => state.user?.currentUser);
   const inputRef = React.useRef(null);
   const dispatch = useDispatch();
+  const formData = new FormData();
+
   const handleDrag = function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -26,30 +31,23 @@ const SetUpProfileView = () => {
   const updatedUser = {
     updatedUser: file,
   };
-  console.log("upload image====>", updatedUser);
+
   const handleDrop = function (e) {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       setFile(URL.createObjectURL(e.dataTransfer.files[0]));
-      const user_profile = [e.target.files[0]];
-      const profilePic = {
-         updatedUser: user_profile,
-      };
-      dispatch(holdUserProfile(updatedUser));
+      formData.append("profilePic", e.target.files[0]);
+      dispatch(updateUserprofile({ data: formData, userId: user?.id }));
     }
   };
   const handleChange = function (e) {
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
       setFile(URL.createObjectURL(e.target.files[0]));
-      const user_profile = e.target.files[0];
-      const  data = {
-        profilePic: user_profile,
-        updatedUser:user?.id
-      };
-      dispatch(updateUserprofile(data));
+      formData.append("profilePic", e.target.files[0]);
+      dispatch(updateUserprofile({ data: formData, userId: user?.id }));
     }
   };
   console.log("onlyHoldUserProfile", onlyHoldUserProfile);

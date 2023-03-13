@@ -23,6 +23,7 @@ export const userLogin = createAsyncThunk("userLogin", async (data) => {
     console.log(err);
   }
 });
+// ========user signUP 
 export const userSignUP = createAsyncThunk("userSignUP", async (data) => {
   try {
     const res = await axiosInstance.post(
@@ -69,7 +70,7 @@ export const getCurrentUser = createAsyncThunk(
       const { data } = await axiosInstance.get(
         `http://localhost:5000/user/get-current-user/${userId}`
       );
-      return data.data;
+      return data;
     } catch (err) {
       console.log(err);
     }
@@ -93,8 +94,11 @@ export const getUserCommunity = createAsyncThunk(
 export const updateUserprofile = createAsyncThunk(
   "updateUserprofile",
   async (obj) => {
-    console.log("whats is obj",obj)
+    console.log("whats is obj", obj);
     try {
+      const res = await axiosInstance.put(
+        `http://localhost:5000/user/update-user-profile/${obj.userId}`,
+        obj.data
       const { data } = await axiosInstance.put(
         `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.introduction 
       );
@@ -114,8 +118,8 @@ export const userIntroduction = createAsyncThunk(
       const { data } = await axiosInstance.put(
         `http://localhost:5000/user/update-user-profile/${obj.userId}`,obj.introduction
       );
-  
-      return data.data;
+
+      return res;
     } catch (err) {
       console.log(err);
     }
