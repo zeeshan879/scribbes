@@ -193,7 +193,7 @@ export default function InviteFriens() {
           {groupedOptions.map((option, index) => (
             <li key={index} {...getOptionProps({ option, index })}>
               <span>{option.title}</span>
-              <CheckIcon fontSize="small" />
+              <CheckIcon fontSize="small" />  
             </li>
           ))}
         </Listbox>
