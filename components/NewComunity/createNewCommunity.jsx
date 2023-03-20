@@ -7,12 +7,11 @@ import earth from "../../Asstes/images/earth.png";
 import lock from "../../Asstes/images/lock.png";
 import { useSelector, useDispatch } from "react-redux";
 import InviteFriens from "./inviteFriends";
-import screen from "../../Asstes/images/screen.png";
-import mobile from "../../Asstes/images/mobile.png";
 import upload_profile from "../../Asstes/images/upload_profile.png";
 import { handleDeskTopView } from "../../redux/reducers/scribbes";
 import { FaDesktop } from "react-icons/fa";
 import { ImMobile } from "react-icons/im";
+import { handleaddCommunity } from "../../redux/reducers/userReducer";
 
 const CreateNewCommunity = () => {
   const [dragActive, setDragActive] = React.useState(false);
@@ -21,10 +20,37 @@ const CreateNewCommunity = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [file, setFile] = useState(null);
   const [inputError, setInputError] = useState(false);
-  const [comunityForm, setCommunityFrom] = useState();
+  const [categoryError, setcategoryError] = useState(false);
+  const [comunityForm, setCommunityFrom] = useState({
+    name: "privacy",
+    name: "invitations",
+    name: "communityOwner",
+  });
+
+  const privayData = [
+    {
+      name: "Everyone",
+      icon: earth,
+    },
+    {
+      name: "Private",
+      icon: lock,
+    },
+  ];
+  const friends = [
+    { title: "Ali@450", year: 1994 },
+    { title: "Afzal@562", year: 1972 },
+    { title: "Yousaf@258", year: 1974 },
+    { title: "Herry@258", year: 2008 },
+    { title: "Haroon@654", year: 1957 },
+    { title: "Herry@2645", year: 1993 },
+    { title: "PulpFiction@254", year: 1994 },
+  ];
   const changeView = useSelector(
     (state) => state.allGernalFunction.mobileDesktopView
   );
+  const user = useSelector((state) => state.user?.currentUser);
+
   const inputRef = React.useRef(null);
   const dispatch = useDispatch();
   const handleDrag = function (e) {
@@ -45,29 +71,31 @@ const CreateNewCommunity = () => {
     }
   };
   const handleChange = function (e) {
+    const name=e.target.name
+    const  value=e.target.value
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
       setFile(URL.createObjectURL(e.target.files[0]));
+      setCommunityFrom((values) => ({ ...values, [name]: value }));
+    
     }
   };
+  console.log("comunityForm",comunityForm)
   const onButtonClick = () => {
     inputRef.current.click();
   };
-  const privayData = [
-    {
-      name: "Everyone",
-      icon: earth,
-    },
-    {
-      name: "Private",
-      icon: lock,
-    },
-  ];
   const handlePrivacy = (data) => {
     if (data == true) {
       activeChose(!chose1);
     } else {
       setPrivcy(data);
+      setCommunityFrom({
+        ...comunityForm,
+        privacy: data,
+        invitations: friends,
+        communityOwner: user?.id,
+      });
+      console.log("form state", comunityForm);
       activeChose(false);
     }
   };
@@ -75,20 +103,34 @@ const CreateNewCommunity = () => {
     const name = e.target.name;
     const value = e.target.value;
     setCommunityFrom((values) => ({ ...values, [name]: value }));
-    if (comunityForm?.communityName.trim().length === 0) {
+    if (comunityForm?.communityName?.trim().length == "") {
       setInputError(true);
     } else {
       setInputError(false);
+    }
+    if (comunityForm?.category?.trim().length == "") {
+      setcategoryError(true);
+    } else {
+      setcategoryError(false);
     }
   };
   const handleSubmitNewCommunity = () => {
-    if (comunityForm?.communityName.trim().length == 0) {
+    if (comunityForm?.communityName?.trim().length == 0) {
       setInputError(true);
     } else {
       setInputError(false);
+      const formData = new FormData();
+      formData.append("communityName",comunityForm.name); 
+      formData.append("category",comunityForm.category); 
+      formData.append("privacy",comunityForm.privacy); 
+      formData.append("description",comunityForm.description); 
+      formData.append("privacy",comunityForm.privacy); 
+      formData.append("invitations",comunityForm.invitations); 
+      formData.append("communityOwner",comunityForm.communityOwner); 
+      dispatch(handleaddCommunity(formData));
     }
 
-    console.log("comunityForm========>", comunityForm?.communityName);
+
   };
   return (
     <>
@@ -118,7 +160,7 @@ const CreateNewCommunity = () => {
                     onChange={(e) => handleAddNewCommunity(e)}
                   />
                 </div>
-                <div className="text-danger text-s">
+                <div className="text-danger text-sm h-[10px]">
                   {inputError && <span>This feild is required*</span>}
                 </div>
                 <div className={nc.name_text}>
@@ -139,7 +181,9 @@ const CreateNewCommunity = () => {
                     name="category"
                   />
                 </div>
-                <div className="text-danger"></div>
+                <div className="text-danger text-sm h-[10px]">
+                  {categoryError && <span>This feild is required*</span>}
+                </div>
                 <div className={nc.name_text}>
                   Use the name of your business, Brand etc or a name what this
                   Community is about....
@@ -247,6 +291,7 @@ const CreateNewCommunity = () => {
                 ref={inputRef}
                 type="file"
                 id="input-file-upload"
+                name="privacy"
                 multiple={true}
                 onChange={handleChange}
               />

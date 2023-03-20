@@ -8,15 +8,18 @@ import Image from "next/image";
 import ChoseInterstToggle from "../ChoseInterst";
 import InsertMediaAndInsertUrlBtn from "../InsertMedia";
 import BlogPost from "../CreatePostModal/blogPost";
-import { useSelector,useDispatch } from "react-redux";
-import {handlePostAndBlogView } from "../../redux/reducers/scribbes"
+import { useSelector, useDispatch } from "react-redux";
+import { handlePostAndBlogView } from "../../redux/reducers/scribbes";
 
 const StartConverstion = () => {
   const [active, setActive] = useState(1);
   const [choseInterst, setChoseInterst] = useState(false);
-const chnagePostType =useSelector((state)=>state.allGernalFunction.isBlogOrPost)
-console.log("chnagePostType===>",chnagePostType)
-const dispatch=useDispatch()
+  const chnagePostType = useSelector(
+    (state) => state.allGernalFunction.isBlogOrPost
+  );
+
+  console.log("chnagePostType===>", chnagePostType);
+  const dispatch = useDispatch();
   const handleInterstToggle = () => {
     setChoseInterst(!choseInterst);
   };
@@ -28,7 +31,11 @@ const dispatch=useDispatch()
           Make your first scribbe and start a conversation
         </div>
         <div className={con.con_wraper}>
-          <div className={chnagePostType==2?con.conversation_ele2:con.conversation_ele}>
+          <div
+            className={
+              chnagePostType == 2 ? con.conversation_ele2 : con.conversation_ele
+            }
+          >
             <div className={con.profile_wrap}>
               <div>
                 {" "}
@@ -87,7 +94,7 @@ const dispatch=useDispatch()
             <div className={con.seprator}></div>
             <div className={con.action_btn_wrap}>
               <div>
-        { chnagePostType===2?"":  <InsertMediaAndInsertUrlBtn />}
+                {chnagePostType === 2 ? "" : <InsertMediaAndInsertUrlBtn />}
               </div>
               <div className={pa.modal_post_btn}>
                 {chnagePostType === 2 ? "Post Blog" : "Post"}{" "}

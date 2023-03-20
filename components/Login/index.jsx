@@ -12,6 +12,7 @@ import { userLogin } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import Router from "next/router";
 
+
 const Login = () => {
   const [remember, setRember] = useState(false);
   const disptach = useDispatch();
@@ -56,7 +57,7 @@ const Login = () => {
         ></link>
         <link href="http://fonts.cdnfonts.com/css/dm-sans" rel="stylesheet" />
       </Head>
-      <div className="flex   md:flex-row justify-between  min-h-[100vh] ">
+      <div className="flex  justify-center  md:flex-row md:justify-between  min-h-[100vh] ">
         <div
           className="hidden  bg-scroll md:block w-[100%] w-[878px] mt-[30px]  md:mt-[0px]  h-[450px]  bg-center sm:h-[100vh] relative bg-[100%]"
           style={showImage}

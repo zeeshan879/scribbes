@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import tell from "../../Asstes/style/tellUsAboutYourSelf.module.css";
 import Image from "next/image";
+import { userBio } from "../../redux/reducers/userReducer";
+import { useDispatch, useSelector } from "react-redux";
 
 const TellUsView = () => {
+  const [intro, setIntro] = useState();
+  const dispatch = useDispatch();
+  const temBio = useSelector((state) => state.user.temBio);
+  const currentUser = useSelector((state) => state.user.currentUser);
+  const handleUserIntroduction = (e) => {
+    const bio = e.target.value;
+    setIntro(bio);
+
+    dispatch(userBio(bio));
+  };
+  console.log("introducton", temBio);
   return (
     <>
       <div className={tell.tellUS_wrap}>
@@ -16,6 +29,8 @@ const TellUsView = () => {
             <textarea
               className={tell.teaxt_ele}
               placeholder="Introduce yourself...."
+              onChange={(e) => handleUserIntroduction(e)}
+              value={intro}
             ></textarea>
             <div className={tell.text_limit}>0/2000</div>
           </div>
