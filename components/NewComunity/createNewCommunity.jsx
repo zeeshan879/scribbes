@@ -26,6 +26,7 @@ const CreateNewCommunity = () => {
     name: "invitations",
     name: "communityOwner",
   });
+
   const privayData = [
     {
       name: "Everyone",
@@ -70,14 +71,16 @@ const CreateNewCommunity = () => {
     }
   };
   const handleChange = function (e) {
+    const name=e.target.name
+    const  value=e.target.value
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
       setFile(URL.createObjectURL(e.target.files[0]));
-      const name = e.target.name;
-      const value = e.target.value;
       setCommunityFrom((values) => ({ ...values, [name]: value }));
+    
     }
   };
+  console.log("comunityForm",comunityForm)
   const onButtonClick = () => {
     inputRef.current.click();
   };
@@ -116,10 +119,18 @@ const CreateNewCommunity = () => {
       setInputError(true);
     } else {
       setInputError(false);
-      dispatch(handleaddCommunity(comunityForm));
+      const formData = new FormData();
+      formData.append("communityName",comunityForm.name); 
+      formData.append("category",comunityForm.category); 
+      formData.append("privacy",comunityForm.privacy); 
+      formData.append("description",comunityForm.description); 
+      formData.append("privacy",comunityForm.privacy); 
+      formData.append("invitations",comunityForm.invitations); 
+      formData.append("communityOwner",comunityForm.communityOwner); 
+      dispatch(handleaddCommunity(formData));
     }
 
-    console.log("comunityForm========>", comunityForm);
+
   };
   return (
     <>
@@ -280,7 +291,7 @@ const CreateNewCommunity = () => {
                 ref={inputRef}
                 type="file"
                 id="input-file-upload"
-                name="photo"
+                name="privacy"
                 multiple={true}
                 onChange={handleChange}
               />

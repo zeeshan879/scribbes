@@ -1,19 +1,12 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react"
 import lbar from "../../Asstes/style/homeLeftmenu.module.css";
 import profile from "../../Asstes/Images/profile.png";
 import arrowUp2 from "../../Asstes/Images/arrowUp2.png";
-import homeV from "../../Asstes/Images/homeV2.png";
-import vedioV from "../../Asstes/Images/vedioV.png";
 import com22 from "../../Asstes/Images/com22.png";
-import fireV from "../../Asstes/Images/fireV.png";
-import noti from "../../Asstes/Images/noti.png";
-import explor from "../../Asstes/Images/explor.png";
-import userV from "../../Asstes/Images/userV.png";
-import msgV from "../../Asstes/Images/msgV.png";
-import setV from "../../Asstes/Images/setV.png";
 import addUser from "../../Asstes/Images/addUser.png";
 import logout from "../../Asstes/Images/logout.png";
 import Image from "next/image";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 import CreatepostModal from "../CreatePostModal";
 import { RiHomeLine } from "react-icons/ri";
 import { AiOutlinePlayCircle } from "react-icons/ai";
@@ -27,6 +20,7 @@ import { RiNotification4Line } from "react-icons/ri";
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import Cookies from "universal-cookie";
+import Router from "next/router";
 
 
 const HomeLeftMenu = () => {
@@ -36,12 +30,40 @@ const HomeLeftMenu = () => {
   const router = useRouter();
   const pathName = router.pathname;
   const cookies = new Cookies();
+  const ref = useRef()
   function onClick() {
     setLgShow(!lgShow);
   }
   const handleSignOut=()=>{
-    cookies.remove("token");
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You want to logout!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        cookies.remove("token");
+        Router.push("/login");
+
+      }
+    })
+
   }
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (isLogout && ref.current && !ref.current.contains(e.target)) {
+        setIsLogout(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [isLogout])
+
   return (
     <>
       <div className={lbar.home_left_bar}>
@@ -51,7 +73,7 @@ const HomeLeftMenu = () => {
         <div className={lbar.left_bar_content_box}>
           <div
             className={lbar.left_bar_profile}
-            onClick={() => setIsLogout(!isLogout)}
+            onClick={() => setIsLogout(true)}
           >
             <div className={lbar.left_bar_p}>
               <div>
@@ -69,7 +91,7 @@ const HomeLeftMenu = () => {
               </div>
             </div>
             {isLogout && (
-              <div className={lbar.logout_toggle}>
+              <div className={lbar.logout_toggle} ref={ref}>
                 <div className={lbar.logut_user_p}>
                   <div>
                     <Image src={profile} />

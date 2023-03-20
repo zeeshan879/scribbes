@@ -19,22 +19,18 @@ import {
 
 } from "../../redux/reducers/userReducer";
 
+
 const FollowYourDesired = () => {
   const allcommunities = useSelector((state) => state.user.allcommunities);
-  const showAllCommunity=allcommunities.data
+  const showAllCommunity=allcommunities.data.map(data => ({...data, active:false}))
   const [followDesired, setfollowDesired] = useState(showAllCommunity);
   const user = useSelector((state) => state.user.currentUser);
   const dispatch = useDispatch();
-
-
-
-
-
   const handleSelectCommunity = (data) => {
     const find_id = followDesired?.findIndex((data1) => data1.id === data.id);
     const tempArray = [...followDesired];
     const temp2 = [];
-    tempArray[find_id].active = !tempArray[find_id].active;
+    tempArray[find_id].active = !tempArray[find_id]?.active;
     const activeCom = tempArray.filter((data) => data.active === true);
     for (let i = 0; i <= activeCom.length - 1; i++) {
       temp2?.push({ communityId: activeCom[i]?.id, userId: user?.id });
@@ -56,8 +52,7 @@ const FollowYourDesired = () => {
           return (
             <>
               <div
-                // className={data.active == true ? foll.active_tile : foll.tile}
-                className={foll.tile}
+                className={data.active == true ? foll.active_tile : foll.tile}
                 onClick={() => handleSelectCommunity(data)}
               >
                 <div>
@@ -80,7 +75,7 @@ const FollowYourDesired = () => {
                         : foll.tile_folowers
                     }
                   >
-                    {data.followers}
+               {data.Users?.length} followers
                   </div>
                 </div>
               </div>

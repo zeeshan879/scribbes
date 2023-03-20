@@ -10,7 +10,7 @@ import * as yup from "yup";
 import { Form, Field, Formik, ErrorMessage } from "formik";
 import { userSignUP } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ const SignUp = () => {
       password: value.password,
     };
     dispatch(userSignUP(signupData));
-    router.push('/login');
+    router.push("/login");
   };
   return (
     <>
