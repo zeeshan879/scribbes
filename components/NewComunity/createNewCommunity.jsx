@@ -22,9 +22,9 @@ const CreateNewCommunity = () => {
   const [inputError, setInputError] = useState(false);
   const [categoryError, setcategoryError] = useState(false);
   const [comunityForm, setCommunityFrom] = useState({
-    name: "privacy",
-    name: "invitations",
-    name: "communityOwner",
+    // name: "privacy",
+    // name: "invitations",
+    // name: "communityOwner",
   });
 
   const privayData = [
@@ -71,13 +71,10 @@ const CreateNewCommunity = () => {
     }
   };
   const handleChange = function (e) {
-    const name=e.target.name
-    const  value=e.target.value
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
       setFile(URL.createObjectURL(e.target.files[0]));
-      setCommunityFrom((values) => ({ ...values, [name]: value }));
-    
+      setCommunityFrom((values) => ({ ...values, [e.target.name]: e.target.files[0] }));
     }
   };
   console.log("comunityForm",comunityForm)
@@ -120,13 +117,13 @@ const CreateNewCommunity = () => {
     } else {
       setInputError(false);
       const formData = new FormData();
-      formData.append("communityName",comunityForm.name); 
+      formData.append("communityName",comunityForm.communityName); 
       formData.append("category",comunityForm.category); 
-      formData.append("privacy",comunityForm.privacy); 
       formData.append("description",comunityForm.description); 
       formData.append("privacy",comunityForm.privacy); 
-      formData.append("invitations",comunityForm.invitations); 
+      formData.append("invitations",JSON.stringify(comunityForm.invitations)); 
       formData.append("communityOwner",comunityForm.communityOwner); 
+      formData.append("photo",comunityForm.photo); 
       dispatch(handleaddCommunity(formData));
     }
 
@@ -291,7 +288,7 @@ const CreateNewCommunity = () => {
                 ref={inputRef}
                 type="file"
                 id="input-file-upload"
-                name="privacy"
+                name="photo"
                 multiple={true}
                 onChange={handleChange}
               />
