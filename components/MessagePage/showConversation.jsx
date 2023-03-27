@@ -12,8 +12,10 @@ import deleteV from "../../Asstes/Images/deleteV.png";
 import chatUploadImage from "../../Asstes/Images/chatUploadImage.png";
 import masgSentbtn from "../../Asstes/Images/masgSentbtn.png";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-const ShowConversation = () => {
+const ShowConversation = ({ handelTypeMessage, typemessage, sendMessage }) => {
+  const messageReducer = useSelector((store) => store.messageReducer);
   const [toggle, setToggle] = useState(false);
   return (
     <>
@@ -22,7 +24,12 @@ const ShowConversation = () => {
           <Image src={msgUser} />
         </div>
         <div className={sc.user_name}>
-          Jimmy McGill <span className="font-normal">(@saulgoodman)</span>
+          {messageReducer.currentUser.firstName +
+            " " +
+            messageReducer.currentUser.lastName}
+          <span className="font-normal">
+            {messageReducer.currentUser.userName}
+          </span>
         </div>
         <div className={sc.user_opt} onClick={() => setToggle(!toggle)}>
           <Image src={postAction} />
@@ -56,7 +63,7 @@ const ShowConversation = () => {
           )}
         </div>
       </div>
-      <div className={sc.message_container} id="style-desk" >
+      <div className={sc.message_container} id="style-desk">
         <div className={sc.message_ui}>
           <div>
             <Image src={msgUser} />
@@ -112,17 +119,19 @@ const ShowConversation = () => {
         </div>
         <div className={sc.chat_input_wraper}>
           <div className={sc.chat_box}>
-          <div className="cursor-pointer">
-		  <Image src={chatUploadImage} />
-		  </div>
+            <div className="cursor-pointer">
+              <Image src={chatUploadImage} />
+            </div>
             <div className={sc.msg_box}>
               <input
+                value={typemessage}
+                onChange={(e) => handelTypeMessage(e)}
                 placeholder="Type Message Here"
                 className={sc.chat_element}
               />
             </div>
 
-            <div className="cursor-pointer">
+            <div className="cursor-pointer" onClick={() => sendMessage()}>
               <Image src={masgSentbtn} />
             </div>
           </div>

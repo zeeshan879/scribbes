@@ -9,11 +9,14 @@ import userGrl from "../../Asstes/Images/userGrl.png";
 import sentImage from "../../Asstes/Images/sentImage.png";
 import grl from "../../Asstes/Images/grl.png";
 import { handleMessageView } from "../../redux/reducers/scribbes";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Base_Url } from "../../config/baseUrl";
+import moment from "moment";
 
-const MessageLeftSection = () => {
+const MessageLeftSection = ({ userList, handlePrivateMemberMsg }) => {
   const router = useRouter();
   const dispatch = useDispatch();
+  const messageReducer = useSelector((store) => store.messageReducer);
 
   const mesageUser = [
     {
@@ -133,7 +136,6 @@ const MessageLeftSection = () => {
       hours: "8 Aug",
       sendImage: false,
     },
-
   ];
 
   return (
@@ -151,50 +153,57 @@ const MessageLeftSection = () => {
             <input placeholder="Search" className={mls.search_ele} />
           </div>
         </div>
-  <div className={mls.message_reader} >
-  <div className={mls.content_box} id="style-desk">
-          {mesageUser.map((data) => {
-            return (
-              <>
-                <div
-                  className={mls.masg_wrap}
-                onClick={()=>dispatch(handleMessageView(true))}
-                >
-                  <div className={mls.msg_info_wrap}>
-                    <div className={mls.msg_profile_box}>
-                      <div className={mls.online_status}>
-                        {data.active && <Image src={msgOnline} />}
-                      </div>
-                      <Image src={data.profile} />
-                    </div>
-                    <div className={mls.msg_des_box}>
-                      <div className="flex justify-between items-center">
-                        <div className={mls.user_name}>
-                          {data.title}
-                          <span className="text-[#BCBCBC]">
-                            {data.userEmail}
-                          </span>
+        <div className={mls.message_reader}>
+          <div className={mls.content_box} id="style-desk">
+            {userList?.map((data, index) => {
+              return (
+                <>
+                  <div
+                    key={index}
+                    className={mls.masg_wrap}
+                    // onClick={() => dispatch(handleMessageView(true))}
+                    onClick={() => handlePrivateMemberMsg(data, index)}
+                  >
+                    <div className={mls.msg_info_wrap}>
+                      <div className={mls.msg_profile_box}>
+                        <div className={mls.online_status}>
+                          {data.active && <Image src={msgOnline} />}
                         </div>
-                        <div className="text-[#BCBCBC] font-DM font-normal text-sm xl:text-base">
-                          {data.hours}
-                        </div>
+                        <Image
+                          // src={Base_Url + data.profilePic}
+                          src={userGrl}
+                        />
                       </div>
-                      <div
-                        className={
-                          data.active == true ? mls.user_text2 : mls.user_text
-                        }
-                      >
-                        <div>{data.sendImage && <Image src={sentImage} />}</div>
-                     {data.des}
+                      <div className={mls.msg_des_box}>
+                        <div className="flex justify-between items-center">
+                          <div className={mls.user_name}>
+                            {data.firstName + " " + data.lastName + " "}
+                            <span className="text-[#BCBCBC]">
+                              {"(" + data.email + ")"}
+                            </span>
+                          </div>
+                          <div className="text-[#BCBCBC] font-DM font-normal text-sm xl:text-base">
+                            {new Date(data.createdAt).getDate()}
+                          </div>
+                        </div>
+                        <div
+                          className={
+                            data.active == true ? mls.user_text2 : mls.user_text
+                          }
+                        >
+                          <div>
+                            {data.sendImage && <Image src={sentImage} />}
+                          </div>
+                          {data.introduction}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </>
-            );
-          })}
+                </>
+              );
+            })}
+          </div>
         </div>
-  </div>
       </div>
     </>
   );
