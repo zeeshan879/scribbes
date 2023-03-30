@@ -11,7 +11,7 @@ import { Form, Field, Formik, ErrorMessage } from "formik";
 import { userLogin } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import Router from "next/router";
-
+import { setCurrentUserInChat } from "../../redux/reducers/messageReducer";
 
 const Login = () => {
   const [remember, setRember] = useState(false);
@@ -38,8 +38,8 @@ const Login = () => {
       password: value.password,
     };
     const loginRes = await disptach(userLogin(userData));
-    console.log("ali===", loginRes);
-    if (loginRes.payload.status===200) {
+    disptach(setCurrentUserInChat(loginRes.payload.data.data.user));
+    if (loginRes.payload.status === 200) {
       Router.push("/");
     }
   };

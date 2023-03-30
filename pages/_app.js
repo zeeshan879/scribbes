@@ -10,7 +10,7 @@ import {
 import Router from "next/router";
 import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
-import { setCurrentUser } from "../redux/reducers/messageReducer";
+import { setCurrentUserInChat } from "../redux/reducers/messageReducer";
 const cookies = new Cookies();
 
 const MyApp = ({ Component, pageProps }) => {
@@ -31,7 +31,7 @@ const Application = ({ Component, pageProps }) => {
     if (token) {
       const user = jwt_decode(token);
       dispatch(getCurrentUser(user.user?.id));
-      dispatch(setCurrentUser(user.user));
+      dispatch(setCurrentUserInChat(user.user));
       dispatch(getFollowedCommunity(user.user?.id));
     } else {
       Router.push("/login");

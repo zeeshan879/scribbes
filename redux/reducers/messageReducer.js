@@ -53,7 +53,7 @@ export const messageReducer = createSlice({
   name: "messageReducer",
   initialState: initialState,
   reducers: {
-    setCurrentUser(state, action) {
+    setCurrentUserInChat(state, action) {
       state.currentUser = action.payload;
     },
     setCurrentRoom(state, action) {
@@ -96,7 +96,7 @@ export const {
   setCurrentRoomMessages,
   addNotification,
   resetNotification,
-  setCurrentUser,
+  setCurrentUserInChat,
   changeCurrentSideBar,
 } = messageReducer.actions;
 export default messageReducer.reducer;

@@ -13,7 +13,7 @@ const initialState = {
   tempFollowCommunity: [],
   allcommunities: [],
   userFollowedCommunity: "",
-  userList:[],
+  userList: [],
 };
 // =========user login
 export const userLogin = createAsyncThunk("userLogin", async (data) => {
@@ -173,7 +173,7 @@ export const userReducer = createSlice({
   },
   extraReducers: {
     [userLogin.fulfilled]: (state, action) => {
-      state.currentUser = action.payload;
+      state.currentUser = action.payload.data.data.user;
       // state.isLoading = false;
     },
     [getCurrentUser.fulfilled]: (state, action) => {

@@ -24,11 +24,11 @@ const ShowConversation = ({ handelTypeMessage, typemessage, sendMessage }) => {
           <Image src={msgUser} />
         </div>
         <div className={sc.user_name}>
-          {messageReducer.currentUser.firstName +
+          {messageReducer?.currentUser?.firstName +
             " " +
-            messageReducer.currentUser.lastName}
+            messageReducer?.currentUser?.lastName}
           <span className="font-normal">
-            {messageReducer.currentUser.userName}
+            {"(" + messageReducer?.currentUser?.userName + ")"}
           </span>
         </div>
         <div className={sc.user_opt} onClick={() => setToggle(!toggle)}>
@@ -64,59 +64,34 @@ const ShowConversation = ({ handelTypeMessage, typemessage, sendMessage }) => {
         </div>
       </div>
       <div className={sc.message_container} id="style-desk">
-        <div className={sc.message_ui}>
-          <div>
-            <Image src={msgUser} />
-          </div>
-          <div className={sc.messge_box}>
-            <div className={sc.message_view}>
-              Hey! Let me know when you are free. Wanna talk
-            </div>
-            <div className={sc.message_view2}>
-              No rush though, relax and see ya!!!
-            </div>
-          </div>
-        </div>
-        <div className={sc.reply_container}>
-          <div className={sc.reply_masg}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero
-            istorum quidem, inquit. Bonum patria: miserum exilium. Itaque ad
-            tempus ad Pisonem.
-          </div>
-        </div>
-        <div className={sc.message_ui}>
-          <div>
-            <Image src={msgUser} />
-          </div>
-          <div className={sc.messge_box}>
-            <div className={sc.message_view}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </div>
-          </div>
-        </div>
-        <div className={sc.message_ui}>
-          <div>
-            <Image src={msgUser} />
-          </div>
-          <div className={sc.messge_box}>
-            <div className="text-[40px]"> 😂😂😂</div>
-          </div>
-        </div>
-        <div className={sc.reply_container}>
-          <div className={sc.reply_masg}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </div>
-        </div>
-        <div className={sc.message_ui}>
-          <div>
-            <Image src={msgUser} />
-          </div>
-          <div className={sc.messge_box}>
-            <div className={sc.message_view}>
-              Did you watch the match last night? It was epic!
-            </div>
-          </div>
-        </div>
+        {messageReducer.messages.map((data, index) => {
+          return (
+            <>
+              <p className="text-center">{data.id}</p>
+              {data?.messagesByDates?.map((msg, msgIndex) => {
+                return (
+                  <>
+                    {messageReducer?.currentUser.id == msg.from ? (
+                      <div className={sc.reply_container}>
+                        <div className={sc.reply_masg}>{msg?.content}</div>
+                      </div>
+                    ) : (
+                      <div className={sc.message_ui}>
+                        <div>
+                          <Image src={msgUser} />
+                        </div>
+                        <div className={sc.messge_box}>
+                          <div className={sc.message_view}>{msg?.content}</div>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                );
+              })}
+            </>
+          );
+        })}
+
         <div className={sc.chat_input_wraper}>
           <div className={sc.chat_box}>
             <div className="cursor-pointer">
