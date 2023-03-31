@@ -11,6 +11,7 @@ import { Form, Field, Formik, ErrorMessage } from "formik";
 import { userSignUP } from "../../redux/reducers/userReducer";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -41,8 +42,16 @@ const SignUp = () => {
       userName: value.userName,
       password: value.password,
     };
-    dispatch(userSignUP(signupData));
-    router.push("/login");
+    Swal.fire(
+      'Congrs...!',
+      'You are register successfully!',
+      'success'
+    ).then(()=>{
+      dispatch(userSignUP(signupData));
+          router.push("/login");
+    })
+ 
+
   };
   return (
     <>
