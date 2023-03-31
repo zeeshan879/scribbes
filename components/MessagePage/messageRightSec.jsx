@@ -5,10 +5,9 @@ import Image from "next/image";
 import ShowConversation from "./showConversation";
 import { useSelector, useDispatch } from "react-redux";
 
-
-const MessageRightSec = () => {
+const MessageRightSec = ({ handelTypeMessage, typemessage, sendMessage }) => {
   const isMessage = useSelector((state) => state.allGernalFunction.isMessage);
-  console.log("isMessage",isMessage)
+  console.log("isMessage", isMessage);
 
   return (
     <>
@@ -27,7 +26,11 @@ const MessageRightSec = () => {
             </div>
           </>
         ) : (
-          <ShowConversation />
+          <ShowConversation
+            handelTypeMessage={handelTypeMessage}
+            typemessage={typemessage}
+            sendMessage={sendMessage}
+          />
         )}
       </div>
     </>

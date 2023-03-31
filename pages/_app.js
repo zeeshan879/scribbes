@@ -3,10 +3,14 @@ import "../styles/globals.css";
 import { Provider } from "react-redux";
 import { store } from "../redux/store";
 import { useDispatch } from "react-redux";
-import { getCurrentUser,getFollowedCommunity } from "../redux/reducers/userReducer";
-import Router from 'next/router'
+import {
+  getCurrentUser,
+  getFollowedCommunity,
+} from "../redux/reducers/userReducer";
+import Router from "next/router";
 import jwt_decode from "jwt-decode";
 import Cookies from "universal-cookie";
+import { setCurrentUserInChat } from "../redux/reducers/messageReducer";
 const cookies = new Cookies();
 
 const MyApp = ({ Component, pageProps }) => {
@@ -27,9 +31,10 @@ const Application = ({ Component, pageProps }) => {
     if (token) {
       const user = jwt_decode(token);
       dispatch(getCurrentUser(user.user?.id));
-      dispatch(getFollowedCommunity(user.user?.id))
+      dispatch(setCurrentUserInChat(user.user));
+      dispatch(getFollowedCommunity(user.user?.id));
     } else {
-      Router.push('/login')
+      Router.push("/login");
     }
   }, []);
   return <Component {...pageProps} />;
