@@ -17,6 +17,14 @@ import { useDispatch, useSelector } from "react-redux";
 const ShowConversation = ({ handelTypeMessage, typemessage, sendMessage }) => {
   const messageReducer = useSelector((store) => store.messageReducer);
   const [toggle, setToggle] = useState(false);
+  const [sendImage, setSendImage] = useState(false);
+  const handleSendImage = (e) => {
+    if (e.target.files && e.target.files.length > 0) {
+      setSendImage(e.target.files[0]);
+    }
+console.log("sendImage==>",e.target.files)
+  
+  };
   return (
     <>
       <div className={sc.header_wrap}>
@@ -91,12 +99,20 @@ const ShowConversation = ({ handelTypeMessage, typemessage, sendMessage }) => {
             </>
           );
         })}
-
+<div>
+{sendImage && <img   src={URL.createObjectURL(sendImage)} height="200px" width="200px" />}
+</div>
         <div className={sc.chat_input_wraper}>
           <div className={sc.chat_box}>
-            <div className="cursor-pointer">
+            <div class="upload-btn-wrapper cursor-pointer">
               <Image src={chatUploadImage} />
+              <input
+                type="file"
+                name="myfile"
+                onChange={(e) => handleSendImage(e)}
+              />
             </div>
+
             <div className={sc.msg_box}>
               <input
                 value={typemessage}
