@@ -37,7 +37,7 @@ const WellcomeScreen1 = () => {
   const handleChngeScreen = () => {
     setActiveView(activeView + 1);
     if (activeView === 2) {
-      dispatch(updateUserprofile(onlyHoldUserProfile.file));
+      dispatch(updateUserprofile(onlyHoldUserProfile?.file));
     } else if (activeView === 3) {
       dispatch(
         updateUserprofile({

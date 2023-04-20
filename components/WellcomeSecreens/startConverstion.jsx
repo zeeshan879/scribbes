@@ -18,7 +18,6 @@ const StartConverstion = () => {
     (state) => state.allGernalFunction.isBlogOrPost
   );
 
-  console.log("chnagePostType===>", chnagePostType);
   const dispatch = useDispatch();
   const handleInterstToggle = () => {
     setChoseInterst(!choseInterst);

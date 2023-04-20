@@ -46,7 +46,6 @@ const Messages = () => {
     let firstPerson = userReducer?.userList?.filter(
       (u) => messageReducer?.currentUser?.id !== u?.id
     )[0];
-    console.log("firstperson", firstPerson);
     const roomId = orderIds(messageReducer?.currentUser?.id, firstPerson?.id);
     dispatch(setCurrentPrivateMemberMsg(firstPerson));
     dispatch(setCurrentRoom(roomId));
